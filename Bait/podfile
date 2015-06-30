@@ -1,0 +1,10 @@
+platform :ios, '7.0'
+
+target "Bait" do
+   	pod 'MBProgressHUD', '~> 0.9'
+	pod 'AFNetworking', '~> 2.4.1'
+	pod 'TPKeyboardAvoiding', '~> 1.2.4'
+	pod 'SDWebImage', '~> 3.7.1'
+	pod 'Base64', '~> 1.0.1'
+	pod 'SBJson', '~> 4.0.1'
+end

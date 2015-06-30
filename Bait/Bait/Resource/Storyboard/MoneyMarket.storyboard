@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Money Market Product Fund View Controller-->
+        <scene sceneID="E3U-8H-HuL">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketProductFundViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CcT-jp-DDP" customClass="MoneyMarketProductFundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qb3-CZ-kUu"/>
+                        <viewControllerLayoutGuide type="bottom" id="KgC-0B-YoF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b6s-GX-JG1">
+                        <rect key="frame" x="0.0" y="44" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpa-B2-PfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="443"/>
+        </scene>
+        <!--Money Market Produc Detail View Controller-->
+        <scene sceneID="Uex-nX-p3E">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketProducDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lb3-hp-LYB" customClass="MoneyMarketProducDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yAA-mO-zzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bro-O8-ixJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G4y-U4-AdR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vt-gW-heY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-565" y="1172"/>
+        </scene>
+        <!--Money Market Favourite View Controller-->
+        <scene sceneID="nOm-XE-NeQ">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketFavouriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4La-Jt-zfC" customClass="MoneyMarketFavouriteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yPa-mH-3aD"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdC-3L-Pyp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XYP-Iz-rMB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3x-z0-M3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573" y="209"/>
+        </scene>
+        <!--Money Market View Controller-->
+        <scene sceneID="j1I-4z-9yE">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="po2-PL-f73" customClass="MoneyMarketViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cmU-wF-ght"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rxp-OP-jNF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6lP-Hh-dWU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86b-ro-Sgv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OzL-6t-Lcn">
+                                        <rect key="frame" x="44" y="10" width="233" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                            <segment title="third"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="swapButtonPressed:" destination="po2-PL-f73" eventType="valueChanged" id="ucx-Si-5ZW"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OzL-6t-Lcn" secondAttribute="trailing" constant="43" id="Ebc-cv-PYu"/>
+                                    <constraint firstAttribute="height" constant="48" id="G70-h0-u33"/>
+                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="leading" secondItem="86b-ro-Sgv" secondAttribute="leading" constant="44" id="PQR-yN-tC4"/>
+                                    <constraint firstAttribute="bottom" secondItem="OzL-6t-Lcn" secondAttribute="bottom" constant="10" id="PZm-5W-0vB"/>
+                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="top" secondItem="86b-ro-Sgv" secondAttribute="top" constant="10" id="qXr-cg-RBF"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-qa-hu8">
+                                <rect key="frame" x="0.0" y="56" width="320" height="448"/>
+                                <connections>
+                                    <segue destination="ZPI-l5-Bph" kind="embed" identifier="embedContainer" id="7ic-vf-TsM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ILr-qa-hu8" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="GI2-CM-9nA"/>
+                            <constraint firstItem="86b-ro-Sgv" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="GvL-X0-XFZ"/>
+                            <constraint firstItem="86b-ro-Sgv" firstAttribute="top" secondItem="cmU-wF-ght" secondAttribute="bottom" id="QGS-ni-4eQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="86b-ro-Sgv" secondAttribute="trailing" constant="-16" id="VZL-ag-ZSa"/>
+                            <constraint firstItem="ILr-qa-hu8" firstAttribute="top" secondItem="86b-ro-Sgv" secondAttribute="bottom" constant="8" id="od9-8M-g29"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ILr-qa-hu8" secondAttribute="trailing" constant="-16" id="rta-JA-Q8D"/>
+                            <constraint firstItem="Rxp-OP-jNF" firstAttribute="top" secondItem="ILr-qa-hu8" secondAttribute="bottom" id="x7Y-ua-8qf"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzt-EK-gCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1017" y="386"/>
+        </scene>
+        <!--Money Market Produc Section Detail One View Controller-->
+        <scene sceneID="j5c-0U-Ln2">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketProducSectionDetailOneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h6J-A4-9nk" customClass="MoneyMarketProducSectionDetailOneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Zr-ET-DX1"/>
+                        <viewControllerLayoutGuide type="bottom" id="f2j-Yz-7ii"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W5A-1S-6RR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUB-Ts-E4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="1178"/>
+        </scene>
+        <!--Money Market ProductPTP View Controller-->
+        <scene sceneID="csp-qd-R2Y">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketProductPTPViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="96r-JV-Dn2" customClass="MoneyMarketProductPTPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q6C-v3-SFr"/>
+                        <viewControllerLayoutGuide type="bottom" id="I34-Sd-nXf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6vL-Zz-shS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLb-bL-bmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="43"/>
+        </scene>
+        <!--Money Market Produc Section Detail Two View Controller-->
+        <scene sceneID="22l-Wy-Cka">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketProducSectionDetailTwoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RvC-su-7KI" customClass="MoneyMarketProducSectionDetailTwoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QxT-aH-zdq"/>
+                        <viewControllerLayoutGuide type="bottom" id="stm-Ls-lHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jOG-Oa-ybV">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCG-o0-6su" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="1186"/>
+        </scene>
+        <!--Money Market Container View Controller-->
+        <scene sceneID="aj2-Tt-IEP">
+            <objects>
+                <viewController storyboardIdentifier="MoneyMarketContainerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZPI-l5-Bph" customClass="MoneyMarketContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bUK-Wm-wqb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xCH-cW-Mik"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sO9-Uv-ZAf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.55294117649999996" green="0.78039215689999997" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="448"/>
+                    <connections>
+                        <segue destination="4La-Jt-zfC" kind="custom" identifier="embedThird" customClass="EmptySegue" id="elv-qs-4cw"/>
+                        <segue destination="CcT-jp-DDP" kind="custom" identifier="embedSecond" customClass="EmptySegue" id="sQ7-PU-SuV"/>
+                        <segue destination="96r-JV-Dn2" kind="custom" identifier="embedFirst" customClass="EmptySegue" id="84W-g2-dfE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZW-PG-vOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-613" y="456"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

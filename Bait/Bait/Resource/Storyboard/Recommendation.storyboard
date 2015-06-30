@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Recommendation View Controller-->
+        <scene sceneID="AZ4-2e-Rrt">
+            <objects>
+                <viewController storyboardIdentifier="RecommendationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fM7-NL-9O8" customClass="RecommendationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pL3-9i-fRa"/>
+                        <viewControllerLayoutGuide type="bottom" id="VjO-7s-1PA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R4r-2E-s5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpg-KW-Z2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="319"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wjQ-kB-cLE">
+            <objects>
+                <viewController storyboardIdentifier="RecommendationActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qeY-BU-g09" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2vg-z7-uhW"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdm-Q3-l64"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QQv-Zv-wLu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkw-HH-zBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="319"/>
+        </scene>
+        <!--Recommendation Activity Detail View Controller-->
+        <scene sceneID="4Mw-j0-cqh">
+            <objects>
+                <viewController storyboardIdentifier="RecommendationActivityDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5aR-OO-hlX" customClass="RecommendationActivityDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vrd-gY-4HH"/>
+                        <viewControllerLayoutGuide type="bottom" id="I9s-Lv-hEB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mbp-H6-LB9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlD-Z3-J7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="319"/>
+        </scene>
+        <!--Recommendation Message View Controller-->
+        <scene sceneID="hSW-UV-8z2">
+            <objects>
+                <viewController storyboardIdentifier="RecommendationMessageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J8Z-hB-ro0" customClass="RecommendationMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8x3-0k-w8M"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Eb-xa-kk3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vic-IC-SB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37O-Sq-TwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="319"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

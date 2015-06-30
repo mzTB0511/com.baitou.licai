@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ba1-Fc-CZM">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GlD-kd-Wbl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ArP-3M-sRY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iwe-ZX-0Rf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9FB-a1-ngB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24v-wv-Era" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-477" y="1159"/>
+        </scene>
+        <!--My Property Card Manager Card Info View Controller-->
+        <scene sceneID="yaq-hV-0EP">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyCardManagerCardInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gYv-6b-iez" customClass="MyPropertyCardManagerCardInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hcd-Q4-T7D"/>
+                        <viewControllerLayoutGuide type="bottom" id="Se6-MS-Rsk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fde-81-j0t">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cci-Mx-qOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="1917"/>
+        </scene>
+        <!--My Property Card Manager Own Info View Controller-->
+        <scene sceneID="FN8-RO-Pki">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyCardManagerOwnInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uHp-Y0-4bj" customClass="MyPropertyCardManagerOwnInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yxa-Rx-QBl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vlv-Jf-JwK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZNz-RC-uib">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUU-t8-5IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="1927"/>
+        </scene>
+        <!--My Property Card Manager List View Controller-->
+        <scene sceneID="Mqo-un-2TM">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyCardManagerListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lkj-Z2-d7Q" customClass="MyPropertyCardManagerListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cO4-Hq-Bcb"/>
+                        <viewControllerLayoutGuide type="bottom" id="LvA-I2-oit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U4P-wr-2bI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Vl-8M4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-477" y="1939"/>
+        </scene>
+        <!--My Property Get Cash View Controller-->
+        <scene sceneID="rgN-uF-SG4">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyGetCashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lbH-QS-A7o" customClass="MyPropertyGetCashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zOQ-Vj-eEe"/>
+                        <viewControllerLayoutGuide type="bottom" id="WJ7-ep-3fr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bnw-8O-Fqh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcT-s4-4Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="1159"/>
+        </scene>
+        <!--My Property Rebate Records View Controller-->
+        <scene sceneID="SyR-9g-G4o">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyRebateRecordsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k1s-h8-yzr" customClass="MyPropertyRebateRecordsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oxL-s4-3BI"/>
+                        <viewControllerLayoutGuide type="bottom" id="JHI-iK-cZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uFh-lE-gdq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvK-Ns-R8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="1159"/>
+        </scene>
+        <!--My Property Investment Record View Controller-->
+        <scene sceneID="3ff-XS-aRA">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertyInvestmentRecordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9HD-VC-AH7" customClass="MyPropertyInvestmentRecordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kjQ-W8-dlO"/>
+                        <viewControllerLayoutGuide type="bottom" id="F1S-PL-vDs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7D3-7P-qCM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsV-uk-pZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="1159"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
