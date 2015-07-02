@@ -73,6 +73,10 @@
 		E98A50561B44528600193817 /* EditPhoneNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50551B44528600193817 /* EditPhoneNewPwdViewController.m */; };
 		E98A50591B44604F00193817 /* UserCenterCardVerifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */; };
 		E98A50621B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50611B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m */; };
+		E98A50661B45174A00193817 /* MyPropertyInvestmentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50651B45174A00193817 /* MyPropertyInvestmentHeaderView.m */; };
+		E98A50691B45175B00193817 /* MyPropertyInvestmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50681B45175B00193817 /* MyPropertyInvestmentTableViewCell.m */; };
+		E98A506B1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98A506A1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib */; };
+		E98A506E1B45354300193817 /* RecommendActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A506D1B45354300193817 /* RecommendActivityTableViewCell.m */; };
 		E98F99881B3AEF9000E3E365 /* MoneyMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */; };
 		E98F998A1B3AEFD200E3E365 /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */; };
 		E98F998C1B3AF05A00E3E365 /* Recommendation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */; };
@@ -285,6 +289,13 @@
 		E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterCardVerifierViewController.m; sourceTree = "<group>"; };
 		E98A50601B45071100193817 /* MyPropertyRebateRecordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPropertyRebateRecordsTableViewCell.h; sourceTree = "<group>"; };
 		E98A50611B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPropertyRebateRecordsTableViewCell.m; sourceTree = "<group>"; };
+		E98A50641B45174A00193817 /* MyPropertyInvestmentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPropertyInvestmentHeaderView.h; sourceTree = "<group>"; };
+		E98A50651B45174A00193817 /* MyPropertyInvestmentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPropertyInvestmentHeaderView.m; sourceTree = "<group>"; };
+		E98A50671B45175B00193817 /* MyPropertyInvestmentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPropertyInvestmentTableViewCell.h; sourceTree = "<group>"; };
+		E98A50681B45175B00193817 /* MyPropertyInvestmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPropertyInvestmentTableViewCell.m; sourceTree = "<group>"; };
+		E98A506A1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPropertyInvestmentHeaderView.xib; sourceTree = "<group>"; };
+		E98A506C1B45354300193817 /* RecommendActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendActivityTableViewCell.h; sourceTree = "<group>"; };
+		E98A506D1B45354300193817 /* RecommendActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendActivityTableViewCell.m; sourceTree = "<group>"; };
 		E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MoneyMarket.storyboard; sourceTree = "<group>"; };
 		E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyProperty.storyboard; sourceTree = "<group>"; };
 		E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recommendation.storyboard; sourceTree = "<group>"; };
@@ -898,6 +909,18 @@
 			path = MyPropertyRebateRecordsCell;
 			sourceTree = "<group>";
 		};
+		E98A50631B45171A00193817 /* MyPropertyInvestmentRecordCell */ = {
+			isa = PBXGroup;
+			children = (
+				E98A50641B45174A00193817 /* MyPropertyInvestmentHeaderView.h */,
+				E98A50651B45174A00193817 /* MyPropertyInvestmentHeaderView.m */,
+				E98A50671B45175B00193817 /* MyPropertyInvestmentTableViewCell.h */,
+				E98A50681B45175B00193817 /* MyPropertyInvestmentTableViewCell.m */,
+				E98A506A1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib */,
+			);
+			path = MyPropertyInvestmentRecordCell;
+			sourceTree = "<group>";
+		};
 		E98F99A91B3AF42D00E3E365 /* MoneyMarket */ = {
 			isa = PBXGroup;
 			children = (
@@ -1077,6 +1100,8 @@
 			children = (
 				E98F9A201B3B035B00E3E365 /* RecommendationActivityViewController.h */,
 				E98F9A211B3B035B00E3E365 /* RecommendationActivityViewController.m */,
+				E98A506C1B45354300193817 /* RecommendActivityTableViewCell.h */,
+				E98A506D1B45354300193817 /* RecommendActivityTableViewCell.m */,
 			);
 			path = RecommendationActivity;
 			sourceTree = "<group>";
@@ -1124,6 +1149,7 @@
 		E98F9A2B1B3B08FD00E3E365 /* MyPropertyInvestmentRecord */ = {
 			isa = PBXGroup;
 			children = (
+				E98A50631B45171A00193817 /* MyPropertyInvestmentRecordCell */,
 				E98F9A301B3B094F00E3E365 /* MyPropertyInvestmentRecordViewController.h */,
 				E98F9A311B3B094F00E3E365 /* MyPropertyInvestmentRecordViewController.m */,
 			);
@@ -1333,6 +1359,7 @@
 				E98A50461B44257D00193817 /* UserInfoHeaderFooterView.xib in Resources */,
 				E98A50441B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib in Resources */,
 				E98F9A0C1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib in Resources */,
+				E98A506B1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib in Resources */,
 				E98A500D1B440F5000193817 /* UserCenter.storyboard in Resources */,
 				E98F9A611B3B18AD00E3E365 /* UMSLoginViewController.xib in Resources */,
 				E98F9A631B3B18AD00E3E365 /* UMSShareListController.xib in Resources */,
@@ -1406,6 +1433,7 @@
 				E98F99E01B3AF70D00E3E365 /* MoneyMarketProductFundViewController.m in Sources */,
 				E920C1881B37F6F600F19EC5 /* CommonFunc.m in Sources */,
 				E98F99F71B3AF8D200E3E365 /* MoneyMarketProducDetailViewController.m in Sources */,
+				E98A50661B45174A00193817 /* MyPropertyInvestmentHeaderView.m in Sources */,
 				E920C1E81B3809C300F19EC5 /* BaseNavigationViewController.m in Sources */,
 				E98F99C01B3AF42D00E3E365 /* MoreFadebackViewController.m in Sources */,
 				E98F9A151B3B008700E3E365 /* MoneyMarketProducSectionDetailOneCell.m in Sources */,
@@ -1425,6 +1453,7 @@
 				E920C1C81B37FCA800F19EC5 /* UIScrollView+MJRefresh.m in Sources */,
 				E98F9A321B3B094F00E3E365 /* MyPropertyInvestmentRecordViewController.m in Sources */,
 				E920C1EA1B3809C300F19EC5 /* BaseViewController.m in Sources */,
+				E98A50691B45175B00193817 /* MyPropertyInvestmentTableViewCell.m in Sources */,
 				E920C1811B37F6F600F19EC5 /* NaturtionItemModule.m in Sources */,
 				E920C1871B37F6F600F19EC5 /* CommonUser.m in Sources */,
 				E98F9A2F1B3B093E00E3E365 /* MyPropertyGetCashViewController.m in Sources */,
@@ -1437,6 +1466,7 @@
 				E920C20A1B38562400F19EC5 /* UserRegisterPwdViewController.m in Sources */,
 				E98F99BF1B3AF42D00E3E365 /* MoreCustomerServiceViewController.m in Sources */,
 				E920C1851B37F6F600F19EC5 /* CommonHUD.m in Sources */,
+				E98A506E1B45354300193817 /* RecommendActivityTableViewCell.m in Sources */,
 				E920C1CD1B37FCA800F19EC5 /* UIActionSheet+Blocks.m in Sources */,
 				E98A50431B44257D00193817 /* MoudleFourthUserInfoAvatarCell.m in Sources */,
 				E98A50531B44526F00193817 /* EditPhoneNewPhoneViewController.m in Sources */,

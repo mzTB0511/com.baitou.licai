@@ -7,8 +7,20 @@
 //
 
 #import "MyPropertyGetCashViewController.h"
+#import "NetworkHandle.h"
 
 @interface MyPropertyGetCashViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *img_VenderIco;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_CashTotal;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *btn_CashApply;
+
+
+
 
 @end
 
@@ -19,6 +31,21 @@
    
     [self setViewTitle:@"返利取现"];
 }
+
+
+//** 取现申请操作
+- (IBAction)action_CashApply:(id)sender {
+    
+    
+}
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

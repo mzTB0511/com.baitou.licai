@@ -7,6 +7,8 @@
 //
 
 #import "MyPropertyCardManagerOwnInfoViewController.h"
+#import "NetworkHandle.h"
+
 
 @interface MyPropertyCardManagerOwnInfoViewController ()
 
@@ -17,7 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    [self setViewTitle:@"银行卡信息"];
+    
+    [self customerRightNavigationBarItemWithTitle:@"提交" andImageRes:nil];
+    
 }
+
+//** 重写NavigationBar右键方法
+-(void)navigationRightItemEvent{
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
