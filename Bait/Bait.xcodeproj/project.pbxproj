@@ -72,6 +72,7 @@
 		E98A50531B44526F00193817 /* EditPhoneNewPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50521B44526F00193817 /* EditPhoneNewPhoneViewController.m */; };
 		E98A50561B44528600193817 /* EditPhoneNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50551B44528600193817 /* EditPhoneNewPwdViewController.m */; };
 		E98A50591B44604F00193817 /* UserCenterCardVerifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */; };
+		E98A50621B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50611B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m */; };
 		E98F99881B3AEF9000E3E365 /* MoneyMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */; };
 		E98F998A1B3AEFD200E3E365 /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */; };
 		E98F998C1B3AF05A00E3E365 /* Recommendation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */; };
@@ -282,6 +283,8 @@
 		E98A50551B44528600193817 /* EditPhoneNewPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhoneNewPwdViewController.m; sourceTree = "<group>"; };
 		E98A50571B44604F00193817 /* UserCenterCardVerifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterCardVerifierViewController.h; sourceTree = "<group>"; };
 		E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterCardVerifierViewController.m; sourceTree = "<group>"; };
+		E98A50601B45071100193817 /* MyPropertyRebateRecordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPropertyRebateRecordsTableViewCell.h; sourceTree = "<group>"; };
+		E98A50611B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPropertyRebateRecordsTableViewCell.m; sourceTree = "<group>"; };
 		E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MoneyMarket.storyboard; sourceTree = "<group>"; };
 		E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyProperty.storyboard; sourceTree = "<group>"; };
 		E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recommendation.storyboard; sourceTree = "<group>"; };
@@ -886,6 +889,15 @@
 			path = "UIViewController+ImagePicker";
 			sourceTree = "<group>";
 		};
+		E98A505F1B4506F700193817 /* MyPropertyRebateRecordsCell */ = {
+			isa = PBXGroup;
+			children = (
+				E98A50601B45071100193817 /* MyPropertyRebateRecordsTableViewCell.h */,
+				E98A50611B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m */,
+			);
+			path = MyPropertyRebateRecordsCell;
+			sourceTree = "<group>";
+		};
 		E98F99A91B3AF42D00E3E365 /* MoneyMarket */ = {
 			isa = PBXGroup;
 			children = (
@@ -1121,6 +1133,7 @@
 		E98F9A2C1B3B08FD00E3E365 /* MyPropertyRebateRecords */ = {
 			isa = PBXGroup;
 			children = (
+				E98A505F1B4506F700193817 /* MyPropertyRebateRecordsCell */,
 				E98F9A331B3B095E00E3E365 /* MyPropertyRebateRecordsViewController.h */,
 				E98F9A341B3B095E00E3E365 /* MyPropertyRebateRecordsViewController.m */,
 			);
@@ -1446,6 +1459,7 @@
 				E98F99FC1B3AFACF00E3E365 /* MoneyMarketProducSectionDetailOneViewController.m in Sources */,
 				E9DCA8B71B419FB7009EE6A3 /* IssueQuestionListCell.m in Sources */,
 				E920C1CC1B37FCA800F19EC5 /* NSObject+RuntimeMethods.m in Sources */,
+				E98A50621B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m in Sources */,
 				E98F9A061B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.m in Sources */,
 				E98F99BE1B3AF42D00E3E365 /* MoreAboutUsViewController.m in Sources */,
 				E98A50501B44524800193817 /* EditPhoneVeriferPwdViewController.m in Sources */,

@@ -7,8 +7,18 @@
 //
 
 #import "MyPropertyRebateRecordsViewController.h"
+#import "NetworkHandle.h"
+#import "MJRefresh.h"
+#import "MyPropertyRebateRecordsTableViewCell.h"
 
 @interface MyPropertyRebateRecordsViewController ()
+{
+    NSInteger pageIndex;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tbv_RebateList;
+
+@property (strong, nonatomic) NSArray *rebateList;
+
 
 @end
 
@@ -16,9 +26,70 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self setViewTitle:@"我的返利"];
+    
+    [self setupRefresh];
 }
+
+
+
+#pragma mark - 集成下拉上提
+
+- (void)setupRefresh
+{
+    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+    [self.tbv_RebateList addHeaderWithTarget:self action:@selector(headerRereshing)];
+    
+    // 2.上拉加载更多(进入刷新状态就会调用self的footerRereshing)
+    [self.tbv_RebateList addFooterWithTarget:self action:@selector(footerRereshing)];
+    
+    //    [self.view_newsView setFooterHidden:YES];
+    // [self beginRefresh];
+}
+
+#pragma mark 开始进入刷新状态
+- (void)headerRereshing
+{
+    //刷新代码
+    pageIndex = 1;
+    
+    
+}
+
+
+- (void)footerRereshing
+{
+    //加载代码
+    pageIndex ++;
+    
+    
+}
+
+
+#pragma mark -- UITabelViewDelegate
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  
+        return _rebateList.count;
+  
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MyPropertyRebateRecordsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyPropertyRebateRecordsTableViewCell.h" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
