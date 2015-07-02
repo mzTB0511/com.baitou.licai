@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserInfoHeaderFooterView : UIView
+@interface UserInfoHeaderFooterView : UITableViewHeaderFooterView
 
 
 @property (weak, nonatomic) IBOutlet UILabel *UserInfoHeaderTitle;

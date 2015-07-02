@@ -69,7 +69,7 @@
         return nil;
     }
     
-    UserInfoHeaderFooterView *view = [[[NSBundle mainBundle] loadNibNamed:@"UserInfoHeaderFooterView" owner:self options:nil] objectAtIndex:0];
+    UserInfoHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"UserInfoHeaderFooterView"];
     
     switch (section) {
         case 2:
@@ -194,6 +194,8 @@
     [self setViewTitle:@"账号设置"];
     
     mRegisterNib_TableView(_tbv_UserInfoTableView, NSStringFromClass([MoudleFourthUserInfoAvatarCell class]));
+    
+    mRegisterHeaderFooterNib_TableView(_tbv_UserInfoTableView, NSStringFromClass([UserInfoHeaderFooterView class]));
     
     self.arr_dataSource = @[@[@"userUrl"],
                             @[@{@"itemTitle":@"手机号码",@"itemValue":@"15618297762"},@{@"itemTitle":@"身份认证",@"itemValue":@"立即开户"}],
