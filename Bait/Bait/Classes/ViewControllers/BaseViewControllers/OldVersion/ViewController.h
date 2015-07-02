@@ -13,14 +13,11 @@
 #import "CommonFunc.h"
 #import "FormatData.h"
 //#import "DataModule.h"
-#import "MBProgressHUD.h"
 #import "UserInfo.h"
 #import "BaseViewController.h"
 
 @interface ViewController : BaseViewController
 
-
-@property (strong, nonatomic) MBProgressHUD *HUD;
 
 
 // 设置Navigation bar title
@@ -33,33 +30,6 @@
 -(CGFloat)getControlHWithTextView:(UITextView *)textView attributes:(NSDictionary *)attributes;
 
 
-
-//// 显示加载信息动画
-//-(void) showLoadingView;
-//
-//// 隐藏 加载动画
-//-(void) hideLoadingView;
-//
-//// 提醒消息
-//-(void)showHintMessage:(NSString*)mesage;
-//
-//
-//// 登陆提示消息
-//-(void)showLoginMessage:(NSString*)mesage;
-//
-//
-//// 登陆提示消息
-//-(void)hideViewMessage;
-
-
-// 显示加载信息动画
--(void) showLoadingView;
-// 隐藏 加载动画
--(void) hideLoadingView;
-
--(void)showHintMessage:(NSString*)mesage;
-
--(void)showMessage:(NSString *)string WithAnimation:(BOOL)flag complet:(void (^)(MBProgressHUD *hud)) complet;
 
 //** 搜索默认显示结果
 -(void)setEmptyHintMessage:(NSString *)message;

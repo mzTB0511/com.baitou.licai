@@ -1,23 +1,24 @@
 //
-//  MyPropertyRebateRecordsViewController.m
+//  EditPhoneVeriferPwdViewController.m
 //  Bait
 //
-//  Created by 刘轩 on 15/6/24.
+//  Created by 刘轩 on 15/7/2.
 //  Copyright (c) 2015年 刘轩. All rights reserved.
 //
 
-#import "MyPropertyRebateRecordsViewController.h"
+#import "EditPhoneVeriferPwdViewController.h"
 
-@interface MyPropertyRebateRecordsViewController ()
+@interface EditPhoneVeriferPwdViewController ()
 
 @end
 
-@implementation MyPropertyRebateRecordsViewController
+@implementation EditPhoneVeriferPwdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setViewTitle:@"我的返利"];
+    // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self setViewTitle:@"验证身份"];
 }
 
 - (void)didReceiveMemoryWarning {

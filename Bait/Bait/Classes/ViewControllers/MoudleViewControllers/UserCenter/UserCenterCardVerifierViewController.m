@@ -1,23 +1,25 @@
 //
-//  MyPropertyRebateRecordsViewController.m
+//  UserCenterCardVerifierViewController.m
 //  Bait
 //
-//  Created by 刘轩 on 15/6/24.
+//  Created by 刘轩 on 15/7/2.
 //  Copyright (c) 2015年 刘轩. All rights reserved.
 //
 
-#import "MyPropertyRebateRecordsViewController.h"
+#import "UserCenterCardVerifierViewController.h"
 
-@interface MyPropertyRebateRecordsViewController ()
+@interface UserCenterCardVerifierViewController ()
 
 @end
 
-@implementation MyPropertyRebateRecordsViewController
+@implementation UserCenterCardVerifierViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setViewTitle:@"我的返利"];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self setViewTitle:@"身份认证"];
 }
 
 - (void)didReceiveMemoryWarning {

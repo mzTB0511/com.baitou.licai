@@ -47,6 +47,9 @@
 #define sbStoryBoard_Moudle_MoneyMarket         @"MoneyMarket"
 #define sbStoryBoard_Moudle_MyProperty          @"MyProperty"
 #define sbStoryBoard_Moudle_Recomendation       @"Recommendation"
+#define sbStoryBoard_Moudle_UserCenter       @"UserCenter"
+
+
 
 //用户登陆注册
 #define sbStoryBoard_Moudle_LoginRegister       @"UserLoginRegister"

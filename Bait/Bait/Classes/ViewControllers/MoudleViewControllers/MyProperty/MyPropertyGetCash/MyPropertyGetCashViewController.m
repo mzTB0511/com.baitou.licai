@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    [self setViewTitle:@"返利取现"];
 }
 
 - (void)didReceiveMemoryWarning {

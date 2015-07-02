@@ -11,7 +11,7 @@
 #import "MoreCustomerServiceViewController.h"
 #import "MoreFadebackViewController.h"
 #import "MoreNormalIssueViewController.h"
-
+#import "UserCenterUserInfoViewController.h"
 
 
 @interface MoreViewController ()
@@ -54,6 +54,13 @@
     
     [self setViewTitle:@"更多"];
 }
+
+
+- (IBAction)action_Login:(id)sender {
+    
+      pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, UserCenterUserInfoViewController, nil);
+}
+
 
 
 

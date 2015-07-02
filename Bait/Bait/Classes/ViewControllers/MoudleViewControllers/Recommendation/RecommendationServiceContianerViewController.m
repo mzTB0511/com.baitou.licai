@@ -1,43 +1,35 @@
 //
-//  MoneyMarketContainerViewController.m
+//  RecommendationServiceContianerViewController.m
 //  Bait
 //
 //  Created by 刘轩 on 15/6/30.
 //  Copyright (c) 2015年 刘轩. All rights reserved.
 //
 
-#import "MoneyMarketContainerViewController.h"
-#import "MoneyMarketProductPTPViewController.h"
-#import "MoneyMarketProductFundViewController.h"
-#import "MoneyMarketFavouriteViewController.h"
+#import "RecommendationServiceContianerViewController.h"
+#import "RecommendationActivityViewController.h"
+#import "RecommendationMessageViewController.h"
 
 
-@interface MoneyMarketContainerViewController ()
+@interface RecommendationServiceContianerViewController ()
 
 @property (strong, nonatomic) NSString *currentSegueIdentifier;
-@property (strong, nonatomic) MoneyMarketProductPTPViewController *firstViewController;
-@property (strong, nonatomic) MoneyMarketProductFundViewController *secondViewController;
-@property (strong, nonatomic) MoneyMarketFavouriteViewController *thirdViewController;
+@property (strong, nonatomic) RecommendationActivityViewController *firstViewController;
+@property (strong, nonatomic) RecommendationMessageViewController *secondViewController;
 @property (strong, nonatomic) UIViewController *curViewController;
 @property (assign, nonatomic) BOOL transitionInProgress;
-
 @end
 
-@implementation MoneyMarketContainerViewController
+@implementation RecommendationServiceContianerViewController
 
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
+   
     self.transitionInProgress = NO;
-    self.currentSegueIdentifier = SegueIdentifierFirst;
-    [self performSegueWithIdentifier:SegueIdentifierFirst sender:nil];
-    [self performSegueWithIdentifier:SegueIdentifierSecond  sender:nil];
-    [self performSegueWithIdentifier:SegueIdentifierThird sender:nil];
-    
+    self.currentSegueIdentifier = SegueIdentifierActivity;
+    [self performSegueWithIdentifier:SegueIdentifierMessage sender:nil];
+    [self performSegueWithIdentifier:SegueIdentifierActivity  sender:nil];
 }
-
 
 
 
@@ -48,20 +40,17 @@
     // Instead of creating new VCs on each seque we want to hang on to existing
     // instances if we have it. Remove the second condition of the following
     // two if statements to get new VC instances instead.
-    if ([segue.identifier isEqualToString:SegueIdentifierFirst]) {
+    if ([segue.identifier isEqualToString:SegueIdentifierActivity]) {
         self.firstViewController = segue.destinationViewController;
     }
     
-    if ([segue.identifier isEqualToString:SegueIdentifierSecond]) {
+    if ([segue.identifier isEqualToString:SegueIdentifierMessage]) {
         self.secondViewController = segue.destinationViewController;
     }
     
-    if ([segue.identifier isEqualToString:SegueIdentifierThird]) {
-        self.thirdViewController = segue.destinationViewController;
-    }
     
     // If we're going to the first view controller.
-    if ([segue.identifier isEqualToString:SegueIdentifierFirst]) {
+    if ([segue.identifier isEqualToString:SegueIdentifierActivity]) {
         // If this is not the first time we're loading this.
         
         // If this is the very first time we're loading this we need to do
@@ -108,23 +97,19 @@
     self.transitionInProgress = YES;
     self.currentSegueIdentifier = indntifier;
     
-    if (([self.currentSegueIdentifier isEqualToString:SegueIdentifierFirst]) && self.firstViewController) {
+    if (([self.currentSegueIdentifier isEqualToString:SegueIdentifierActivity]) && self.firstViewController) {
         [self swapFromViewController:_curViewController toViewController:self.firstViewController];
         return;
     }
     
-    if (([self.currentSegueIdentifier isEqualToString:SegueIdentifierSecond]) && self.secondViewController) {
+    if (([self.currentSegueIdentifier isEqualToString:SegueIdentifierMessage]) && self.secondViewController) {
         [self swapFromViewController:_curViewController toViewController:self.secondViewController];
-        return;
-    }
-    
-    if (([self.currentSegueIdentifier isEqualToString:SegueIdentifierThird]) && self.thirdViewController) {
-        [self swapFromViewController:_curViewController toViewController:self.thirdViewController];
         return;
     }
     
     
 }
+
 
 
 - (void)didReceiveMemoryWarning {

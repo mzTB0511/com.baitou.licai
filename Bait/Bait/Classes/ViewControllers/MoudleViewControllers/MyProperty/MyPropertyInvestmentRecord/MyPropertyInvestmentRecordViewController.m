@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setViewTitle:@"投资记录"];
 }
 
 - (void)didReceiveMemoryWarning {

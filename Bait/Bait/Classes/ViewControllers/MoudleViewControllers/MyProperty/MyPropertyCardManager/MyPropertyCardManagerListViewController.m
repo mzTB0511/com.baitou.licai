@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setViewTitle:@"银行卡管理"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

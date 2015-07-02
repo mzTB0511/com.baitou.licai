@@ -11,6 +11,8 @@
 		E9156DAE1B42939300F24616 /* MoneyMarketContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DAD1B42939300F24616 /* MoneyMarketContainerViewController.m */; };
 		E9156DB11B42953000F24616 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DB01B42953000F24616 /* EmptySegue.m */; };
 		E9156DB41B42995100F24616 /* MoneyMarketNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DB31B42995100F24616 /* MoneyMarketNavigationViewController.m */; };
+		E9156DFD1B42EF3500F24616 /* RecommendationServiceContianerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DFC1B42EF3500F24616 /* RecommendationServiceContianerViewController.m */; };
+		E9156E001B42EFF000F24616 /* RecommendationServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DFF1B42EFF000F24616 /* RecommendationServiceViewController.m */; };
 		E920C0CE1B37F13000F19EC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C0CD1B37F13000F19EC5 /* main.m */; };
 		E920C0D11B37F13000F19EC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C0D01B37F13000F19EC5 /* AppDelegate.m */; };
 		E920C0EB1B37F13000F19EC5 /* BaitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C0EA1B37F13000F19EC5 /* BaitTests.m */; };
@@ -59,6 +61,17 @@
 		E920C20D1B3856A400F19EC5 /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C20C1B3856A400F19EC5 /* UserLoginViewController.m */; };
 		E920C20F1B385A6D00F19EC5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E920C20E1B385A6D00F19EC5 /* More.storyboard */; };
 		E920C2121B38692400F19EC5 /* MoudleOthersWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */; };
+		E98A500D1B440F5000193817 /* UserCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98A500C1B440F5000193817 /* UserCenter.storyboard */; };
+		E98A50421B44257D00193817 /* UserCenterUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A503A1B44257D00193817 /* UserCenterUserInfoViewController.m */; };
+		E98A50431B44257D00193817 /* MoudleFourthUserInfoAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A503D1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.m */; };
+		E98A50441B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98A503E1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib */; };
+		E98A50451B44257D00193817 /* UserInfoHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50401B44257D00193817 /* UserInfoHeaderFooterView.m */; };
+		E98A50461B44257D00193817 /* UserInfoHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98A50411B44257D00193817 /* UserInfoHeaderFooterView.xib */; };
+		E98A504D1B44504A00193817 /* UIViewController+ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A504C1B44504A00193817 /* UIViewController+ImagePicker.m */; };
+		E98A50501B44524800193817 /* EditPhoneVeriferPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A504F1B44524800193817 /* EditPhoneVeriferPwdViewController.m */; };
+		E98A50531B44526F00193817 /* EditPhoneNewPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50521B44526F00193817 /* EditPhoneNewPhoneViewController.m */; };
+		E98A50561B44528600193817 /* EditPhoneNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50551B44528600193817 /* EditPhoneNewPwdViewController.m */; };
+		E98A50591B44604F00193817 /* UserCenterCardVerifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */; };
 		E98F99881B3AEF9000E3E365 /* MoneyMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */; };
 		E98F998A1B3AEFD200E3E365 /* MyProperty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */; };
 		E98F998C1B3AF05A00E3E365 /* Recommendation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */; };
@@ -149,6 +162,10 @@
 		E9156DB01B42953000F24616 /* EmptySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptySegue.m; sourceTree = "<group>"; };
 		E9156DB21B42995100F24616 /* MoneyMarketNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketNavigationViewController.h; sourceTree = "<group>"; };
 		E9156DB31B42995100F24616 /* MoneyMarketNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketNavigationViewController.m; sourceTree = "<group>"; };
+		E9156DFB1B42EF3500F24616 /* RecommendationServiceContianerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendationServiceContianerViewController.h; sourceTree = "<group>"; };
+		E9156DFC1B42EF3500F24616 /* RecommendationServiceContianerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendationServiceContianerViewController.m; sourceTree = "<group>"; };
+		E9156DFE1B42EFF000F24616 /* RecommendationServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendationServiceViewController.h; sourceTree = "<group>"; };
+		E9156DFF1B42EFF000F24616 /* RecommendationServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendationServiceViewController.m; sourceTree = "<group>"; };
 		E920C0C81B37F13000F19EC5 /* Bait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E920C0CC1B37F13000F19EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E920C0CD1B37F13000F19EC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -246,6 +263,25 @@
 		E920C20E1B385A6D00F19EC5 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		E920C2101B38692400F19EC5 /* MoudleOthersWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoudleOthersWebViewController.h; sourceTree = "<group>"; };
 		E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoudleOthersWebViewController.m; sourceTree = "<group>"; };
+		E98A500C1B440F5000193817 /* UserCenter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserCenter.storyboard; sourceTree = "<group>"; };
+		E98A50391B44257D00193817 /* UserCenterUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterUserInfoViewController.h; sourceTree = "<group>"; };
+		E98A503A1B44257D00193817 /* UserCenterUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterUserInfoViewController.m; sourceTree = "<group>"; };
+		E98A503C1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoudleFourthUserInfoAvatarCell.h; sourceTree = "<group>"; };
+		E98A503D1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoudleFourthUserInfoAvatarCell.m; sourceTree = "<group>"; };
+		E98A503E1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoudleFourthUserInfoAvatarCell.xib; sourceTree = "<group>"; };
+		E98A503F1B44257D00193817 /* UserInfoHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHeaderFooterView.h; sourceTree = "<group>"; };
+		E98A50401B44257D00193817 /* UserInfoHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHeaderFooterView.m; sourceTree = "<group>"; };
+		E98A50411B44257D00193817 /* UserInfoHeaderFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoHeaderFooterView.xib; sourceTree = "<group>"; };
+		E98A504B1B44504A00193817 /* UIViewController+ImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImagePicker.h"; sourceTree = "<group>"; };
+		E98A504C1B44504A00193817 /* UIViewController+ImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImagePicker.m"; sourceTree = "<group>"; };
+		E98A504E1B44524800193817 /* EditPhoneVeriferPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhoneVeriferPwdViewController.h; sourceTree = "<group>"; };
+		E98A504F1B44524800193817 /* EditPhoneVeriferPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhoneVeriferPwdViewController.m; sourceTree = "<group>"; };
+		E98A50511B44526F00193817 /* EditPhoneNewPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhoneNewPhoneViewController.h; sourceTree = "<group>"; };
+		E98A50521B44526F00193817 /* EditPhoneNewPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhoneNewPhoneViewController.m; sourceTree = "<group>"; };
+		E98A50541B44528600193817 /* EditPhoneNewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhoneNewPwdViewController.h; sourceTree = "<group>"; };
+		E98A50551B44528600193817 /* EditPhoneNewPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhoneNewPwdViewController.m; sourceTree = "<group>"; };
+		E98A50571B44604F00193817 /* UserCenterCardVerifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterCardVerifierViewController.h; sourceTree = "<group>"; };
+		E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterCardVerifierViewController.m; sourceTree = "<group>"; };
 		E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MoneyMarket.storyboard; sourceTree = "<group>"; };
 		E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyProperty.storyboard; sourceTree = "<group>"; };
 		E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recommendation.storyboard; sourceTree = "<group>"; };
@@ -506,6 +542,7 @@
 		E920C0FD1B37F6C000F19EC5 /* 3rdPaty */ = {
 			isa = PBXGroup;
 			children = (
+				E98A504A1B44504A00193817 /* UIViewController+ImagePicker */,
 				E9DCA8B91B41A20C009EE6A3 /* PLaceholdeTextView */,
 				E98F9A651B3B18CB00E3E365 /* UMSocial_Sdk_Extra_Frameworks */,
 				E98F9A3F1B3B18AD00E3E365 /* UMSocial_Sdk_4.2.3 */,
@@ -540,6 +577,7 @@
 				E98F99871B3AEF9000E3E365 /* MoneyMarket.storyboard */,
 				E98F99891B3AEFD200E3E365 /* MyProperty.storyboard */,
 				E98F998B1B3AF05A00E3E365 /* Recommendation.storyboard */,
+				E98A500C1B440F5000193817 /* UserCenter.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -763,6 +801,7 @@
 		E920C1E31B3809C300F19EC5 /* MoudleViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E98A50381B44257D00193817 /* UserCenter */,
 				E98F9A171B3B02F200E3E365 /* Recommendation */,
 				E98F99A91B3AF42D00E3E365 /* MoneyMarket */,
 				E98F99B71B3AF42D00E3E365 /* MyProperty */,
@@ -805,6 +844,46 @@
 				E920C1F41B380E8400F19EC5 /* OpenUDID.m */,
 			);
 			path = OpenUDID;
+			sourceTree = "<group>";
+		};
+		E98A50381B44257D00193817 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				E98A503B1B44257D00193817 /* UserInfoTableViewCell */,
+				E98A50391B44257D00193817 /* UserCenterUserInfoViewController.h */,
+				E98A503A1B44257D00193817 /* UserCenterUserInfoViewController.m */,
+				E98A504E1B44524800193817 /* EditPhoneVeriferPwdViewController.h */,
+				E98A504F1B44524800193817 /* EditPhoneVeriferPwdViewController.m */,
+				E98A50511B44526F00193817 /* EditPhoneNewPhoneViewController.h */,
+				E98A50521B44526F00193817 /* EditPhoneNewPhoneViewController.m */,
+				E98A50541B44528600193817 /* EditPhoneNewPwdViewController.h */,
+				E98A50551B44528600193817 /* EditPhoneNewPwdViewController.m */,
+				E98A50571B44604F00193817 /* UserCenterCardVerifierViewController.h */,
+				E98A50581B44604F00193817 /* UserCenterCardVerifierViewController.m */,
+			);
+			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		E98A503B1B44257D00193817 /* UserInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E98A503C1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.h */,
+				E98A503D1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.m */,
+				E98A503E1B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib */,
+				E98A503F1B44257D00193817 /* UserInfoHeaderFooterView.h */,
+				E98A50401B44257D00193817 /* UserInfoHeaderFooterView.m */,
+				E98A50411B44257D00193817 /* UserInfoHeaderFooterView.xib */,
+			);
+			path = UserInfoTableViewCell;
+			sourceTree = "<group>";
+		};
+		E98A504A1B44504A00193817 /* UIViewController+ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E98A504B1B44504A00193817 /* UIViewController+ImagePicker.h */,
+				E98A504C1B44504A00193817 /* UIViewController+ImagePicker.m */,
+			);
+			path = "UIViewController+ImagePicker";
 			sourceTree = "<group>";
 		};
 		E98F99A91B3AF42D00E3E365 /* MoneyMarket */ = {
@@ -973,6 +1052,10 @@
 				E98F9A1F1B3B033A00E3E365 /* RecommendationMessage */,
 				E98F9A1A1B3B02F200E3E365 /* RecommendationViewController.h */,
 				E98F9A1B1B3B02F200E3E365 /* RecommendationViewController.m */,
+				E9156DFE1B42EFF000F24616 /* RecommendationServiceViewController.h */,
+				E9156DFF1B42EFF000F24616 /* RecommendationServiceViewController.m */,
+				E9156DFB1B42EF3500F24616 /* RecommendationServiceContianerViewController.h */,
+				E9156DFC1B42EF3500F24616 /* RecommendationServiceContianerViewController.m */,
 			);
 			path = Recommendation;
 			sourceTree = "<group>";
@@ -1234,7 +1317,10 @@
 				E98F9A731B3B18CB00E3E365 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				E98F9A5D1B3B18AD00E3E365 /* UMSCommentInputController.xib in Resources */,
 				E98F99F21B3AF7A300E3E365 /* MoneyMarketProductPTPTableViewCell.xib in Resources */,
+				E98A50461B44257D00193817 /* UserInfoHeaderFooterView.xib in Resources */,
+				E98A50441B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib in Resources */,
 				E98F9A0C1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib in Resources */,
+				E98A500D1B440F5000193817 /* UserCenter.storyboard in Resources */,
 				E98F9A611B3B18AD00E3E365 /* UMSLoginViewController.xib in Resources */,
 				E98F9A631B3B18AD00E3E365 /* UMSShareListController.xib in Resources */,
 				E98F998C1B3AF05A00E3E365 /* Recommendation.storyboard in Resources */,
@@ -1301,6 +1387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E920C20D1B3856A400F19EC5 /* UserLoginViewController.m in Sources */,
+				E98A504D1B44504A00193817 /* UIViewController+ImagePicker.m in Sources */,
 				E98F99BD1B3AF42D00E3E365 /* MoneyMarketViewController.m in Sources */,
 				E920C1EC1B3809C300F19EC5 /* ViewController.m in Sources */,
 				E98F99E01B3AF70D00E3E365 /* MoneyMarketProductFundViewController.m in Sources */,
@@ -1315,8 +1402,11 @@
 				E9156DAE1B42939300F24616 /* MoneyMarketContainerViewController.m in Sources */,
 				E98F9A1C1B3B02F200E3E365 /* RecommendationViewController.m in Sources */,
 				E920C1C71B37FCA800F19EC5 /* UIScrollView+Extension.m in Sources */,
+				E98A50561B44528600193817 /* EditPhoneNewPwdViewController.m in Sources */,
 				E920C1C31B37FCA800F19EC5 /* MJRefreshBaseView.m in Sources */,
 				E920C1CF1B37FCA800F19EC5 /* UIButton+Verify.m in Sources */,
+				E98A50451B44257D00193817 /* UserInfoHeaderFooterView.m in Sources */,
+				E9156DFD1B42EF3500F24616 /* RecommendationServiceContianerViewController.m in Sources */,
 				E920C17F1B37F6F600F19EC5 /* BaseModel.m in Sources */,
 				E98F99C21B3AF42D00E3E365 /* MoreViewController.m in Sources */,
 				E920C1C81B37FCA800F19EC5 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1335,6 +1425,8 @@
 				E98F99BF1B3AF42D00E3E365 /* MoreCustomerServiceViewController.m in Sources */,
 				E920C1851B37F6F600F19EC5 /* CommonHUD.m in Sources */,
 				E920C1CD1B37FCA800F19EC5 /* UIActionSheet+Blocks.m in Sources */,
+				E98A50431B44257D00193817 /* MoudleFourthUserInfoAvatarCell.m in Sources */,
+				E98A50531B44526F00193817 /* EditPhoneNewPhoneViewController.m in Sources */,
 				E920C1CA1B37FCA800F19EC5 /* MLBlackTransition.m in Sources */,
 				E98F9A3E1B3B0A2200E3E365 /* MyPropertyCardManagerCardInfoViewController.m in Sources */,
 				E98F9A0F1B3AFFF500E3E365 /* MoneyMarketProducSectionDetailSection.m in Sources */,
@@ -1345,6 +1437,8 @@
 				E920C2051B38534E00F19EC5 /* UserRegisterViewController.m in Sources */,
 				E920C1841B37F6F600F19EC5 /* SignTool.m in Sources */,
 				E920C1F51B380E8400F19EC5 /* OpenUDID.m in Sources */,
+				E98A50591B44604F00193817 /* UserCenterCardVerifierViewController.m in Sources */,
+				E9156E001B42EFF000F24616 /* RecommendationServiceViewController.m in Sources */,
 				E920C2121B38692400F19EC5 /* MoudleOthersWebViewController.m in Sources */,
 				E98F9A221B3B035B00E3E365 /* RecommendationActivityViewController.m in Sources */,
 				E920C18B1B37F6F600F19EC5 /* UMTrack.m in Sources */,
@@ -1354,6 +1448,7 @@
 				E920C1CC1B37FCA800F19EC5 /* NSObject+RuntimeMethods.m in Sources */,
 				E98F9A061B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.m in Sources */,
 				E98F99BE1B3AF42D00E3E365 /* MoreAboutUsViewController.m in Sources */,
+				E98A50501B44524800193817 /* EditPhoneVeriferPwdViewController.m in Sources */,
 				E98F99F11B3AF7A300E3E365 /* MoneyMarketProductPTPTableViewCell.m in Sources */,
 				E920C18A1B37F6F600F19EC5 /* UIImage+Tint.m in Sources */,
 				E9DCA8BF1B41A219009EE6A3 /* IssueModule.m in Sources */,
@@ -1365,6 +1460,7 @@
 				E920C1E91B3809C300F19EC5 /* BaseTableViewCell.m in Sources */,
 				E98F99C11B3AF42D00E3E365 /* MoreNormalIssueViewController.m in Sources */,
 				E920C1821B37F6F600F19EC5 /* UserInfo.m in Sources */,
+				E98A50421B44257D00193817 /* UserCenterUserInfoViewController.m in Sources */,
 				E920C1C41B37FCA800F19EC5 /* MJRefreshConst.m in Sources */,
 				E920C1EB1B3809C300F19EC5 /* RootViewController.m in Sources */,
 				E98F9A251B3B038600E3E365 /* RecommendationActivityDetailViewController.m in Sources */,

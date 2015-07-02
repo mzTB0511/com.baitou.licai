@@ -1,23 +1,24 @@
 //
-//  MyPropertyRebateRecordsViewController.m
+//  EidtPhoneNewPwdViewController.m
 //  Bait
 //
-//  Created by 刘轩 on 15/6/24.
+//  Created by 刘轩 on 15/7/2.
 //  Copyright (c) 2015年 刘轩. All rights reserved.
 //
 
-#import "MyPropertyRebateRecordsViewController.h"
+#import "EditPhoneNewPwdViewController.h"
 
-@interface MyPropertyRebateRecordsViewController ()
+@interface EditPhoneNewPwdViewController ()
 
 @end
 
-@implementation MyPropertyRebateRecordsViewController
+@implementation EditPhoneNewPwdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setViewTitle:@"我的返利"];
+    // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self setViewTitle:@"更换手机号"];
 }
 
 - (void)didReceiveMemoryWarning {

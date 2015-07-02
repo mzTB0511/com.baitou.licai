@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "HLoadingView.h"
 
-@interface ViewController ()<MBProgressHUDDelegate>
+@interface ViewController ()
 
 @end
 
@@ -28,13 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:getColorWithRGBA(242, 242, 242, 1)];
+    [self.view setBackgroundColor:getColorWithRGBA(239, 239, 244, 1)];
     
-
-    // 初始化 指示器
-    _HUD = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:_HUD];
-    _HUD.delegate = self;
     
     
 //       [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
@@ -97,125 +92,6 @@
     }
     
     return textViewH;
-}
-
-//
-//// 加载 状态状态栏显示
-//// 显示加载信息动画
-//-(void) showLoadingView
-//{
-//    [HLoadingView showDefaultLoadingView];
-//}
-//
-//// 隐藏 加载动画
-//-(void) hideLoadingView
-//{
-//    [HLoadingView hideWithAnimated:YES];
-//}
-//
-//// 提醒消息
-//-(void)showHintMessage:(NSString*)mesage
-//{
-//    [HLoadingView showInView:self.view image:nil info:mesage animated:YES modeled:YES autoHide:YES];
-//}
-//
-//// 登陆提示消息
-//-(void)showLoginMessage:(NSString*)mesage
-//{
-//    [HLoadingView showInView:self.view image:nil info:mesage animated:YES modeled:YES autoHide:NO];
-//}
-//
-//
-//// 隐藏提示消息
-//-(void)hideViewMessage
-//{
-//    [HLoadingView hideWithAnimated:YES];
-//}
-
-
-
-// 加载 状态状态栏显示
-// 显示加载信息动画
--(void) showLoadingView
-{
-    //[ProgressHUD show:@"加载中.."];
-    if (!_HUD) {
-        
-        _HUD = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:_HUD];
-        
-        _HUD.delegate = self;
-    }
-    
-    _HUD.labelText = @"加载中..";
-    [_HUD show:YES];
-}
-
-
-// 隐藏 加载动画
--(void) hideLoadingView
-{
-    //[ProgressHUD dismiss];
-    [_HUD hide:YES];
-}
-
-// 提醒消息
--(void)showHintMessage:(NSString*)mesage
-{
-    //[ProgressHUD show:mesage];
-    if (!_HUD) {
-        
-        _HUD = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:_HUD];
-        //_HUD.dimBackground = YES;
-        _HUD.delegate = self;
-    }
-    [self.view bringSubviewToFront:_HUD];
-    _HUD.labelText = mesage;
-    [_HUD show:YES];
-}
-
-
--(void)showMessage:(NSString *)string WithAnimation:(BOOL)flag complet:(void (^)(MBProgressHUD *hud)) complet{
-    
-#if NS_BLOCKS_AVAILABLE
-    
-    if (!_HUD) {
-        
-        _HUD = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:_HUD];
-        
-        _HUD.delegate = self;
-    }
-    [self.view bringSubviewToFront:_HUD];
-    _HUD.labelText = string;
-    
-    [_HUD showAnimated:YES whileExecutingBlock:^{
-        [self myTask];
-    } completionBlock:^{
-        //	[_HUD removeFromSuperview];
-        if (complet){
-            complet(_HUD);
-        }
-    }];
-#endif
-}
-
-
-
-- (void)myTask {
-    // Do something usefull in here instead of sleeping ...
-    sleep(1);
-}
-
-
-#pragma mark -
-#pragma mark MBProgressHUDDelegate methods
-
-- (void)hudWasHidden:(MBProgressHUD *)hud {
-    // Remove HUD from screen when the HUD was hidded
-    [_HUD removeFromSuperview];
-    _HUD = nil;
 }
 
 

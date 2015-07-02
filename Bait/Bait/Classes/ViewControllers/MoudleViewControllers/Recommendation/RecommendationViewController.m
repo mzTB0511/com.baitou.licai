@@ -7,6 +7,8 @@
 //
 
 #import "RecommendationViewController.h"
+#import "RecommendationServiceViewController.h"
+
 
 @interface RecommendationViewController ()
 
@@ -24,7 +26,7 @@
 
 
 -(void)navigationRightItemEvent{
-    
+    pushViewControllerWith(sbStoryBoard_Moudle_Recomendation, RecommendationServiceViewController, nil);
     
 }
 

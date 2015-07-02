@@ -7,6 +7,11 @@
 //
 
 #import "MyPropertyViewController.h"
+#import "MyPropertyRebateRecordsViewController.h"
+#import "MyPropertyGetCashViewController.h"
+#import "MyPropertyInvestmentRecordViewController.h"
+#import "MyPropertyCardManagerListViewController.h"
+
 
 @interface MyPropertyViewController ()
 
@@ -19,6 +24,33 @@
     
     [self setViewTitle:@"我的百投"];
 }
+
+
+//**我的返利
+- (IBAction)action_MyRebase:(id)sender {
+    pushViewControllerWith(sbStoryBoard_Moudle_MyProperty, MyPropertyRebateRecordsViewController, nil);
+}
+
+
+//**返利取现
+- (IBAction)action_PropertyCash:(id)sender {
+    pushViewControllerWith(sbStoryBoard_Moudle_MyProperty, MyPropertyGetCashViewController, nil);
+}
+
+
+//**投资记录
+- (IBAction)action_PropertyRecord:(id)sender {
+    pushViewControllerWith(sbStoryBoard_Moudle_MyProperty, MyPropertyInvestmentRecordViewController, nil);
+}
+
+
+//**银行卡管理
+- (IBAction)action_CardManager:(id)sender {
+    pushViewControllerWith(sbStoryBoard_Moudle_MyProperty, MyPropertyCardManagerListViewController, nil);
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

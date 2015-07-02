@@ -17,7 +17,18 @@
                     <view key="view" contentMode="scaleToFill" id="b6s-GX-JG1">
                         <rect key="frame" x="0.0" y="44" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ai3-5N-bAj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ai3-5N-bAj" secondAttribute="trailing" constant="-16" id="1hi-kp-sCq"/>
+                            <constraint firstItem="Ai3-5N-bAj" firstAttribute="top" secondItem="qb3-CZ-kUu" secondAttribute="bottom" id="5ue-zw-OEZ"/>
+                            <constraint firstItem="Ai3-5N-bAj" firstAttribute="leading" secondItem="b6s-GX-JG1" secondAttribute="leadingMargin" constant="-16" id="HDW-hU-McA"/>
+                            <constraint firstItem="KgC-0B-YoF" firstAttribute="top" secondItem="Ai3-5N-bAj" secondAttribute="bottom" id="fnC-Zr-1a7"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -56,7 +67,18 @@
                     <view key="view" contentMode="scaleToFill" id="XYP-Iz-rMB">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8Pi-96-nFq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Pi-96-nFq" secondAttribute="trailing" constant="-16" id="W64-LU-weu"/>
+                            <constraint firstItem="8Pi-96-nFq" firstAttribute="top" secondItem="yPa-mH-3aD" secondAttribute="bottom" id="bYQ-Rf-fRP"/>
+                            <constraint firstItem="jdC-3L-Pyp" firstAttribute="top" secondItem="8Pi-96-nFq" secondAttribute="bottom" id="f0v-8w-OOt"/>
+                            <constraint firstItem="8Pi-96-nFq" firstAttribute="leading" secondItem="XYP-Iz-rMB" secondAttribute="leadingMargin" constant="-16" id="vWr-mi-tUu"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -77,46 +99,47 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86b-ro-Sgv">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-qa-hu8">
+                                <rect key="frame" x="0.0" y="51" width="320" height="453"/>
+                                <connections>
+                                    <segue destination="ZPI-l5-Bph" kind="embed" identifier="embedContainer" id="7ic-vf-TsM"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RO4-8H-EX0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OzL-6t-Lcn">
-                                        <rect key="frame" x="44" y="10" width="233" height="29"/>
+                                        <rect key="frame" x="44" y="11" width="233" height="29"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                            <segment title="third"/>
+                                            <segment title="P2P网贷"/>
+                                            <segment title="基金产品"/>
+                                            <segment title="我的订阅"/>
                                         </segments>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="swapButtonPressed:" destination="po2-PL-f73" eventType="valueChanged" id="ucx-Si-5ZW"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="OzL-6t-Lcn" secondAttribute="trailing" constant="43" id="Ebc-cv-PYu"/>
-                                    <constraint firstAttribute="height" constant="48" id="G70-h0-u33"/>
-                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="leading" secondItem="86b-ro-Sgv" secondAttribute="leading" constant="44" id="PQR-yN-tC4"/>
-                                    <constraint firstAttribute="bottom" secondItem="OzL-6t-Lcn" secondAttribute="bottom" constant="10" id="PZm-5W-0vB"/>
-                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="top" secondItem="86b-ro-Sgv" secondAttribute="top" constant="10" id="qXr-cg-RBF"/>
+                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="top" secondItem="RO4-8H-EX0" secondAttribute="top" constant="11" id="G9I-8G-BZ2"/>
+                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="leading" secondItem="RO4-8H-EX0" secondAttribute="leading" constant="44" id="H32-3h-FPy"/>
+                                    <constraint firstAttribute="trailing" secondItem="OzL-6t-Lcn" secondAttribute="trailing" constant="43" id="RqX-j2-s9c"/>
+                                    <constraint firstAttribute="bottom" secondItem="OzL-6t-Lcn" secondAttribute="bottom" constant="11" id="ScK-y3-T68"/>
+                                    <constraint firstAttribute="height" constant="50" id="n7S-gY-GmG"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-qa-hu8">
-                                <rect key="frame" x="0.0" y="56" width="320" height="448"/>
-                                <connections>
-                                    <segue destination="ZPI-l5-Bph" kind="embed" identifier="embedContainer" id="7ic-vf-TsM"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ILr-qa-hu8" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="GI2-CM-9nA"/>
-                            <constraint firstItem="86b-ro-Sgv" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="GvL-X0-XFZ"/>
-                            <constraint firstItem="86b-ro-Sgv" firstAttribute="top" secondItem="cmU-wF-ght" secondAttribute="bottom" id="QGS-ni-4eQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="86b-ro-Sgv" secondAttribute="trailing" constant="-16" id="VZL-ag-ZSa"/>
-                            <constraint firstItem="ILr-qa-hu8" firstAttribute="top" secondItem="86b-ro-Sgv" secondAttribute="bottom" constant="8" id="od9-8M-g29"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ILr-qa-hu8" secondAttribute="trailing" constant="-16" id="rta-JA-Q8D"/>
-                            <constraint firstItem="Rxp-OP-jNF" firstAttribute="top" secondItem="ILr-qa-hu8" secondAttribute="bottom" id="x7Y-ua-8qf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ILr-qa-hu8" secondAttribute="trailing" constant="-16" id="3ee-bJ-k1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RO4-8H-EX0" secondAttribute="trailing" constant="-16" id="9vG-fy-Tqk"/>
+                            <constraint firstItem="ILr-qa-hu8" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="RFh-c0-EdD"/>
+                            <constraint firstItem="Rxp-OP-jNF" firstAttribute="top" secondItem="ILr-qa-hu8" secondAttribute="bottom" id="Vnk-1d-wDm"/>
+                            <constraint firstItem="RO4-8H-EX0" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="XUb-ze-4a1"/>
+                            <constraint firstItem="RO4-8H-EX0" firstAttribute="top" secondItem="cmU-wF-ght" secondAttribute="bottom" id="i6Q-kC-T6P"/>
+                            <constraint firstItem="ILr-qa-hu8" firstAttribute="top" secondItem="RO4-8H-EX0" secondAttribute="bottom" constant="1" id="kvG-ec-DLn"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -155,7 +178,19 @@
                     <view key="view" contentMode="scaleToFill" id="6vL-Zz-shS">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fII-pY-L7W">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fII-pY-L7W" secondAttribute="trailing" constant="-16" id="7g3-yH-dtq"/>
+                            <constraint firstItem="fII-pY-L7W" firstAttribute="leading" secondItem="6vL-Zz-shS" secondAttribute="leadingMargin" constant="-16" id="9lE-gC-G9p"/>
+                            <constraint firstItem="fII-pY-L7W" firstAttribute="top" secondItem="q6C-v3-SFr" secondAttribute="bottom" id="SZC-qR-gP9"/>
+                            <constraint firstItem="I34-Sd-nXf" firstAttribute="top" secondItem="fII-pY-L7W" secondAttribute="bottom" id="h25-7V-SJo"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -194,14 +229,14 @@
                     <view key="view" contentMode="scaleToFill" id="sO9-Uv-ZAf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.55294117649999996" green="0.78039215689999997" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="448"/>
                     <connections>
                         <segue destination="4La-Jt-zfC" kind="custom" identifier="embedThird" customClass="EmptySegue" id="elv-qs-4cw"/>
                         <segue destination="CcT-jp-DDP" kind="custom" identifier="embedSecond" customClass="EmptySegue" id="sQ7-PU-SuV"/>
-                        <segue destination="96r-JV-Dn2" kind="custom" identifier="embedFirst" customClass="EmptySegue" id="84W-g2-dfE"/>
+                        <segue destination="96r-JV-Dn2" kind="custom" identifier="embedFirst" customClass="EmptySegue" id="O8P-ey-oxN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZW-PG-vOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
