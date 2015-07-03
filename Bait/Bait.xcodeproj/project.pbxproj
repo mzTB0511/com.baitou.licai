@@ -99,8 +99,6 @@
 		E98F9A021B3AFB0F00E3E365 /* MoneyMarketProducSectionDetailTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98F9A011B3AFB0F00E3E365 /* MoneyMarketProducSectionDetailTwoViewController.m */; };
 		E98F9A061B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98F9A041B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.m */; };
 		E98F9A071B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98F9A051B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.xib */; };
-		E98F9A0A1B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E98F9A091B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.m */; };
-		E98F9A0C1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98F9A0B1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib */; };
 		E98F9A0F1B3AFFF500E3E365 /* MoneyMarketProducSectionDetailSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E98F9A0E1B3AFFF500E3E365 /* MoneyMarketProducSectionDetailSection.m */; };
 		E98F9A111B3B000300E3E365 /* MoneyMarketProducSectionDetailSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98F9A101B3B000300E3E365 /* MoneyMarketProducSectionDetailSection.xib */; };
 		E98F9A151B3B008700E3E365 /* MoneyMarketProducSectionDetailOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98F9A131B3B008700E3E365 /* MoneyMarketProducSectionDetailOneCell.m */; };
@@ -145,6 +143,7 @@
 		E9DCA8BC1B41A20C009EE6A3 /* PlaceholdeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8BB1B41A20C009EE6A3 /* PlaceholdeTextView.m */; };
 		E9DCA8BF1B41A219009EE6A3 /* IssueModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8BE1B41A219009EE6A3 /* IssueModule.m */; };
 		E9DCA8C21B41A243009EE6A3 /* IssueListSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8C11B41A243009EE6A3 /* IssueListSearchViewController.m */; };
+		E9FD407A1B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FD40791B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,9 +333,6 @@
 		E98F9A031B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketFavouriteTableViewCell.h; sourceTree = "<group>"; };
 		E98F9A041B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketFavouriteTableViewCell.m; sourceTree = "<group>"; };
 		E98F9A051B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyMarketFavouriteTableViewCell.xib; sourceTree = "<group>"; };
-		E98F9A081B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketProducDetailHeader.h; sourceTree = "<group>"; };
-		E98F9A091B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketProducDetailHeader.m; sourceTree = "<group>"; };
-		E98F9A0B1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyMarketProducDetailHeader.xib; sourceTree = "<group>"; };
 		E98F9A0D1B3AFFF500E3E365 /* MoneyMarketProducSectionDetailSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketProducSectionDetailSection.h; sourceTree = "<group>"; };
 		E98F9A0E1B3AFFF500E3E365 /* MoneyMarketProducSectionDetailSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketProducSectionDetailSection.m; sourceTree = "<group>"; };
 		E98F9A101B3B000300E3E365 /* MoneyMarketProducSectionDetailSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoneyMarketProducSectionDetailSection.xib; sourceTree = "<group>"; };
@@ -414,6 +410,8 @@
 		E9DCA8BE1B41A219009EE6A3 /* IssueModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueModule.m; sourceTree = "<group>"; };
 		E9DCA8C01B41A243009EE6A3 /* IssueListSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueListSearchViewController.h; sourceTree = "<group>"; };
 		E9DCA8C11B41A243009EE6A3 /* IssueListSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueListSearchViewController.m; sourceTree = "<group>"; };
+		E9FD40781B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketProducDetailTopTableViewCell.h; sourceTree = "<group>"; };
+		E9FD40791B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketProducDetailTopTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1047,9 +1045,8 @@
 		E98F99F41B3AF8A100E3E365 /* MoneyMarketProducDetailCustomers */ = {
 			isa = PBXGroup;
 			children = (
-				E98F9A081B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.h */,
-				E98F9A091B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.m */,
-				E98F9A0B1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib */,
+				E9FD40781B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.h */,
+				E9FD40791B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m */,
 			);
 			path = MoneyMarketProducDetailCustomers;
 			sourceTree = "<group>";
@@ -1358,7 +1355,6 @@
 				E98F99F21B3AF7A300E3E365 /* MoneyMarketProductPTPTableViewCell.xib in Resources */,
 				E98A50461B44257D00193817 /* UserInfoHeaderFooterView.xib in Resources */,
 				E98A50441B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib in Resources */,
-				E98F9A0C1B3AFDE400E3E365 /* MoneyMarketProducDetailHeader.xib in Resources */,
 				E98A506B1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib in Resources */,
 				E98A500D1B440F5000193817 /* UserCenter.storyboard in Resources */,
 				E98F9A611B3B18AD00E3E365 /* UMSLoginViewController.xib in Resources */,
@@ -1476,6 +1472,7 @@
 				E920C1ED1B3809C300F19EC5 /* MainViewController.m in Sources */,
 				E98F99EC1B3AF79000E3E365 /* MoneyMarketProductFundTableViewCell.m in Sources */,
 				E98F9A3B1B3B0A0100E3E365 /* MyPropertyCardManagerOwnInfoViewController.m in Sources */,
+				E9FD407A1B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m in Sources */,
 				E920C1801B37F6F600F19EC5 /* FoodModule.m in Sources */,
 				E920C2051B38534E00F19EC5 /* UserRegisterViewController.m in Sources */,
 				E920C1841B37F6F600F19EC5 /* SignTool.m in Sources */,
@@ -1497,7 +1494,6 @@
 				E920C18A1B37F6F600F19EC5 /* UIImage+Tint.m in Sources */,
 				E9DCA8BF1B41A219009EE6A3 /* IssueModule.m in Sources */,
 				E920C1CE1B37FCA800F19EC5 /* UIAlertView+Blocks.m in Sources */,
-				E98F9A0A1B3AFD6200E3E365 /* MoneyMarketProducDetailHeader.m in Sources */,
 				E9156DB41B42995100F24616 /* MoneyMarketNavigationViewController.m in Sources */,
 				E9DCA8C21B41A243009EE6A3 /* IssueListSearchViewController.m in Sources */,
 				E920C0D11B37F13000F19EC5 /* AppDelegate.m in Sources */,

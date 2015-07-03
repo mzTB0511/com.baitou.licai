@@ -7,8 +7,14 @@
 //
 
 #import "MoneyMarketProducDetailViewController.h"
+#import "MoneyMarketProducDetailTopTableViewCell.h"
+#import "NetworkHandle.h"
 
 @interface MoneyMarketProducDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tbv_MoneyMarketPTP;
+
+@property(nonatomic,strong) NSMutableArray *productDetailList;
 
 @end
 
@@ -18,6 +24,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+
+#pragma mark -- UITabelViewDelegate
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return _productDetailList.count;
+    
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MoneyMarketProducDetailTopTableViewCell
+    
+    *cell = [tableView dequeueReusableCellWithIdentifier:@"MoneyMarketProducDetailTopTableViewCell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
