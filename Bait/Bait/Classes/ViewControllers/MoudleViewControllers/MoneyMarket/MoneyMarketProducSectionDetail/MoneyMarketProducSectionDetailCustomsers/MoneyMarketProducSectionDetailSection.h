@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoneyMarketProducSectionDetailSection : UIView
+@interface MoneyMarketProducSectionDetailSection : UITableViewHeaderFooterView
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_SectionTitle;
+
+@property (weak, nonatomic) IBOutlet UIButton *btn_SecitonReightItem;
+
+
 
 @end
