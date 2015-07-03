@@ -32,6 +32,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tbv_MoneyMarketFund" destination="Ai3-5N-bAj" id="l0Y-gI-Rnm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpa-B2-PfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +85,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tbv_MoneyMarketFavourite" destination="8Pi-96-nFq" id="dky-Sa-JvE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3x-z0-M3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,6 +200,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tbv_MoneyMarketPTP" destination="fII-pY-L7W" id="pYe-L4-zrv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLb-bL-bmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

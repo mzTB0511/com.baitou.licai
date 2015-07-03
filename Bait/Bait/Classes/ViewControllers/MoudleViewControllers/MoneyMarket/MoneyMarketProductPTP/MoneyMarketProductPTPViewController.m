@@ -7,8 +7,17 @@
 //
 
 #import "MoneyMarketProductPTPViewController.h"
+#import "MJRefresh.h"
+#import "NetworkHandle.h"
+#import "MoneyMarketProductPTPTableViewCell.h"
 
 @interface MoneyMarketProductPTPViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tbv_MoneyMarketPTP;
+
+@property(nonatomic,strong) NSMutableArray *productPTPList;
+
+
 
 @end
 
@@ -16,8 +25,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    [self setupRefresh];
 }
+
+
+
+#pragma mark - 集成下拉上提
+
+- (void)setupRefresh
+{
+    
+    WEAKSELF
+    // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
+    [self.tbv_MoneyMarketPTP addHeaderWithCallback:^{
+        
+        [weakSelf.tbv_MoneyMarketPTP reloadData];
+        
+        
+    }];
+    
+    //** 开始刷新
+    [self.tbv_MoneyMarketPTP headerBeginRefreshing];
+}
+
+
+#pragma mark -- UITabelViewDelegate
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return _productPTPList.count;
+    
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MoneyMarketProductPTPTableViewCell
+    
+    *cell = [tableView dequeueReusableCellWithIdentifier:@"MoneyMarketProductPTPTableViewCell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
