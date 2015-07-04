@@ -22,6 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Base64 (1.0.1)
   - MBProgressHUD (0.9.1)
+  - MD5Digest (0.1.0)
   - SBJson (4.0.1)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.4.1)
   - Base64 (~> 1.0.1)
   - MBProgressHUD (~> 0.9)
+  - MD5Digest (~> 0.1.0)
   - SBJson (~> 4.0.1)
   - SDWebImage (~> 3.7.1)
   - TPKeyboardAvoiding (~> 1.2.4)
@@ -40,6 +42,7 @@ SPEC CHECKSUMS:
   AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
   Base64: 4924bf3ca6fa559a5161ef717291bd450eb7bd1a
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MD5Digest: 99bcccfc389c5b7a0edaf66beb80fbc7596a3b65
   SBJson: 68f16f446bd6047dc3dd1ec4919a468c2cd7fedd
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   TPKeyboardAvoiding: ee4dd35e3bb7bb64bfbda47e7cc9ba872ff10f77

@@ -19,8 +19,6 @@
 		E920C1031B37F6C000F19EC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E920C0FF1B37F6C000F19EC5 /* Images.xcassets */; };
 		E920C1051B37F6C000F19EC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E920C1021B37F6C000F19EC5 /* Main.storyboard */; };
 		E920C17F1B37F6F600F19EC5 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C1091B37F6F600F19EC5 /* BaseModel.m */; };
-		E920C1801B37F6F600F19EC5 /* FoodModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C10C1B37F6F600F19EC5 /* FoodModule.m */; };
-		E920C1811B37F6F600F19EC5 /* NaturtionItemModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C10E1B37F6F600F19EC5 /* NaturtionItemModule.m */; };
 		E920C1821B37F6F600F19EC5 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C1101B37F6F600F19EC5 /* UserInfo.m */; };
 		E920C1831B37F6F600F19EC5 /* NetworkHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C1171B37F6F600F19EC5 /* NetworkHandle.m */; };
 		E920C1841B37F6F600F19EC5 /* SignTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C1191B37F6F600F19EC5 /* SignTool.m */; };
@@ -182,10 +180,6 @@
 		E920C1021B37F6C000F19EC5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E920C1081B37F6F600F19EC5 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		E920C1091B37F6F600F19EC5 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
-		E920C10B1B37F6F600F19EC5 /* FoodModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodModule.h; sourceTree = "<group>"; };
-		E920C10C1B37F6F600F19EC5 /* FoodModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodModule.m; sourceTree = "<group>"; };
-		E920C10D1B37F6F600F19EC5 /* NaturtionItemModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaturtionItemModule.h; sourceTree = "<group>"; };
-		E920C10E1B37F6F600F19EC5 /* NaturtionItemModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaturtionItemModule.m; sourceTree = "<group>"; };
 		E920C10F1B37F6F600F19EC5 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		E920C1101B37F6F600F19EC5 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		E920C1121B37F6F600F19EC5 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
@@ -612,22 +606,10 @@
 				E9DCA8BE1B41A219009EE6A3 /* IssueModule.m */,
 				E920C1081B37F6F600F19EC5 /* BaseModel.h */,
 				E920C1091B37F6F600F19EC5 /* BaseModel.m */,
-				E920C10A1B37F6F600F19EC5 /* OldVersion */,
 				E920C10F1B37F6F600F19EC5 /* UserInfo.h */,
 				E920C1101B37F6F600F19EC5 /* UserInfo.m */,
 			);
 			path = DataModel;
-			sourceTree = "<group>";
-		};
-		E920C10A1B37F6F600F19EC5 /* OldVersion */ = {
-			isa = PBXGroup;
-			children = (
-				E920C10B1B37F6F600F19EC5 /* FoodModule.h */,
-				E920C10C1B37F6F600F19EC5 /* FoodModule.m */,
-				E920C10D1B37F6F600F19EC5 /* NaturtionItemModule.h */,
-				E920C10E1B37F6F600F19EC5 /* NaturtionItemModule.m */,
-			);
-			path = OldVersion;
 			sourceTree = "<group>";
 		};
 		E920C1111B37F6F600F19EC5 /* Defines */ = {
@@ -1450,7 +1432,6 @@
 				E98F9A321B3B094F00E3E365 /* MyPropertyInvestmentRecordViewController.m in Sources */,
 				E920C1EA1B3809C300F19EC5 /* BaseViewController.m in Sources */,
 				E98A50691B45175B00193817 /* MyPropertyInvestmentTableViewCell.m in Sources */,
-				E920C1811B37F6F600F19EC5 /* NaturtionItemModule.m in Sources */,
 				E920C1871B37F6F600F19EC5 /* CommonUser.m in Sources */,
 				E98F9A2F1B3B093E00E3E365 /* MyPropertyGetCashViewController.m in Sources */,
 				E9DA8A381B38719C00CB5AF6 /* UserRegisterSetPwdViewController.m in Sources */,
@@ -1473,7 +1454,6 @@
 				E98F99EC1B3AF79000E3E365 /* MoneyMarketProductFundTableViewCell.m in Sources */,
 				E98F9A3B1B3B0A0100E3E365 /* MyPropertyCardManagerOwnInfoViewController.m in Sources */,
 				E9FD407A1B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m in Sources */,
-				E920C1801B37F6F600F19EC5 /* FoodModule.m in Sources */,
 				E920C2051B38534E00F19EC5 /* UserRegisterViewController.m in Sources */,
 				E920C1841B37F6F600F19EC5 /* SignTool.m in Sources */,
 				E920C1F51B380E8400F19EC5 /* OpenUDID.m in Sources */,

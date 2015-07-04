@@ -149,27 +149,6 @@
     return nil;
 }
 
-/**
- *  切换到下一个视图
- */
-+ (void) pushToNextViewController {
-    
-    if ([CommonUser userInfo]) {                    //判断是否已经登录
-        if (![CommonUser ifUserSetStatus]) {
-            //跳转到状态选择
-            [CommonUser pushToUserStatusChooseViewController];
-        } else {
-            //跳转到首页
-            [CommonUser pushToMainViewController];
-        }
-    } else if ([CommonUser userStatusInfo]) {       //是否已经填写用户状态
-        //跳转到首页
-        [CommonUser pushToMainViewController];
-    } else {
-        //跳转到状态选择页
-        [CommonUser pushToUserStatusChooseViewController];
-    }
-}
 
 /**
  *  切换到首页
@@ -244,21 +223,13 @@
     
     [CommonUser setUserInfo:userInfo];
     
-    //如果用户已经设置过状态 则覆盖本地状态
-    if ([userInfo.status isEqualToString:@"1"]) {
-        
-        NSDictionary *userStatus = responseDictionary[Return_data][@"statusvalue"];
-        
-        [CommonUser setUserStatusInfo:userStatus];
-    }
-    
-    NSDictionary *bdDict = [CommonIO getLocalValue:@"BPushRequestResponseParamsKey"];
-    
-    if (bdDict) {
-        
-        [CommonUser userRegisterPushWithBdcid:[CommonIO ifNilValueReturnStr:[bdDict objectForKey:@"channel_id"]] bduid:[CommonIO ifNilValueReturnStr:[bdDict objectForKey:@"user_id"]]];
-        
-    }
+//    NSDictionary *bdDict = [CommonIO getLocalValue:@"BPushRequestResponseParamsKey"];
+//    
+//    if (bdDict) {
+//        
+//        [CommonUser userRegisterPushWithBdcid:[CommonIO ifNilValueReturnStr:[bdDict objectForKey:@"channel_id"]] bduid:[CommonIO ifNilValueReturnStr:[bdDict objectForKey:@"user_id"]]];
+//        
+//    }
     
     if (block) {
         block();
@@ -269,7 +240,7 @@
  *  获取user id
  */
 + (NSString *) userID {
-    return [CommonUser userInfo].userID?:@""; //@"360"
+    return [CommonUser userInfo].member_id?:@""; //@"360"
 }
 
 /**
@@ -283,14 +254,7 @@
  *  用户是否登录了
  */
 + (BOOL) ifUserHasLogin {
-    return [[CommonUser userInfo].isTempUser isEqualToString:@"0"];
-}
-
-/**
- *  用户是否已经设置了用户状态(在服务器设置了)
- */
-+ (BOOL) ifUserSetStatus {
-    return [[CommonUser userInfo].status isEqualToString:@"1"];
+    return ![[CommonUser userInfo] isEqual:[NSNull null]];
 }
 
 /**

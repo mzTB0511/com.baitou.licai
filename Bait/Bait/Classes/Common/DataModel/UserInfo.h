@@ -13,66 +13,36 @@
 /**
  *  用户的ID
  */
-@property (nonatomic, copy) NSString *userID;
-
-/**
- *  0-没有设置状态，1-已经设置过
- */
-@property (nonatomic, copy) NSString *status;
+@property (nonatomic, copy) NSString *member_id;
 
 /**
  *  用户手机号
  */
-@property (nonatomic, copy) NSString *userPhone;
-
-/**
- *  用户性别，0-男，1-女
- */
-@property (nonatomic, copy) NSString *userSex;
+@property (nonatomic, copy) NSString *user_phone;
 
 /**
  *  用户头像
  */
-@property (nonatomic, copy) NSString *userIco;
+@property (nonatomic, copy) NSString *user_ico;
 
 /**
- *  用户昵称
+ *  认证用户名称
  */
-@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *member_name;
 
 /**
- *  是否临时用户 0:否 1:是
+ *  用户银行卡
  */
-@property (nonatomic, copy) NSString *isTempUser;
-
-/**
- *  用户身高
- */
-@property (nonatomic, copy) NSString *height;
-
-/**
- *  用户体重
- */
-@property (nonatomic, copy) NSString *weight;
+@property (nonatomic, copy) NSString *member_card;
 
 
-
-#pragma mark - 1.8版本以前属性
-
-// 用户UnionID
+// 用户设备唯一标示 UnionID
 @property(nonatomic,strong) NSString* unionID;
 
-// 用户类型 iPhone / android
-@property(nonatomic,strong) NSString* userType ;
 
-// 用户昵称
-@property(nonatomic,strong) NSString* userName ;
+// 个推唯一标示ID userID
+@property(nonatomic,strong) NSString* gtClientID ;
 
-// 百度 userID chinnelID
-@property(nonatomic,strong) NSString* bdUserID ;
 
-@property(nonatomic,strong) NSString* bdChannelID ;
-
-@property(nonatomic,strong) NSString* bdAppID ;
 
 @end

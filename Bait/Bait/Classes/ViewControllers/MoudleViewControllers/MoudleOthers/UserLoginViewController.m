@@ -8,7 +8,7 @@
 
 #import "UserLoginViewController.h"
 #import "NetworkHandle.h"
-
+#import <NSString+MD5.h>
 
 @interface UserLoginViewController ()
 
@@ -25,6 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setViewTitle:@"登录"];
+    
+    [self customerLeftNavigationBarItemWithTitle:@"返回" andImageRes:nil];
+    
+}
+
+-(void)backToView{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -44,15 +53,16 @@
     }
     
     NSDictionary *data = @{@"phone":_tf_UserPhone.text,
-                           @"pwd":_tf_UserPwd.text};
+                           @"pwd":[_tf_UserPwd.text MD5Digest]};
     
-    
+    WEAKSELF
     [NetworkHandle loadDataFromServerWithParamDic:data
                                           signDic:nil
-                                    interfaceName:InterfaceAddressName(@"account/register")
+                                    interfaceName:InterfaceAddressName(@"user/login")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
                                               [CommonUser userLoginSuccess:responseDictionary block:^{
-                                                  
+                                                
+                                                  [weakSelf backToView];
                                               }];
                                           }
                                           failure:nil

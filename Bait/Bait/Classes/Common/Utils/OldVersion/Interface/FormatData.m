@@ -10,8 +10,6 @@
 //
 #import "CommonFunc.h"
 #import "FormatData.h"
-#import "NaturtionItemModule.h"
-#import "FoodModule.h"
 
 
 static FormatData *fdata;
@@ -51,156 +49,32 @@ static FormatData *fdata;
     return self;
 }
 
-/*请求下来的数据封装成营养项目的数据*/
-- (NSMutableArray *)formatDictToNaturitionItemData:(NSArray *)dictArray
-{
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 0; i < [dictArray count]; i ++) {
-        NaturtionItemModule *data = [[NaturtionItemModule alloc]init];
-        
-        NSDictionary *dict = [dictArray objectAtIndex:i];        
-      
-        data.neid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:NaturtionItem_id]];
-        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:NaturtionItem_name]];
-        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:NaturtionItem_img]];
-        data.value= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:NaturtionItem_value]];
-        data.unit= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:NaturtionItem_unit]];
-        
-        [tempArray addObject:data];
-   
-    }
-    
-     return tempArray;
-}
+//
+//
+///*请求下来的数据封装成食物营养含量模块数据*/
+//- (NSMutableArray *)formatDictToFoodNutritionTotalData:(NSArray *)dictArray
+//{
+//    NSMutableArray *tempArray = [NSMutableArray array];
+//    
+//    for (int i = 0; i < [dictArray count]; i ++) {
+//        FoodElementTotal *data = [[FoodElementTotal alloc]init];
+//        
+//        NSDictionary *dict = [dictArray objectAtIndex:i];
+//        
+//        data.neid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"neid"]];
+//        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"name"]];
+//        data.unit= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"unit"]];
+//        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"imgurl"]];
+//        data.value= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"value"]];
+//    
+//        [tempArray addObject:data];
+//        
+//    }
+//    
+//    return tempArray;
+//}
+//
 
-
-/*请求下来的数据封装成食物数据*/
-- (NSMutableArray *)formatDictToFoodItemData:(NSArray *)dictArray
-{
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 0; i < [dictArray count]; i ++) {
-        FoodModule *data = [[FoodModule alloc]init];
-        
-        NSDictionary *dict = [dictArray objectAtIndex:i];
-        
-        data.nfid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_productID]];
-        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_name]];
-        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_img]];
-        data.value= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_value]];
-        data.unit= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_unit]];
-        
-        data.type= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_type]];
-        
-        data.gitype= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_gitype]];
-        data.givalue= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_givalue]];
-        
-        data.giremind= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:FoodModule_giremind]];
-        
-        
-        
-        
-        [tempArray addObject:data];
-        
-    }
-    
-    return tempArray;
-}
-
-
-/*请求下来的数据封装成食物营养含量模块数据*/
-- (NSMutableArray *)formatDictToFoodNutritionTotalData:(NSArray *)dictArray
-{
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 0; i < [dictArray count]; i ++) {
-        FoodElementTotal *data = [[FoodElementTotal alloc]init];
-        
-        NSDictionary *dict = [dictArray objectAtIndex:i];
-        
-        data.neid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"neid"]];
-        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"name"]];
-        data.unit= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"unit"]];
-        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"imgurl"]];
-        data.value= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"value"]];
-    
-        [tempArray addObject:data];
-        
-    }
-    
-    return tempArray;
-}
-
-
-/*请求下来的数据封装成食物营养元素模块数据*/
-- (NSMutableArray *)formatDictToFoodTraceElementsData:(NSArray *)dictArray
-{
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 0; i < [dictArray count]; i ++) {
-        FoodTraceElements *data = [[FoodTraceElements alloc]init];
-        
-        NSDictionary *dict = [dictArray objectAtIndex:i];
-        
-        data.neid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"neids"]];
-        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"name"]];
-        data.value= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"value"]];
-        data.unit= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"unit"]];
-        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"imgurl"]];
-        
-        [tempArray addObject:data];
-        
-    }
-    
-    return tempArray;
-}
-
-/*请求下来的数据封装成食物营养元素模块数据*/
-- (NSMutableArray *)formatDictToFoodTypeData:(NSArray *)dictArray
-{
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 0; i < [dictArray count]; i ++) {
-        FoodTypeModule *data = [[FoodTypeModule alloc]init];
-        
-        NSDictionary *dict = [dictArray objectAtIndex:i];
-        
-        data.ncid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"ncid"]];
-        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"name"]];
-        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"imgurl"]];
-        
-        [tempArray addObject:data];
-        
-    }
-    
-    return tempArray;
-}
-
-
-- (NSMutableArray *)formatDictToRecommendPackageData:(NSArray *)dictArray{
-    
-    NSMutableArray *tempArray = [NSMutableArray array];
-    
-    for (int i = 0; i < [dictArray count]; i ++) {
-        FoodRecommendPackageModule *data = [[FoodRecommendPackageModule alloc]init];
-        
-        NSDictionary *dict = [dictArray objectAtIndex:i];
-        
-        data.pkgid= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"pkgid"]];
-        data.name= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"name"]];
-        data.imgurl= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"imgurl"]];
-        data.desc= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"desc"]];
-        data.lookcount= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"count"]];
-        data.type= [[CommonFunc shareInstance] checkNullString:[dict objectForKey:@"type"]];
-        data.marks = [dict objectForKey:@"tag"];
-        [tempArray addObject:data];
-        
-    }
-    
-    return tempArray;
-    
-}
 
 
 

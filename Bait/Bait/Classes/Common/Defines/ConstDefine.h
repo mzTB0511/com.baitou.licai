@@ -47,68 +47,12 @@
 #define sbStoryBoard_Moudle_MoneyMarket         @"MoneyMarket"
 #define sbStoryBoard_Moudle_MyProperty          @"MyProperty"
 #define sbStoryBoard_Moudle_Recomendation       @"Recommendation"
-#define sbStoryBoard_Moudle_UserCenter       @"UserCenter"
+#define sbStoryBoard_Moudle_UserCenter          @"UserCenter"
 
 
 
 //用户登陆注册
 #define sbStoryBoard_Moudle_LoginRegister       @"UserLoginRegister"
-
-
-
-//首页接收到新消息推送 显示小红点
-#define Notification_Recieve_New_Message        @"Notification_Recieve_New_Message"
-
-//登录成功
-#define Notification_User_Login_Success         @"Notification_User_Login_Success"
-
-//糖妈妈记录饮食完成
-#define Notification_Suger_Mom_Add_Food         @"Notification_Suger_Mom_Add_Food"
-
-//强制刷新首页列表
-#define Notification_Home_Page_Refresh          @"Notification_Home_Page_Refresh"
-
-//进入医生问答页面
-#define Notification_Push_DoctorQA              @"Notification_Push_DoctorQA"
-
-//进入医生指导意见页面
-#define Notification_Push_DoctorAdvice          @"Notification_Push_DoctorAdvice"
-
-//进入医生回访通知
-#define Notification_Push_DoctorVisit           @"Notification_PushDoctorVisit"
-
-//下单成功以后 刷新购物车
-#define Notification_Create_Order_Success       @"Notification_Create_Order_Success"
-
-
-#define User_Status_Before_Pregnancy            1001
-#define User_Status_During_Pregnancy            1002
-#define User_Status_After_Pregnancy             1003
-#define User_Status_Just_Look                   1004
-
-
-typedef enum : NSUInteger {
-    MoudleThirdSugerMomMealType_1 = 1,      //早餐前
-    MoudleThirdSugerMomMealType_2 = 2,      //早餐后
-    MoudleThirdSugerMomMealType_3 = 3,      //午餐前
-    MoudleThirdSugerMomMealType_4 = 4,      //午餐后
-    MoudleThirdSugerMomMealType_5 = 5,      //晚餐前
-    MoudleThirdSugerMomMealType_6 = 6,      //晚餐后
-    MoudleThirdSugerMomMealType_7 = 7       //凌晨
-} MoudleThirdSugerMomMealType;
-
-
-typedef enum : NSUInteger {
-    Notification_Message_Type_BloodPressure = 1,        //血压
-    Notification_Message_Type_Weight        = 2,        //体重
-    Notification_Message_Type_Sport         = 3,        //运动量
-    Notification_Message_Type_BloodSugar    = 5,        //血糖
-    Notification_Message_Type_DoctorReply   = 100,      //医生回复
-    Notification_Message_Type_DoctorAdvice  = 200,      //医生指导意见
-    Notification_Message_Type_DoctorVisit   = 300       //回访通知
-} Notification_Message_Type;
-
-
 
 
 

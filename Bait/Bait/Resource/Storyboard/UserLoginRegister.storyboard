@@ -247,7 +247,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pd-DF-YOI">
                                         <rect key="frame" x="14" y="8" width="293" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,8 +288,11 @@
                                     <action selector="actionLogin:" destination="HQl-a2-o4L" eventType="touchUpInside" id="1lS-CV-KQD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-0R-jvG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-0R-jvG">
                                 <rect key="frame" x="16" y="155" width="61" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="2Sx-tW-fA9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="注册用户">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -298,8 +301,11 @@
                                     <segue destination="gJ9-QR-xWg" kind="push" id="xiv-Ay-zw3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-Cn-T9M">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-Cn-T9M">
                                 <rect key="frame" x="230" y="155" width="76" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="aSN-IF-tPf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="忘记密码">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -308,12 +314,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Yd-Cn-T9M" secondAttribute="trailing" constant="-2" id="AF3-3O-5iU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="44P-3C-j3Z" secondAttribute="trailing" constant="-16" id="Ab8-jV-dKM"/>
                             <constraint firstItem="44P-3C-j3Z" firstAttribute="top" secondItem="j7f-rF-a2J" secondAttribute="bottom" constant="8" id="BGq-51-ebp"/>
                             <constraint firstItem="44P-3C-j3Z" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" constant="-16" id="EA4-38-TL3"/>
                             <constraint firstItem="YcW-bU-J5G" firstAttribute="top" secondItem="j7f-rF-a2J" secondAttribute="bottom" constant="60" id="EL7-lL-Ry6"/>
+                            <constraint firstItem="zBv-0R-jvG" firstAttribute="top" secondItem="pbd-Ya-duD" secondAttribute="bottom" constant="8" id="F4z-Uz-i1h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pbd-Ya-duD" secondAttribute="trailing" constant="-2" id="JRh-ZU-sCn"/>
                             <constraint firstItem="YcW-bU-J5G" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" constant="-16" id="baG-Wt-OeJ"/>
+                            <constraint firstItem="3Yd-Cn-T9M" firstAttribute="top" secondItem="pbd-Ya-duD" secondAttribute="bottom" constant="8" id="kOF-e5-SSO"/>
+                            <constraint firstItem="zBv-0R-jvG" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" id="sJ8-9y-m52"/>
                             <constraint firstItem="pbd-Ya-duD" firstAttribute="top" secondItem="YcW-bU-J5G" secondAttribute="bottom" constant="13" id="uy7-Rt-cUp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YcW-bU-J5G" secondAttribute="trailing" constant="-16" id="wf3-yU-ItI"/>
                             <constraint firstItem="pbd-Ya-duD" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" constant="-1" id="zWm-1O-xAc"/>

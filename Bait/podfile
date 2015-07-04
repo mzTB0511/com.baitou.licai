@@ -7,4 +7,5 @@ target "Bait" do
 	pod 'SDWebImage', '~> 3.7.1'
 	pod 'Base64', '~> 1.0.1'
 	pod 'SBJson', '~> 4.0.1'
+    pod 'MD5Digest', '~> 0.1.0'
 end

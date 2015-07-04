@@ -10,10 +10,11 @@
  *定义接口
  */
 
-#define Interface_Server                    @"http://192.168.3.123/"//@"http://app.babysante.net/"//
+#define Interface_Server                    @"http://lx.thinkphp.com/"//@"http://app.babysante.net/"//
 
+#define ProjectForder                        @"app/"
 
-#define InterfaceAddressName(addressName)   [NSString stringWithFormat:@"%@%@",Interface_Server,addressName]
+#define InterfaceAddressName(addressName)   [NSString stringWithFormat:@"%@%@%@",Interface_Server,ProjectForder,addressName]
 
 /**
  *  加密秘钥
@@ -30,7 +31,7 @@
 
 #define Return_result                       @"ret"
 
-#define Return_data                         @"return_data"
+#define Return_data                         @"data"
 
 
 

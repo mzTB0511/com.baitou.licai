@@ -12,7 +12,7 @@
 #import "MoreFadebackViewController.h"
 #import "MoreNormalIssueViewController.h"
 #import "UserCenterUserInfoViewController.h"
-
+#import "BaseNavigationViewController.h"
 
 @interface MoreViewController ()
 
@@ -42,7 +42,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn_AboutUs;
 
 
-
+//** View 添加点击事件
+@property(strong,nonatomic) UITapGestureRecognizer *tapRecognizer;
 
 
 @end
@@ -53,12 +54,41 @@
     [super viewDidLoad];
     
     [self setViewTitle:@"更多"];
+    
+    //** 判断用户当前是否是已经登录状态
+    if ([CommonUser ifUserHasLogin]) {
+        [self.v_UserIcoPhone setHidden:NO];
+        [self.btn_Login setHidden:YES];
+        
+        _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userIcoPhoneTapEvent)];
+        _tapRecognizer.numberOfTapsRequired = 1;
+        _tapRecognizer.numberOfTouchesRequired = 1;
+        [_v_UserIcoPhone addGestureRecognizer:_tapRecognizer];
+        
+    }else{
+        [self.btn_Login setHidden:NO];
+        [self.v_UserIcoPhone setHidden:YES];
+    }
+    
 }
 
 
-- (IBAction)action_Login:(id)sender {
+-(void)userIcoPhoneTapEvent{
     
-      pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, UserCenterUserInfoViewController, nil);
+    pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, UserCenterUserInfoViewController, nil);
+    
+}
+
+
+
+- (IBAction)action_Login:(id)sender {
+
+    
+    UIStoryboard *moreSB = mLoadStoryboard(sbStoryBoard_Moudle_LoginRegister);
+    UINavigationController *nav = mLoadViewController(moreSB, NSStringFromClass([BaseNavigationViewController class]));
+    
+    [self presentViewController:nav animated:YES completion:nil];
+    
 }
 
 
@@ -97,21 +127,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- (IBAction)action_CallPhone:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://40088888888"]];
+}
 
 
 

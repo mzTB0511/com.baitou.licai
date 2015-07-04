@@ -91,10 +91,6 @@
  */
 + (void) pushToMainViewController;
 
-/**
- *  切换到选择用户状态
- */
-+ (void) pushToUserStatusChooseViewController;
 
 /**
  *  切换到用户引导页
