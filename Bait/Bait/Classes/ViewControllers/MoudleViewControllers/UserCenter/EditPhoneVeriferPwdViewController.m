@@ -7,8 +7,16 @@
 //
 
 #import "EditPhoneVeriferPwdViewController.h"
+#import "NetworkHandle.h"
+#import <NSString+MD5.h>
+#import "EditPhoneNewPhoneViewController.h"
+
 
 @interface EditPhoneVeriferPwdViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UITextField *tf_UserPwd;
+
 
 @end
 
@@ -21,14 +29,45 @@
     [self setViewTitle:@"验证身份"];
 }
 
+
+
+- (IBAction)action_Next:(id)sender {
+   
+    [self.view endEditing:YES];
+    //** 验证用户密码是否正确
+    NSDictionary *data = @{@"phone":[CommonUser userPhone],
+                           @"pwd":[_tf_UserPwd.text MD5Digest]};
+    
+    
+    [NetworkHandle loadDataFromServerWithParamDic:data
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"user/login")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, EditPhoneNewPhoneViewController, nil);
+                                              
+                                          }
+                                          failure:nil
+                                   networkFailure:nil
+     showLoading:YES];
+
+    
+}
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
+
+
+#pragma mark - Navigation
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

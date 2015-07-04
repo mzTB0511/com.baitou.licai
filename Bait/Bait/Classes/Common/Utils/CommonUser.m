@@ -243,6 +243,14 @@
     return [CommonUser userInfo].member_id?:@""; //@"360"
 }
 
+
+/**
+ *  获取userPhone
+ */
++ (NSString *) userPhone {
+    return [CommonUser userInfo].user_phone?:@""; //
+}
+
 /**
  *  用户数据 isTempUser 为1说明是临时用户
  */
@@ -346,5 +354,27 @@
 + (void) userOpenedAppAlready {
     [CommonIO isOpened:[NSString stringWithFormat:@"ConstUserOpenedAppFlag_%@",[CommonIO appVersion]]];
 }
+
+
+
+/**
+ *  设置用户手机号码
+ */
++(void) resetUserPhone:(NSString *)phone{
+    UserInfo *userInfo = [CommonIO getLocalData:@"DataUserInfoKey"];
+    userInfo.user_phone = phone;
+    [CommonIO setLocalData:userInfo key:@"DataUserInfoKey"];
+}
+
+/**
+ *  设置用户头像信息
+ */
++(void) resetUserIco:(NSString *)ico{
+    UserInfo *userInfo = [CommonIO getLocalData:@"DataUserInfoKey"];
+    userInfo.user_ico = ico;
+    [CommonIO setLocalData:userInfo key:@"DataUserInfoKey"];
+}
+
+
 
 @end

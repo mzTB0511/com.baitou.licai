@@ -123,6 +123,12 @@
 + (NSString *) userID;
 
 /**
+ *  获取userPhone
+ */
++ (NSString *) userPhone;
+
+
+/**
  *  用户数据 isTempUser 为1说明是临时用户
  */
 + (UserInfo *) userInfo;
@@ -185,5 +191,21 @@
  *  用户已经打开App
  */
 + (void) userOpenedAppAlready;
+
+
+/**
+ *  设置用户手机号码
+ */
++(void) resetUserPhone:(NSString *)phone;
+
+/**
+ *  设置用户头像信息
+ */
++(void) resetUserIco:(NSString *)ico;
+
+
+
+
+
 
 @end

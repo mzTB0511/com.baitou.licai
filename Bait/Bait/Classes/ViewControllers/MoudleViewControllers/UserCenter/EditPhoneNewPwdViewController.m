@@ -7,8 +7,21 @@
 //
 
 #import "EditPhoneNewPwdViewController.h"
+#import "NetworkHandle.h"
+#import <NSString+MD5.h>
 
 @interface EditPhoneNewPwdViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UITextField *tf_OldPwd;
+
+@property (weak, nonatomic) IBOutlet UITextField *tf_NewPwd;
+
+@property (weak, nonatomic) IBOutlet UITextField *tf_CheckPwd;
+
+@property(strong, nonatomic) NSDictionary *passDict;
+
+
 
 @end
 
@@ -19,7 +32,68 @@
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setViewTitle:@"更换手机号"];
+    
+    if (self.viewObject) {
+        _passDict = (NSDictionary *)self.viewObject;
+    }
+    
+    
 }
+
+
+-(BOOL)checkData{
+    
+    if ([_tf_OldPwd.text isEqualToString:@""]) {
+        [CommonHUD showHudWithMessage:@"请输入原密码" delay:CommonHudShowDuration completion:nil];
+        return NO;
+    }
+    
+    if (![_tf_NewPwd.text isEqualToString:_tf_CheckPwd.text]) {
+        [CommonHUD showHudWithMessage:@"输入的密码不一致" delay:CommonHudShowDuration completion:nil];
+        return NO;
+    }
+
+    
+    return YES;
+    
+}
+
+
+
+- (IBAction)action_Complate:(id)sender {
+    
+    if (![self checkData]) {
+        return;
+    }
+    
+    [self.view endEditing:YES];
+    //** 验证用户密码是否正确
+    NSDictionary *data = @{@"phone":[CommonUser userPhone],
+                           @"verify_code":[_passDict objectForKey:@"code"],
+                           @"new_phone":[_passDict objectForKey:@"phone"],
+                           @"old_pwd":[_tf_OldPwd.text MD5Digest],
+                           @"new_pwd":[_tf_NewPwd.text MD5Digest],
+                           @"step":@"2"};
+    
+    [NetworkHandle loadDataFromServerWithParamDic:data
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"user/resetphone")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, EditPhoneNewPwdViewController, nil);
+                                              
+                                          }
+                                          failure:nil
+                                   networkFailure:nil
+     
+     ];
+     
+    
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
