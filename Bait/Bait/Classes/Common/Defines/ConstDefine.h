@@ -55,5 +55,17 @@
 #define sbStoryBoard_Moudle_LoginRegister       @"UserLoginRegister"
 
 
+//**************************** 消息通知名称 键宏定义***********************************************/
+
+//* 更多页面 登录、注册成功后通知页面刷新
+#define Com_Notifation_MoreViewController         @"com.notifation.more_view"
+
+
+
+
+
+
+
+
 
 

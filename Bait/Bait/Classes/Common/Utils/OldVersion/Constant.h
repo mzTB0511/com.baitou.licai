@@ -123,19 +123,6 @@
 
 
 
-//**************************** 消息通知名称 键宏定义***********************************************/
-//** 调用微信授权信息
-#define COM_NOTIFATION_WECHATBLOCK    @"com_notifation_weichat_block"
-
-//** 刷新套餐查看量
-#define COM_NOTIFATION_PKGLOOKCOUNT    @"com_notifation_pkg_lookcount"
-
-//** 更新选择的食物列表
-#define COM_NOTIFATION_UPDATEFOODLIST    @"com_notifation_sel_foodlist"
-
-//** 更新饮食记录列表
-#define COM_NOTIFATION_UPDATEFOODRECORD    @"com_notifation_sel_foodrecord"
-
 
 
 

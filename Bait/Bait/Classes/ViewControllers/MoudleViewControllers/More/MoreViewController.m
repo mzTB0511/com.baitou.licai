@@ -55,22 +55,36 @@
     
     [self setViewTitle:@"更多"];
     
-    //** 判断用户当前是否是已经登录状态
-    if ([CommonUser ifUserHasLogin]) {
-        [self.v_UserIcoPhone setHidden:NO];
-        [self.btn_Login setHidden:YES];
-        
-        _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userIcoPhoneTapEvent)];
-        _tapRecognizer.numberOfTapsRequired = 1;
-        _tapRecognizer.numberOfTouchesRequired = 1;
-        [_v_UserIcoPhone addGestureRecognizer:_tapRecognizer];
-        
-    }else{
-        [self.btn_Login setHidden:NO];
-        [self.v_UserIcoPhone setHidden:YES];
-    }
+    [self action_RefrashView];
+    
+     [self.btn_Login setHidden:NO];
+    
+    [mNotificationCenter addObserver:self selector:@selector(action_RefrashView) name:Com_Notifation_MoreViewController object:nil];
     
 }
+
+
+//**通知方法，登录，注册成功后刷新当前页面
+-(void)action_RefrashView{
+    
+        //** 判断用户当前是否是已经登录状态
+        if ([CommonUser ifUserHasLogin]) {
+            [self.v_UserIcoPhone setHidden:NO];
+            [self.btn_Login setHidden:YES];
+    
+            _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userIcoPhoneTapEvent)];
+            _tapRecognizer.numberOfTapsRequired = 1;
+            _tapRecognizer.numberOfTouchesRequired = 1;
+            [_v_UserIcoPhone addGestureRecognizer:_tapRecognizer];
+    
+        }else{
+            [self.btn_Login setHidden:NO];
+            [self.v_UserIcoPhone setHidden:YES];
+        }
+    
+}
+
+
 
 
 -(void)userIcoPhoneTapEvent{
@@ -129,7 +143,14 @@
 
 - (IBAction)action_CallPhone:(id)sender {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://40088888888"]];
+    [UIAlertView showAlertViewWithTitle:@"提示" message:@"400-888-8888" cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] onDismiss:^(int buttonIndex) {
+       
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://40088888888"]];
+    } onCancel:^{
+        
+    }];
+    
+    
 }
 
 

@@ -41,10 +41,10 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"push_to_registerPwdView"]) {
         
-        UIViewController *viewContorler  = (UserRegisterPwdViewController *)segue.destinationViewController;
-        
-        [self.navigationController pushViewController:viewContorler animated:YES];
+        UserRegisterPwdViewController *viewContorler  = (UserRegisterPwdViewController *)segue.destinationViewController;
 
+        viewContorler.userPhone = _tf_userPhone.text;
+        
     }
     
     

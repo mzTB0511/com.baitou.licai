@@ -10,4 +10,6 @@
 
 @interface UserRegisterPwdViewController : RootViewController
 
+@property(nonatomic,strong) NSString *userPhone;
+
 @end

@@ -10,6 +10,4 @@
 
 @interface UserRegisterSetPwdViewController : RootViewController
 
-//@property(nonatomic,strong) NSObject *viewObject;
-
 @end

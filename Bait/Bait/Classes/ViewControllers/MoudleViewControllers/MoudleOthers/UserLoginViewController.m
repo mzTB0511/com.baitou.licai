@@ -63,6 +63,9 @@
                                               [CommonUser userLoginSuccess:responseDictionary block:^{
                                                 
                                                   [weakSelf backToView];
+                                                  
+                                                  [mNotificationCenter postNotificationName:Com_Notifation_MoreViewController object:nil];
+                                                  
                                               }];
                                           }
                                           failure:nil

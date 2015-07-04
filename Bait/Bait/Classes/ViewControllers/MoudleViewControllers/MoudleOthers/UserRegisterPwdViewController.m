@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tf_VertifyCode;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *btn_SendCode;
 
 
 
@@ -32,7 +33,13 @@
     
     [self setViewTitle:@"注册"];
     
-    [self customerLeftNavigationBarItemWithTitle:@"返回" andImageRes:nil];
+   // [self customerLeftNavigationBarItemWithTitle:@"返回" andImageRes:nil];
+    
+    
+    [_lb_UserPhone setText:_userPhone];
+    
+    
+    [self action_sendVerify:_btn_SendCode];
     
 }
 
@@ -80,7 +87,7 @@
     //发送验证码
     [NetworkHandle loadDataFromServerWithParamDic:@{@"phone":_lb_UserPhone.text}
                                           signDic:nil
-                                    interfaceName:InterfaceAddressName(@"user/send")
+                                    interfaceName:InterfaceAddressName(@"user/verifycode")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
                                               [CommonHUD showHudWithMessage:@"发送成功" delay:CommonHudShowDuration completion:nil];
                                           }
@@ -88,48 +95,41 @@
                                    networkFailure:nil];
 }
 
+
+
 /**
- *  验证手机
+ *  验证验证码是否正确
+ *
+ *
  */
-- (IBAction)action_login {
+-(IBAction)action_CheckVerifyCode{
     
-    [self.view endEditing:YES];
-    
-    if (![CommonIO validateMobile:_lb_UserPhone.text]) {
-        [CommonHUD showHudWithMessage:@"手机号不正确" delay:CommonHudShowDuration completion:nil];
-        return;
-    }
     
     if (_tf_VertifyCode.text.length != 4) {
         [CommonHUD showHudWithMessage:@"请输入四位验证码" delay:CommonHudShowDuration completion:nil];
         return;
     }
     
-    [self action_loginWithData:@{@"type":@"2",
-                                 @"phone":_lb_UserPhone.text,
-                                 @"vCode":_tf_VertifyCode.text}];
-}
-
-- (void) action_loginWithData:(NSDictionary *)data {
-
-    [NetworkHandle loadDataFromServerWithParamDic:data
+    WEAKSELF
+    //验证验证码
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"vertify_code":_tf_VertifyCode.text}
                                           signDic:nil
-                                    interfaceName:InterfaceAddressName(@"account/register")
+                                    interfaceName:InterfaceAddressName(@"user/verifycodecheck")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
-                                              [CommonUser userLoginSuccess:responseDictionary block:^{
-                                                  [self pushToRegisterSetPwdViewController];
-                                              }];
+                                              //** 验证码通过跳转到设置密码页面
+                                              [weakSelf pushToRegisterSetPwdViewController];
                                           }
                                           failure:nil
                                    networkFailure:nil];
+    
+    
 }
-
 
 
 
 -(void)pushToRegisterSetPwdViewController{
     
-    pushViewControllerWith(@"", UserRegisterSetPwdViewController,_lb_UserPhone);
+    pushViewControllerWith(sbStoryBoard_Moudle_LoginRegister, UserRegisterSetPwdViewController,_lb_UserPhone.text);
 }
 
 

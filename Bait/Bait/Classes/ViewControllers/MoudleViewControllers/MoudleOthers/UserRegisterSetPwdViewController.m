@@ -8,6 +8,8 @@
 
 #import "UserRegisterSetPwdViewController.h"
 #import "NetworkHandle.h"
+#import <NSString+MD5.h>
+
 
 @interface UserRegisterSetPwdViewController ()
 
@@ -27,8 +29,6 @@
     [super viewDidLoad];
     [self setViewTitle:@"完善密码"];
     
-    [self customerLeftNavigationBarItemWithTitle:@"返回" andImageRes:nil];
-    
     _userPhone = (self.viewObject) ? ((NSString *)self.viewObject) : @"";
     
     
@@ -43,7 +43,7 @@
     
     [self.view endEditing:YES];
     
-    if (![_tf_UserPwd.text isEqualToString:@""]) {
+    if ([_tf_UserPwd.text isEqualToString:@""]) {
         [CommonHUD showHudWithMessage:@"请输入密码" delay:CommonHudShowDuration completion:nil];
         return;
     }
@@ -54,16 +54,22 @@
     }
     
     [self actionRegisterWithData:@{@"phone":_userPhone,
-                                 @"pwd":_tf_UserPwd.text}];
+                                 @"pwd":[_tf_UserPwd.text MD5Digest]}];
 }
 
 - (void) actionRegisterWithData:(NSDictionary *)data {
+    [self.view endEditing:YES];
     
     [NetworkHandle loadDataFromServerWithParamDic:data
                                           signDic:nil
                                     interfaceName:InterfaceAddressName(@"user/register")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
                                               [CommonUser userLoginSuccess:responseDictionary block:nil];
+                                              
+                                              [self backToView];
+                                              //** 注册成功后，直接进入首页
+                                              [mNotificationCenter postNotificationName:Com_Notifation_MoreViewController object:nil];
+                                              
                                           }
                                           failure:nil
                                    networkFailure:nil];
@@ -71,6 +77,10 @@
 
 
 
+
+-(void)backToView{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 - (void)didReceiveMemoryWarning {

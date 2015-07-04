@@ -16,11 +16,15 @@
 #import "EditPhoneNewPwdViewController.h"
 #import "UserCenterCardVerifierViewController.h"
 
+#import "BaseNavigationViewController.h"
+#import "NetworkHandle.h"
+
+
 @interface UserCenterUserInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tbv_UserInfoTableView;
 
-@property (nonatomic, strong) NSArray *arr_dataSource;
+@property (nonatomic, strong) NSMutableArray *arr_dataSource;
 
 @property (nonatomic, strong) NSMutableDictionary *data;
 
@@ -173,7 +177,15 @@
                               cancelButtonTitle:@"取消"
                               otherButtonTitles:@[@"确定"]
                                       onDismiss:^(int buttonIndex) {
-                                          [CommonUser userLogout];
+                                      
+                                          [CommonUser setUserInfo:nil];
+                                          
+                                          //**跳转到登录页面
+                                          UIStoryboard *moreSB = mLoadStoryboard(sbStoryBoard_Moudle_LoginRegister);
+                                          UINavigationController *nav = mLoadViewController(moreSB, NSStringFromClass([BaseNavigationViewController class]));
+                                          
+                                          [self presentViewController:nav animated:YES completion:nil];
+                                      
                                       } onCancel:nil];
             
 
@@ -181,6 +193,57 @@
             break;
             
               }
+    
+    
+     //** 取消Cell高亮效果
+    [_tbv_UserInfoTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+}
+
+
+-(void)loadUserDataFormServer{
+    
+    WEAKSELF
+    //验证验证码
+    [NetworkHandle loadDataFromServerWithParamDic:nil
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"user/userinfo")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              //** 获取数据后种植数据格式
+                                              [weakSelf makeTBVDataSourceWithData:responseDictionary];
+                                          }
+                                          failure:nil
+                                   networkFailure:nil];
+    
+}
+
+
+-(void)makeTBVDataSourceWithData:(id)dict{
+    
+    if ([dict isKindOfClass:[NSDictionary class]]) {
+        
+        if ([dict objectForKey: Return_data]) {
+           
+            NSDictionary *userInof = [dict objectForKey: Return_data];
+            
+            //** 组合数据格式
+            NSArray *listIco = @[[[CommonFunc shareInstance] checkNullString:[userInof objectForKey:@"user_ico"]]];
+            NSArray *listProperty = @[@{@"itemTitle":@"手机号码",@"itemValue":[userInof objectForKey:@"user_phone"]},@{@"itemTitle":@"身份认证",@"itemValue":[[userInof objectForKey:@"has_cer"] intValue] == 0 ? @"立即认证" : @"已认证"}];
+            
+            NSArray *listEditPwd = @[@{@"itemTitle":@"修改登录密码",@"itemValue":@""}];
+            NSArray *listExit = @[@{@"itemTitle":@"退出登录",@"itemValue":@""}];
+         
+            [_arr_dataSource addObject:listIco];
+            [_arr_dataSource addObject:listProperty];
+            [_arr_dataSource addObject:listEditPwd];
+            [_arr_dataSource addObject:listExit];
+            
+            [_tbv_UserInfoTableView reloadData];
+            
+        }
+        
+    }
     
 }
 
@@ -197,11 +260,10 @@
     
     mRegisterHeaderFooterNib_TableView(_tbv_UserInfoTableView, NSStringFromClass([UserInfoHeaderFooterView class]));
     
-    self.arr_dataSource = @[@[@"userUrl"],
-                            @[@{@"itemTitle":@"手机号码",@"itemValue":@"15618297762"},@{@"itemTitle":@"身份认证",@"itemValue":@"立即开户"}],
-                            @[@{@"itemTitle":@"修改登录密码",@"itemValue":@""}],
-                            @[@{@"itemTitle":@"退出登录",@"itemValue":@""}]];
+    _arr_dataSource = [NSMutableArray array];
     
+    
+    [self loadUserDataFormServer];
 }
 
 - (void)didReceiveMemoryWarning {

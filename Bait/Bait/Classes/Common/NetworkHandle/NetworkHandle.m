@@ -287,9 +287,9 @@ const float Network_Handle_HUD_Duration = 1.0;
     //需要加密的数据
     NSMutableDictionary *mutableSign = [NSMutableDictionary dictionaryWithDictionary:signDict];
     [mutableSign setValue:[CommonIO appVersion] forKey:@"version"];
-    [mutableSign setValue:[CommonUser udid] forKey:@"udid"];
-    [mutableSign setValue:[CommonUser userID] forKey:@"userID"];
-    [mutableSign setValue:@"1" forKey:@"platformID"];
+    [mutableSign setValue:[CommonUser udid] forKey:@"ud_id"];
+    [mutableSign setValue:[CommonUser userID] forKey:@"member_id"];
+    [mutableSign setValue:@"1" forKey:@"platform_id"];
     
     [postDictionary setValuesForKeysWithDictionary:[SignTool makeSignDict:mutableSign secret:App_Secrect signKey:App_Sign]];
     
