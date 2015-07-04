@@ -13,7 +13,7 @@
 
 @interface UserRegisterPwdViewController ()<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *tf_UserPhone;
+@property (weak, nonatomic) IBOutlet UILabel *lb_UserPhone;
 
 @property (weak, nonatomic) IBOutlet UITextField *tf_VertifyCode;
 
@@ -45,10 +45,6 @@
         return YES;
     }
     
-    if (textField == _tf_UserPhone && textField.text.length >= 11 && ![string isEqualToString:@""]) {
-        return NO;
-    }
-    
     if (textField == _tf_VertifyCode && textField.text.length >= 4 && ![string isEqualToString:@""]) {
         return NO;
     }
@@ -74,7 +70,7 @@
     
     [self.view endEditing:YES];
     
-    if (![CommonIO validateMobile:_tf_UserPhone.text]) {
+    if (![CommonIO validateMobile:_lb_UserPhone.text]) {
         [CommonHUD showHudWithMessage:@"手机号不正确" delay:CommonHudShowDuration completion:nil];
         return;
     }
@@ -82,7 +78,7 @@
     [sender unavailable];
     
     //发送验证码
-    [NetworkHandle loadDataFromServerWithParamDic:@{@"phone":_tf_UserPhone.text}
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"phone":_lb_UserPhone.text}
                                           signDic:nil
                                     interfaceName:InterfaceAddressName(@"user/send")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
@@ -99,7 +95,7 @@
     
     [self.view endEditing:YES];
     
-    if (![CommonIO validateMobile:_tf_UserPhone.text]) {
+    if (![CommonIO validateMobile:_lb_UserPhone.text]) {
         [CommonHUD showHudWithMessage:@"手机号不正确" delay:CommonHudShowDuration completion:nil];
         return;
     }
@@ -110,7 +106,7 @@
     }
     
     [self action_loginWithData:@{@"type":@"2",
-                                 @"phone":_tf_UserPhone.text,
+                                 @"phone":_lb_UserPhone.text,
                                  @"vCode":_tf_VertifyCode.text}];
 }
 
@@ -133,7 +129,7 @@
 
 -(void)pushToRegisterSetPwdViewController{
     
-    pushViewControllerWith(@"", UserRegisterSetPwdViewController,_tf_UserPhone);
+    pushViewControllerWith(@"", UserRegisterSetPwdViewController,_lb_UserPhone);
 }
 
 
