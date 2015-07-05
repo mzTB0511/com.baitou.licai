@@ -22,9 +22,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skt-wV-VTE" customClass="PlaceholdeTextView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -33,7 +33,7 @@
                                     <constraint firstItem="skt-wV-VTE" firstAttribute="top" secondItem="EpM-6R-9HB" secondAttribute="top" id="54A-fI-Ufe"/>
                                     <constraint firstAttribute="height" constant="200" id="NAc-S7-WNc"/>
                                     <constraint firstAttribute="trailing" secondItem="skt-wV-VTE" secondAttribute="trailing" id="X7V-wI-JaV"/>
-                                    <constraint firstAttribute="bottom" secondItem="skt-wV-VTE" secondAttribute="bottom" constant="49" id="op2-3j-Aa9"/>
+                                    <constraint firstAttribute="bottom" secondItem="skt-wV-VTE" secondAttribute="bottom" id="op2-3j-Aa9"/>
                                     <constraint firstItem="skt-wV-VTE" firstAttribute="leading" secondItem="EpM-6R-9HB" secondAttribute="leading" id="tGO-Gr-snv"/>
                                 </constraints>
                             </view>

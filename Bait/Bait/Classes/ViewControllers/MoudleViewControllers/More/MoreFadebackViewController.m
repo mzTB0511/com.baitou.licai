@@ -24,16 +24,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
      [self setViewTitle:@"意见反馈"];
-    
-    // Do any additional setup after loading the view.
-    [self setViewTitle:@"建议反馈"];
-    
-    
-    self.view.backgroundColor=[UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1];
+
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     [self customerRightNavigationBarItemWithTitle:@"提交" andImageRes:nil];
     
-    
+    [_label_questionContent setPlaceholder:@"请输入反馈内容,255字以内"];
 }
 
 
@@ -41,7 +37,7 @@
 - (BOOL)checkDataBeforeCommit{
     
     
-    if ([self.label_questionContent.text isEqualToString:@""]){
+    if ([self.label_questionContent.text length] == 0){
         [[CommonFunc shareInstance] showHintMessage:@"请输入反馈内容"];
         return NO;
     }

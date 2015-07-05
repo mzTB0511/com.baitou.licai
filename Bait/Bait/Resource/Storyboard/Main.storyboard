@@ -32,7 +32,7 @@
         <scene sceneID="rtQ-rD-dci">
             <objects>
                 <navigationController id="P4A-Nn-08m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="热门推荐" image="first" id="egI-hY-PYi"/>
+                    <tabBarItem key="tabBarItem" title="热门推荐" image="img_tablebar_recomend" id="egI-hY-PYi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LLP-NQ-cP5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -671,6 +671,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="img_tablebar_recomend" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

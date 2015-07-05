@@ -72,6 +72,17 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.section == 1) {
+        
+        [UIAlertView showAlertViewWithTitle:nil message:@"400-888-8888" cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] onDismiss:^(int buttonIndex) {
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://40088888888"]];
+        } onCancel:^{
+            
+        }];
+    }
+    
+    
 }
 
 
