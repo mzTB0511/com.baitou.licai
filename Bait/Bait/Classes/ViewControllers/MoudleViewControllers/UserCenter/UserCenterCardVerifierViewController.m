@@ -7,8 +7,17 @@
 //
 
 #import "UserCenterCardVerifierViewController.h"
+#import "NetworkHandle.h"
+
 
 @interface UserCenterCardVerifierViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UITextField *tf_UserName;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *tf_Card;
+
 
 @end
 
@@ -21,6 +30,59 @@
     
     [self setViewTitle:@"身份认证"];
 }
+
+
+
+-(BOOL)checkData{
+    
+    if ([_tf_UserName.text isEqualToString:@""]) {
+        [CommonHUD showHudWithMessage:@"请输入真实姓名" delay:CommonHudShowDuration completion:nil];
+        return NO;
+    }
+    
+    if (![_tf_Card.text isEqualToString:@""]) {
+        [CommonHUD showHudWithMessage:@"请输入身份证号" delay:CommonHudShowDuration completion:nil];
+        return NO;
+    }
+    
+    
+    return YES;
+    
+}
+
+
+- (IBAction)action_VerifierCard:(id)sender {
+    
+    if (![self checkData]) {
+        return;
+    }
+    
+    [self.view endEditing:YES];
+    //** 验证用户密码是否正确
+    NSDictionary *data = @{@"member_name":_tf_UserName.text,
+                           @"card_no":_tf_Card.text};
+    
+    [NetworkHandle loadDataFromServerWithParamDic:data
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"user/verifiercard")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              
+                                              [self.navigationController popToRootViewControllerAnimated:YES];
+                                              
+                                              [mNotificationCenter postNotificationName:Com_Notifation_MoreViewController object:nil];
+                                              
+                                          }
+                                          failure:nil
+                                   networkFailure:nil
+                                      showLoading:YES];
+    
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

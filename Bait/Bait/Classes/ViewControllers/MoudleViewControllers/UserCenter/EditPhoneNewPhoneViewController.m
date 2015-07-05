@@ -96,7 +96,7 @@
     NSDictionary *data = @{@"phone":[CommonUser userPhone],
                            @"verify_code":_tf_VerifierCode.text,
                            @"new_phone":_tf_NewPhone.text,
-                           @"step":@"1"};
+                           @"step":@"2"};
     
     [NetworkHandle loadDataFromServerWithParamDic:data
                                           signDic:nil

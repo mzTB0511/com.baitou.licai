@@ -575,6 +575,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="action_VerifierCard:" destination="xf8-PY-fiP" eventType="touchUpInside" id="f5m-TS-3fR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -602,6 +605,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hh4-PJ-Uyv"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="tf_Card" destination="QcI-q0-nny" id="Qmy-VZ-NGN"/>
+                        <outlet property="tf_UserName" destination="ETt-qx-CQ7" id="on6-DP-spy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6e-7f-FM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

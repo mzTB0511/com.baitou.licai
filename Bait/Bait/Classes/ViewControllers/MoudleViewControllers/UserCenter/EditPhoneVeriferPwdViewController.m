@@ -36,12 +36,13 @@
     [self.view endEditing:YES];
     //** 验证用户密码是否正确
     NSDictionary *data = @{@"phone":[CommonUser userPhone],
-                           @"pwd":[_tf_UserPwd.text MD5Digest]};
+                           @"old_pwd":[_tf_UserPwd.text MD5Digest],
+                           @"step":@"1"};
     
     
     [NetworkHandle loadDataFromServerWithParamDic:data
                                           signDic:nil
-                                    interfaceName:InterfaceAddressName(@"user/login")
+                                    interfaceName:InterfaceAddressName(@"user/resetphone")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
                                               
                                               pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, EditPhoneNewPhoneViewController, nil);
