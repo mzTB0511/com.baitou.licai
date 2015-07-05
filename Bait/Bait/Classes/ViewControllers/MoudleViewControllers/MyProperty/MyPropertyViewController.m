@@ -12,8 +12,16 @@
 #import "MyPropertyInvestmentRecordViewController.h"
 #import "MyPropertyCardManagerListViewController.h"
 
+#import "NetworkHandle.h"
+
 
 @interface MyPropertyViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_RebateNow;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_RebateAll;
+
+
 
 @end
 
@@ -23,6 +31,26 @@
     [super viewDidLoad];
     
     [self setViewTitle:@"我的百投"];
+    WEAKSELF
+    [NetworkHandle loadDataFromServerWithParamDic:nil
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"my/getRepayAll")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                           
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSDictionary *rebateDict = [[responseDictionary objectForKey:Return_data] objectAtIndex:0];
+                                                  
+                                                  [weakSelf.lb_RebateNow setText:[rebateDict objectForKey:@"repay_now"]];
+                                                  [weakSelf.lb_RebateAll setText:[rebateDict objectForKey:@"repay_all"]];
+                                              }
+                                              
+                                          }
+                                          failure:nil
+                                   networkFailure:nil
+                                      showLoading:YES
+     ];
+
+    
 }
 
 
