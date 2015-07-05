@@ -17,7 +17,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITableView *tbv_RebateList;
 
-@property (strong, nonatomic) NSArray *rebateList;
+@property (strong, nonatomic) NSMutableArray *rebateList;
 
 
 @end
@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    _rebateList  = [NSMutableArray array];
     
     [self setViewTitle:@"我的返利"];
     
@@ -46,7 +48,7 @@
     [self.tbv_RebateList addFooterWithTarget:self action:@selector(footerRereshing)];
     
     //    [self.view_newsView setFooterHidden:YES];
-    // [self beginRefresh];
+     [self headerRereshing];
 }
 
 #pragma mark 开始进入刷新状态
@@ -55,6 +57,7 @@
     //刷新代码
     pageIndex = 1;
     
+    [self loadRebateDataWithPage:pageIndex];
     
 }
 
@@ -64,6 +67,42 @@
     //加载代码
     pageIndex ++;
     
+     [self loadRebateDataWithPage:pageIndex];
+}
+
+
+-(void)loadRebateDataWithPage:(NSInteger)page{
+    
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"page_no":[NSString stringWithFormat:@"%li",(long)page]}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"my/getRepay")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                   NSArray *data = [responseDictionary objectForKey:Return_data];
+                                                 
+                                                  if (data.count > 0) {
+                                                      
+                                                  if (page == 1) {
+                                                      [_rebateList removeAllObjects];
+                                                      
+                                                  }
+                                                      [_rebateList addObjectsFromArray:data];
+                                                      
+                                                  }
+                                                  
+                                                  [_tbv_RebateList reloadData];
+                                              }
+                                              
+                                              stopTableViewRefreshAnimation(_tbv_RebateList);
+                                          }
+                                          failure:^{
+                                              stopTableViewRefreshAnimation(_tbv_RebateList);
+                                          } networkFailure:^{
+                                              stopTableViewRefreshAnimation(_tbv_RebateList);
+                                          }
+                                      showLoading:YES
+     ];
     
 }
 

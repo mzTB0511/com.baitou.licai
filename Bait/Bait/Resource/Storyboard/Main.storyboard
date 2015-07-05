@@ -32,7 +32,11 @@
         <scene sceneID="rtQ-rD-dci">
             <objects>
                 <navigationController id="P4A-Nn-08m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="热门推荐" image="img_tablebar_recomend" id="egI-hY-PYi"/>
+                    <tabBarItem key="tabBarItem" title="热门推荐" image="img_tablebar_recomend" id="egI-hY-PYi">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="img_tablebar_recomend_sel"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LLP-NQ-cP5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,13 +116,12 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKb-op-0BX">
-                                        <rect key="frame" x="81" y="213" width="158" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKb-op-0BX">
+                                        <rect key="frame" x="38" y="213" width="244" height="43"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="158" id="2CE-tG-dCe"/>
+                                            <constraint firstAttribute="width" constant="244" id="2CE-tG-dCe"/>
                                         </constraints>
-                                        <state key="normal" title="开始赚钱">
+                                        <state key="normal" title="开始赚钱" backgroundImage="btn_recommend_begin">
                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -167,7 +170,11 @@
         <scene sceneID="cdW-Xi-Z8L">
             <objects>
                 <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="rDK-bc-dHI" customClass="MoneyMarketNavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="理财超市" image="first" id="t5H-O5-iLk"/>
+                    <tabBarItem key="tabBarItem" title="理财超市" image="img_tablebar_market" id="t5H-O5-iLk">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="img_tablebar_market_sel"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5SX-5j-x5U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -181,7 +188,11 @@
         <scene sceneID="7qq-oc-ea2">
             <objects>
                 <navigationController id="0cr-tE-BZN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的百投" image="first" id="s6o-fJ-Z1q"/>
+                    <tabBarItem key="tabBarItem" title="我的百投" image="img_tablebar_myproperty" id="s6o-fJ-Z1q">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="img_tablebar_myproperty_sel"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AzP-Vc-f4D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -425,7 +436,11 @@
         <scene sceneID="Whl-aL-eQN">
             <objects>
                 <navigationController id="6ef-AL-9Ea" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="更多" image="first" id="M4f-18-9rf"/>
+                    <tabBarItem key="tabBarItem" title="更多" image="img_tablebar_more" id="M4f-18-9rf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="img_tablebar_more_sel"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2lr-LC-Ivp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -699,8 +714,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_recommend_begin" width="244" height="43"/>
         <image name="first" width="30" height="30"/>
+        <image name="img_tablebar_market" width="25" height="25"/>
+        <image name="img_tablebar_market_sel" width="25" height="25"/>
+        <image name="img_tablebar_more" width="25" height="25"/>
+        <image name="img_tablebar_more_sel" width="25" height="25"/>
+        <image name="img_tablebar_myproperty" width="25" height="25"/>
+        <image name="img_tablebar_myproperty_sel" width="25" height="25"/>
         <image name="img_tablebar_recomend" width="25" height="25"/>
+        <image name="img_tablebar_recomend_sel" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

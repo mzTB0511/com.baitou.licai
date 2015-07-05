@@ -10,6 +10,6 @@
 
 @interface MyPropertyCardManagerOwnInfoViewController : RootViewController
 
-@property(nonatomic ,strong) NSString *cardID;
+@property(nonatomic ,strong) NSMutableDictionary *cardDict;
 
 @end

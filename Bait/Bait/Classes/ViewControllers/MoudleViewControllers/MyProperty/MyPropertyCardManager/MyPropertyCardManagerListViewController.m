@@ -118,6 +118,8 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+ 
+    [tableView deselectRowAtIndexPath:[_tbv_CardManageList indexPathForSelectedRow] animated:YES];
     
 }
 
@@ -140,9 +142,8 @@
        
         NSDictionary *cellData  = [_cardList objectAtIndex:[_tbv_CardManageList indexPathForSelectedRow].row];
 
-        viewController.cardID = [cellData objectForKey:@"id"];
-             
-        
+        viewController.cardDict = cellData;
+       
     }
 }
 

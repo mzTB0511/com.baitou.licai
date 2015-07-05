@@ -406,7 +406,7 @@
                         <viewControllerLayoutGuide type="top" id="6i4-R7-Y7A"/>
                         <viewControllerLayoutGuide type="bottom" id="Lhi-rG-eaa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fam-te-UD5">
+                    <view key="view" contentMode="scaleToFill" id="fam-te-UD5" customClass="Tk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
