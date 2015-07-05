@@ -34,6 +34,10 @@
 //** 缓存搜索内容
 @property (strong, nonatomic) NSString *searchConBak;
 
+@property(strong,nonatomic) NSIndexPath *lastIndexPaht;
+
+@property(strong,nonatomic) IssueQuestionListCell *issueCell;
+
 @end
 
 @implementation IssueListSearchViewController
@@ -83,7 +87,7 @@
             if ([subView isKindOfClass:[UIButton class]]) {
                 UIButton *cannelButton = (UIButton*)subView;
                 [cannelButton setTitle:@"取消"forState:UIControlStateNormal];
-                [cannelButton setTintColor:[UIColor whiteColor]];
+                [cannelButton setTintColor:[UIColor blackColor]];
                 break;
             }
         }
@@ -142,17 +146,95 @@
 }
 
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSDictionary *dict = [_questionList objectAtIndex:indexPath.row];
+    
+    [_issueCell.lb_Question setText:[dict objectForKey:@"question"]];
+    [_issueCell.lb_Answer setText:[dict objectForKey:@"answer"]];
+    
+    
+    if ([[dict objectForKey:@"status"] integerValue] == 1) {
+        [_issueCell.lb_Answer setHidden:NO];
+        _issueCell.ly_bottom.priority = 250;
+        _issueCell.ly_center.priority = 750;
+        
+        
+    }else{
+        [_issueCell.lb_Answer setHidden:YES];
+        _issueCell.ly_bottom.priority = 750;
+        _issueCell.ly_center.priority = 250;
+    }
+    
+    //  [_issueCell.lb_Answer setText:[dict objectForKey:@"answer"]];
+    
+    CGSize size = [_issueCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    
+    return size.height + 1;
+}
+
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     IssueQuestionListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IssueQuestionListCell" forIndexPath:indexPath];
     
-    IssueModule *naturaItem = [_questionList objectAtIndex:indexPath.row];
+    NSDictionary *dict = [_questionList objectAtIndex:indexPath.row];
     
-    //[cell setFoodModule:naturaItem];
+    [cell.lb_Question setText:[dict objectForKey:@"question"]];
+    
+    [cell.lb_Answer setText:[[_questionList objectAtIndex:indexPath.row] objectForKey:@"answer"]];
+    
+    if ([[dict objectForKey:@"status"] integerValue] == 1) {
+        [cell.lb_Answer setHidden:NO];
+        cell.ly_bottom.priority = 250;
+        cell.ly_center.priority = 750;
+        
+    }else{
+        [cell.lb_Answer setHidden:YES];
+        cell.ly_bottom.priority = 750;
+        cell.ly_center.priority = 250;
+        
+    }
+    
+    [cell.btn_Arraw setTag:indexPath.row];
+    
+    
+    [cell.btn_Arraw addTarget:self action:@selector(actionBtnArrow:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     return cell;
     
 }
+
+
+
+-(void)actionBtnArrow:(UIButton *)sender{
+    
+    NSMutableArray *updateArray = [NSMutableArray array];
+    //** 如果之前已经有有展开的项目需要关闭
+    if (_lastIndexPaht) {
+        [[_questionList objectAtIndex:_lastIndexPaht.row] setObject:@"0" forKey:@"status"];
+        [updateArray addObject:_lastIndexPaht];
+    }
+    
+    //** 取得索引填充数据 ，刷新当前cell
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:sender.tag inSection:0];
+    
+    
+    [[_questionList objectAtIndex:sender.tag] setObject:@"1" forKey:@"status"];
+    
+    IssueQuestionListCell *cell = (IssueQuestionListCell *)[_tableView_SearchList cellForRowAtIndexPath:indexPath];
+    
+    [cell.lb_Answer setText:[[_questionList objectAtIndex:indexPath.row] objectForKey:@"answer"]];
+    
+    [updateArray addObject:indexPath];
+    [_tableView_SearchList beginUpdates];
+    [_tableView_SearchList reloadRowsAtIndexPaths:updateArray withRowAnimation:UITableViewRowAnimationAutomatic];
+    [_tableView_SearchList endUpdates];
+    
+    _lastIndexPaht = indexPath;
+}
+
 
 
 #pragma mark - UISearchBarDelegate
@@ -189,6 +271,7 @@
         
     }
     
+    WEAKSELF
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
@@ -200,28 +283,21 @@
             
         };
         
-        /*
+      
          
-         [NetworkHandle loadDataFromServerWithParamDic:@{@"type":@"",
-         @"name":_searchBar.text,
-         @"page":[NSString stringWithFormat:@"%i",pageIndex]}
+         [NetworkHandle loadDataFromServerWithParamDic:@{@"key":searchBar.text}
          signDic:nil
-         interfaceName:InterfaceAddressName(@"nutrition/search")
+         interfaceName:InterfaceAddressName(@"issue/search")
          success:^(NSDictionary *responseDictionary, NSString *message) {
          
-         if ([responseDictionary objectForKey:@"list"]) {
+         if ([responseDictionary objectForKey:Return_data]) {
          
          //* 新增单菜结果集
+         [weakSelf makeTbvDataSoureWithData:responseDictionary];
          
-         NSMutableArray *foodList = [self makeReturnDataWithData:[responseDictionary objectForKey:@"list"]];
+         if (_questionList.count == 0) {
          
-         [_foodList addObjectsFromArray:foodList];
-         
-         [self.tableView_SearchList reloadData];
-         
-         if (_foodList.count == 0) {
-         
-         [self setEmptyHintMessage:@"没有你要的食材"];
+         [self setEmptyHintMessage:@"没有你要问题"];
          }else{
          [self removeEmptyHint];
          }
@@ -233,35 +309,39 @@
          failure:tempBlock
          networkFailure:tempBlock];
          
-         */
+        
     });
 }
 
 
 
--(NSMutableArray *)makeReturnDataWithData:(NSArray *)list{
+
+-(void)makeTbvDataSoureWithData:(NSDictionary *)dict{
     
-    NSMutableArray *retData = [NSMutableArray array];
-    for (NSObject *obj in list) {
-        NSDictionary *dict = (NSDictionary *)obj;
+    if ([dict isKindOfClass:[NSDictionary class]]) {
         
-        if ([[dict objectForKey:@"datatype"] intValue] == 1) {
+        if ([dict objectForKey: Return_data]) {
             
-            IssueModule *issue = [IssueModule new];
-            [issue voluationWithData:dict];
             
-            [retData addObject:issue];
+            NSArray *issueList = [dict objectForKey: Return_data];
+            
+            for (NSObject *obj  in issueList) {
+                NSDictionary *issueDict = (NSDictionary *)obj;
+                
+                NSMutableDictionary *muIssueDict = [NSMutableDictionary dictionaryWithDictionary:issueDict];
+                [muIssueDict setObject:@"0" forKey:@"status"];
+                
+                [_questionList addObject:muIssueDict];
+                
+            }
+            
+            [_tableView_SearchList reloadData];
             
         }
         
-        
     }
     
-    return retData;
-    
 }
-
-
 
 
 #pragma mark - 集成下拉上提

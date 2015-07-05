@@ -8,6 +8,7 @@
 
 #import "MoreNormalIssueViewController.h"
 #import "IssueQuestionListCell.h"
+#import "NetworkHandle.h"
 
 @interface MoreNormalIssueViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -30,35 +31,100 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
     [self setViewTitle:@"常见问题"];
     // Do any additional setup after loading the view, typically from a nib.
     _dataList = [NSMutableArray array];
+//    
+//    NSMutableDictionary *dict1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题是测试问题的答案是测试问题的答案是测试问题的答案",@"question",
+//                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
+//    
+//    
+//    NSMutableDictionary *dict2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题的答案这条是测试问题的是测试问题",@"question",
+//                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
+//    
+//    
+//    NSMutableDictionary *dict3 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题",@"question",
+//                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
+//    
+//    NSMutableDictionary *dict4 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题",@"question",
+//                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
+//    
+//    NSMutableDictionary *dict5 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题",@"question",
+//                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
+//    
+//    [_dataList addObjectsFromArray:@[dict1,dict2,dict3,dict4,dict5]];
+//
     
-    NSMutableDictionary *dict1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题是测试问题的答案是测试问题的答案是测试问题的答案",@"question",
-                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
-    
-    
-    NSMutableDictionary *dict2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题的答案这条是测试问题的是测试问题",@"question",
-                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
-    
-    
-    NSMutableDictionary *dict3 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题",@"question",
-                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
-    
-    NSMutableDictionary *dict4 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题",@"question",
-                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
-    
-    NSMutableDictionary *dict5 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"这个是测试问题",@"question",
-                                  @"这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案这条是测试问题的答案",@"answer",@"0",@"status", nil];
-    
-    [_dataList addObjectsFromArray:@[dict1,dict2,dict3,dict4,dict5]];
     
     //**注册cell
     [_tbv_IssureList registerNib:[UINib nibWithNibName:@"IssueQuestionListCell" bundle:nil] forCellReuseIdentifier:@"IssueQuestionListCell"];
     
     _issueCell = [_tbv_IssureList dequeueReusableCellWithIdentifier:@"IssueQuestionListCell"];
     
+    [self loadIssueDataWithType:@""];
+    
+    
 }
+
+
+-(IBAction)action_GetDataByIssueType:(id)sender{
+    
+    [self loadIssueDataWithType:[NSString stringWithFormat:@"%li",(long)((UIButton *)sender).tag]];
+    
+}
+
+
+
+-(void)loadIssueDataWithType:(NSString *)issueType{
+    
+  WEAKSELF
+        [NetworkHandle loadDataFromServerWithParamDic:@{@"issure_type":issueType}
+                                              signDic:nil
+                                        interfaceName:InterfaceAddressName(@"issue/issuelist")
+                                              success:^(NSDictionary *responseDictionary, NSString *message) {
+                                                 
+                                                  [_dataList count] > 0 ? [_dataList removeAllObjects] : nil;
+                                                  
+                                                  [weakSelf makeTbvDataSoureWithData:responseDictionary];
+                                              }
+                                              failure:nil
+                                       networkFailure:nil
+         showLoading:YES
+         ];
+
+    
+}
+
+
+-(void)makeTbvDataSoureWithData:(NSDictionary *)dict{
+    
+    if ([dict isKindOfClass:[NSDictionary class]]) {
+        
+        if ([dict objectForKey: Return_data]) {
+            
+            
+            NSArray *issueList = [dict objectForKey: Return_data];
+            
+            for (NSObject *obj  in issueList) {
+                 NSDictionary *issueDict = (NSDictionary *)obj;
+                
+                NSMutableDictionary *muIssueDict = [NSMutableDictionary dictionaryWithDictionary:issueDict];
+                [muIssueDict setObject:@"0" forKey:@"status"];
+                
+                 [_dataList addObject:muIssueDict];
+                
+            }
+            
+            [_tbv_IssureList reloadData];
+            
+        }
+        
+    }
+    
+}
+
 
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
