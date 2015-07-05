@@ -148,7 +148,7 @@
                                             <constraint firstAttribute="height" constant="30" id="YUd-Kp-GPH"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="2sI-Ed-mfv" id="ZB4-M5-mzd"/>

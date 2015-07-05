@@ -40,7 +40,7 @@
         return NO;
     }
     
-    if (![_tf_Card.text isEqualToString:@""]) {
+    if ([_tf_Card.text isEqualToString:@""]) {
         [CommonHUD showHudWithMessage:@"请输入身份证号" delay:CommonHudShowDuration completion:nil];
         return NO;
     }

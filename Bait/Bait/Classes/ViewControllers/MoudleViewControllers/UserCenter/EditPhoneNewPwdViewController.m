@@ -69,19 +69,18 @@
     [self.view endEditing:YES];
     //** 验证用户密码是否正确
     NSDictionary *data = @{@"phone":[CommonUser userPhone],
-                           @"verify_code":[_passDict objectForKey:@"code"],
-                           @"new_phone":[_passDict objectForKey:@"phone"],
-                           @"old_pwd":[_tf_OldPwd.text MD5Digest],
+                           @"pwd":[_tf_OldPwd.text MD5Digest],
                            @"new_pwd":[_tf_NewPwd.text MD5Digest],
-                           @"step":@"2"};
+                           @"type":@"2"};
     
     [NetworkHandle loadDataFromServerWithParamDic:data
                                           signDic:nil
-                                    interfaceName:InterfaceAddressName(@"user/resetphone")
+                                    interfaceName:InterfaceAddressName(@"user/resetpwd")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
                                               
-                                              pushViewControllerWith(sbStoryBoard_Moudle_UserCenter, EditPhoneNewPwdViewController, nil);
+                                              [self.navigationController popToRootViewControllerAnimated:YES];
                                               
+                                              [mNotificationCenter postNotificationName:Com_Notifation_MoreViewController object:nil];
                                           }
                                           failure:nil
                                    networkFailure:nil

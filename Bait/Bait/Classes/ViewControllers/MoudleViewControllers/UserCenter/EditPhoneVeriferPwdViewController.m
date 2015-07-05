@@ -33,6 +33,13 @@
 
 - (IBAction)action_Next:(id)sender {
    
+    
+    if ([_tf_UserPwd.text isEqualToString:@""]) {
+        [CommonHUD showHudWithMessage:@"请输入密码" delay:CommonHudShowDuration completion:nil];
+        return;
+    }
+    
+    
     [self.view endEditing:YES];
     //** 验证用户密码是否正确
     NSDictionary *data = @{@"phone":[CommonUser userPhone],
