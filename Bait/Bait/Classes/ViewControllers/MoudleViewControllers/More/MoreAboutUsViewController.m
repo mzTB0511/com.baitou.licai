@@ -8,7 +8,11 @@
 
 #import "MoreAboutUsViewController.h"
 
-@interface MoreAboutUsViewController ()
+@interface MoreAboutUsViewController ()<UIWebViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIWebView *web_WebView;
+
+
 
 @end
 
@@ -18,6 +22,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
      [self setViewTitle:@"关于我们"];
+    
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    NSString *memberID = [CommonUser userID];
+    NSString *udid = [CommonUser udid];
+    NSString *platformID = @"1";
+    NSString *version = [CommonIO appVersion];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://lx.thinkphp.com/app/tools/aboutus?member_id=%@&ud_id=%@&version=%@&platform_id=%@",memberID,udid,version,platformID];
+    
+    [_web_WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
+    
+}
+
+
+#pragma mark -- UIWebViewDelegate
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    [CommonHUD showHud];
+}
+
+
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [CommonHUD hideHud];
 }
 
 - (void)didReceiveMemoryWarning {
