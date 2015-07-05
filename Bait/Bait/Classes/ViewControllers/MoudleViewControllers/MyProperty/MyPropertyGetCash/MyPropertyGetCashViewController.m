@@ -30,13 +30,45 @@
     [super viewDidLoad];
    
     [self setViewTitle:@"返利取现"];
+    
+    WEAKSELF
+    [NetworkHandle loadDataFromServerWithParamDic:nil
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"my/getRepayAll")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSDictionary *rebateDict = [[responseDictionary objectForKey:Return_data] objectAtIndex:0];
+                                                  
+                                                  [weakSelf.lb_CashTotal setText:[rebateDict objectForKey:@"repay_now"]];
+                                                  
+                                              }
+                                              
+                                          }
+                                          failure:nil
+                                   networkFailure:nil
+                                      showLoading:YES
+     ];
 }
 
 
 //** 取现申请操作
 - (IBAction)action_CashApply:(id)sender {
     
-    
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"cash":_lb_CashTotal.text}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"my/getRepayAll")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                            
+                                               [CommonHUD showHudWithMessage:@"申请成功,请等待后台处理" delay:1.0f completion:^{
+                                                   
+                                                   [self backToView];
+                                               }];
+                                          }
+                                          failure:nil
+                                   networkFailure:nil
+                                      showLoading:YES
+     ];
 }
 
 
