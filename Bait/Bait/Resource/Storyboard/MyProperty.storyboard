@@ -241,7 +241,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uHp-Y0-4bj" kind="push" id="ps6-yu-VFc"/>
+                                            <segue destination="uHp-Y0-4bj" kind="push" identifier="push_to_usecard_de" id="ps6-yu-VFc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

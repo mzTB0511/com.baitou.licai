@@ -10,4 +10,6 @@
 
 @interface MyPropertyCardManagerOwnInfoViewController : RootViewController
 
+@property(nonatomic ,strong) NSString *cardID;
+
 @end
