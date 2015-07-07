@@ -10,4 +10,30 @@
 
 @interface MoneyMarketProductPTPTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *img_Partner;
+
+@property (weak, nonatomic) IBOutlet UIImageView *img_DaiIco;
+
+@property (weak, nonatomic) IBOutlet UIImageView *img_BaoIco;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_ProductName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Profit;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Limit_Cash;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Deadline;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_ProfitTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_DeadlineTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Limit_CashTitle;
+
+@property(strong, nonatomic) NSDictionary *cellData;
+
+
+
+
 @end
