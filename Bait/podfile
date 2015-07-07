@@ -8,4 +8,5 @@ target "Bait" do
 	pod 'Base64', '~> 1.0.1'
 	pod 'SBJson', '~> 4.0.1'
     pod 'MD5Digest', '~> 0.1.0'
+    pod 'BlocksKit', '~> 2.2.5'
 end

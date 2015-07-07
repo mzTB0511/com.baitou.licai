@@ -13,6 +13,8 @@
 #import "MoreNormalIssueViewController.h"
 #import "UserCenterUserInfoViewController.h"
 #import "BaseNavigationViewController.h"
+#import <UIView+BlocksKit.h>
+
 
 @interface MoreViewController ()
 
@@ -72,10 +74,12 @@
             [self.v_UserIcoPhone setHidden:NO];
             [self.btn_Login setHidden:YES];
     
-            _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userIcoPhoneTapEvent)];
-            _tapRecognizer.numberOfTapsRequired = 1;
-            _tapRecognizer.numberOfTouchesRequired = 1;
-            [_v_UserIcoPhone addGestureRecognizer:_tapRecognizer];
+            WEAKSELF
+            [_v_UserIcoPhone bk_whenTapped:^{
+               
+                [weakSelf userIcoPhoneTapEvent];
+            }];
+            
     
         }else{
             [self.btn_Login setHidden:NO];
