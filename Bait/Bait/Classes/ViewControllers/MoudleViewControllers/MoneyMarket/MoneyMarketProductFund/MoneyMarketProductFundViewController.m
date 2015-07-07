@@ -13,7 +13,11 @@
 #import "MoneyMarketProductFundTableViewCell.h"
 
 
-@interface MoneyMarketProductFundViewController ()
+@interface MoneyMarketProductFundViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+    NSInteger pageIndex;
+}
+
 
 @property (weak, nonatomic) IBOutlet UITableView *tbv_MoneyMarketFund;
 
@@ -30,6 +34,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    _productFundList  = [NSMutableArray array];
+    
+    
+    mRegisterNib_TableView(_tbv_MoneyMarketFund, NSStringFromClass([MoneyMarketProductFundTableViewCell class]));
+    
+    
     [self setupRefresh];
     
 }
@@ -45,9 +55,19 @@
     // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
     [self.tbv_MoneyMarketFund addHeaderWithCallback:^{
         
-        [weakSelf.tbv_MoneyMarketFund reloadData];
+        pageIndex = 1;
         
+        [weakSelf loadRebateDataWithPage:pageIndex];
+
         
+    }];
+    
+    [self.tbv_MoneyMarketFund addFooterWithCallback:^{
+        
+        //加载代码
+        pageIndex ++;
+        
+        [weakSelf loadRebateDataWithPage:pageIndex];
     }];
     
     //** 开始刷新
@@ -55,7 +75,53 @@
 }
 
 
+
+
+
+-(void)loadRebateDataWithPage:(NSInteger)page{
+    
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"page_no":[NSString stringWithFormat:@"%li",(long)page],@"product_type_id":@"2"}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"product/refreshProduct")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSArray *data = [responseDictionary objectForKey:Return_data];
+                                                  
+                                                  if (data.count > 0) {
+                                                      
+                                                      if (page == 1) {
+                                                          [_productFundList removeAllObjects];
+                                                          
+                                                      }
+                                                      [_productFundList addObjectsFromArray:data];
+                                                      
+                                                  }
+                                                  
+                                                  [_tbv_MoneyMarketFund reloadData];
+                                              }
+                                              
+                                              stopTableViewRefreshAnimation(_tbv_MoneyMarketFund);
+                                          }
+                                          failure:^{
+                                              stopTableViewRefreshAnimation(_tbv_MoneyMarketFund);
+                                          } networkFailure:^{
+                                              stopTableViewRefreshAnimation(_tbv_MoneyMarketFund);
+                                          }
+                                      showLoading:YES
+     ];
+    
+}
+
+
+
+
 #pragma mark -- UITabelViewDelegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 89;
+}
+
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -70,6 +136,9 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MoneyMarketProductFundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoneyMarketProductFundTableViewCell" forIndexPath:indexPath];
+    
+    [cell setCellData:[_productFundList objectAtIndex:indexPath.row]];
+    
     
     return cell;
 }

@@ -13,7 +13,10 @@
 #import "NetworkHandle.h"
 
 
-@interface MoneyMarketFavouriteViewController ()
+@interface MoneyMarketFavouriteViewController ()<UITableViewDelegate,UITableViewDataSource>
+{
+    NSInteger pageIndex;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tbv_MoneyMarketFavourite;
 
@@ -28,7 +31,15 @@
     [super viewDidLoad];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
 
+    _productFavouriteList  = [NSMutableArray array];
     
+    
+    mRegisterNib_TableView(_tbv_MoneyMarketFavourite, NSStringFromClass([MoneyMarketProductPTPTableViewCell class]));
+    
+    mRegisterNib_TableView(_tbv_MoneyMarketFavourite, NSStringFromClass([MoneyMarketProductFundTableViewCell class]));
+
+     [self setupRefresh];
+
 }
 
 
@@ -43,9 +54,19 @@
     // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
     [self.tbv_MoneyMarketFavourite addHeaderWithCallback:^{
         
-        [weakSelf.tbv_MoneyMarketFavourite reloadData];
+        pageIndex = 1;
+        
+        [weakSelf loadRebateDataWithPage:pageIndex];
         
         
+    }];
+    
+    [self.tbv_MoneyMarketFavourite addFooterWithCallback:^{
+        
+        //加载代码
+        pageIndex ++;
+        
+        [weakSelf loadRebateDataWithPage:pageIndex];
     }];
     
     //** 开始刷新
@@ -53,7 +74,51 @@
 }
 
 
+
+-(void)loadRebateDataWithPage:(NSInteger)page{
+    
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"page_no":[NSString stringWithFormat:@"%li",(long)page],@"product_type_id":@"3"}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"product/refreshProduct")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSArray *data = [responseDictionary objectForKey:Return_data];
+                                                  
+                                                  if (data.count > 0) {
+                                                      
+                                                      if (page == 1) {
+                                                          [_productFavouriteList removeAllObjects];
+                                                          
+                                                      }
+                                                      [_productFavouriteList addObjectsFromArray:data];
+                                                      
+                                                  }
+                                                  
+                                                  [_tbv_MoneyMarketFavourite reloadData];
+                                              }
+                                              
+                                              stopTableViewRefreshAnimation(_tbv_MoneyMarketFavourite);
+                                          }
+                                          failure:^{
+                                              stopTableViewRefreshAnimation(_tbv_MoneyMarketFavourite);
+                                          } networkFailure:^{
+                                              stopTableViewRefreshAnimation(_tbv_MoneyMarketFavourite);
+                                          }
+                                      showLoading:YES
+     ];
+    
+}
+
+
+
+
+
 #pragma mark -- UITabelViewDelegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 89;
+}
+
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -68,6 +133,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MoneyMarketProductFundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoneyMarketProductFundTableViewCell" forIndexPath:indexPath];
+
+    
+    [cell setCellData:[_productFavouriteList objectAtIndex:indexPath.row]];
+    
     
     return cell;
 }
