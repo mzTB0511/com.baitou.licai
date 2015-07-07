@@ -121,7 +121,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    MyPropertyRebateRecordsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyPropertyRebateRecordsTableViewCell.h" forIndexPath:indexPath];
+    MyPropertyRebateRecordsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyPropertyRebateRecordsTableViewCell" forIndexPath:indexPath];
+    
+    [cell setCellData:[_rebateList objectAtIndex:indexPath.row]];
     
     return cell;
 }

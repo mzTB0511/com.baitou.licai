@@ -53,10 +53,8 @@
                                                   
                                                   if ([responseDictionary objectForKey:Return_data]) {
                                                       
-                                                      NSDictionary *retData = [responseDictionary objectForKey:Return_data];
-                                                      
-                                                      if ([[retData objectForKey:@"member"] isKindOfClass:[NSArray class]]) {
-                                                          _cardList = [retData objectForKey:@"member"];
+                                                      if ([[responseDictionary objectForKey:Return_data] isKindOfClass:[NSArray class]]) {
+                                                          _cardList = [responseDictionary objectForKey:Return_data];
                                                           
                                                           [weakSelf.tbv_CardManageList reloadData];
 

@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lb_Rebate;
 
 
+@property(strong, nonatomic) NSDictionary *cellData;
+
 
 @end

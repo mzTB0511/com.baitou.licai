@@ -14,6 +14,20 @@
     // Initialization code
 }
 
+
+-(void)setCellData:(NSDictionary *)cellData{
+    
+    if (_cellData != cellData) {
+        
+        [_lb_ProductName setText:[cellData objectForKey:@"product_name"]];
+        [_lb_BuyCash setText:[cellData objectForKey:@"purchase_amount"]];
+        [_lb_Rebate setText:[cellData objectForKey:@"repay_cash"]];
+    }
+    
+}
+
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

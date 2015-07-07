@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
@@ -153,39 +153,24 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjc-uD-IdY" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hve-nW-ZcG">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hve-nW-ZcG">
                                         <rect key="frame" x="0.0" y="2" width="320" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="户名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDD-8j-hUf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="户名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDD-8j-hUf">
                                                 <rect key="frame" x="15" y="11" width="54" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="54" id="Atx-r9-cMh"/>
-                                                    <constraint firstAttribute="height" constant="25" id="b2Q-AP-pfn"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入真实姓名" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-wh-wAF">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入真实姓名" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxU-wh-wAF">
                                                 <rect key="frame" x="77" y="7" width="229" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ry3-pO-fAT"/>
-                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="aDD-8j-hUf" firstAttribute="top" secondItem="Hve-nW-ZcG" secondAttribute="top" constant="11" id="3AG-8s-yin"/>
-                                            <constraint firstAttribute="trailing" secondItem="pxU-wh-wAF" secondAttribute="trailing" constant="14" id="80J-oX-JaY"/>
-                                            <constraint firstItem="pxU-wh-wAF" firstAttribute="centerY" secondItem="Hve-nW-ZcG" secondAttribute="centerY" id="Bnq-aW-q4d"/>
-                                            <constraint firstItem="pxU-wh-wAF" firstAttribute="leading" secondItem="aDD-8j-hUf" secondAttribute="trailing" constant="8" id="Bu8-0G-a1y"/>
-                                            <constraint firstItem="aDD-8j-hUf" firstAttribute="leading" secondItem="Hve-nW-ZcG" secondAttribute="leading" constant="15" id="HMs-cl-1Ea"/>
-                                            <constraint firstAttribute="height" constant="44" id="dEu-E2-Ph3"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ME6-Sf-U8m">
                                         <rect key="frame" x="0.0" y="106" width="320" height="44"/>
@@ -206,32 +191,25 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-uD-yuB">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-uD-yuB">
                                         <rect key="frame" x="0.0" y="54" width="320" height="44"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择开户行" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1xn-oS-0J8">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择开户行" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1xn-oS-0J8">
                                                 <rect key="frame" x="75" y="7" width="233" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开户行" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOW-0h-ckj">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="开户行" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOW-0h-ckj">
                                                 <rect key="frame" x="15" y="11" width="57" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="SG0-Or-3rE"/>
-                                                    <constraint firstAttribute="width" constant="57" id="yyh-3g-13y"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-PG-23i">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-PG-23i">
                                                 <rect key="frame" x="74" y="0.0" width="233" height="44"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="L0a-P4-ZMZ"/>
-                                                </constraints>
                                                 <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -241,28 +219,8 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="1xn-oS-0J8" firstAttribute="top" secondItem="HsE-uD-yuB" secondAttribute="top" constant="7" id="0mL-FU-TBi"/>
-                                            <constraint firstItem="YdI-PG-23i" firstAttribute="leading" secondItem="HsE-uD-yuB" secondAttribute="leading" constant="74" id="AQ5-QA-jWr"/>
-                                            <constraint firstAttribute="trailing" secondItem="YdI-PG-23i" secondAttribute="trailing" constant="13" id="AdG-gC-sRy"/>
-                                            <constraint firstAttribute="bottom" secondItem="1xn-oS-0J8" secondAttribute="bottom" constant="7" id="HMv-BA-GC2"/>
-                                            <constraint firstAttribute="trailing" secondItem="1xn-oS-0J8" secondAttribute="trailing" constant="12" id="JNS-q8-5Jp"/>
-                                            <constraint firstItem="YdI-PG-23i" firstAttribute="top" secondItem="HsE-uD-yuB" secondAttribute="top" id="L2a-Vt-4c9"/>
-                                            <constraint firstItem="AOW-0h-ckj" firstAttribute="leading" secondItem="HsE-uD-yuB" secondAttribute="leading" constant="15" id="c8n-zQ-AX2"/>
-                                            <constraint firstItem="1xn-oS-0J8" firstAttribute="leading" secondItem="AOW-0h-ckj" secondAttribute="trailing" constant="3" id="o9T-BZ-8bh"/>
-                                            <constraint firstItem="AOW-0h-ckj" firstAttribute="top" secondItem="HsE-uD-yuB" secondAttribute="top" constant="11" id="xZP-dC-c2a"/>
-                                            <constraint firstAttribute="height" constant="44" id="z32-er-xHL"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="HsE-uD-yuB" firstAttribute="leading" secondItem="rjc-uD-IdY" secondAttribute="leading" id="F8c-Ru-OZW"/>
-                                    <constraint firstAttribute="trailing" secondItem="HsE-uD-yuB" secondAttribute="trailing" id="NfJ-3b-voi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hve-nW-ZcG" secondAttribute="trailing" id="QKY-hY-Ob4"/>
-                                    <constraint firstItem="Hve-nW-ZcG" firstAttribute="top" secondItem="rjc-uD-IdY" secondAttribute="top" constant="2" id="W9C-h4-y2K"/>
-                                    <constraint firstItem="HsE-uD-yuB" firstAttribute="top" secondItem="Hve-nW-ZcG" secondAttribute="bottom" constant="8" symbolic="YES" id="opI-8K-amx"/>
-                                    <constraint firstItem="Hve-nW-ZcG" firstAttribute="leading" secondItem="rjc-uD-IdY" secondAttribute="leading" id="uu1-rq-UKw"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -452,7 +410,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-Ml-zgT">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyPropertyRebateRecordsTableViewCell" rowHeight="64" id="dfD-eP-UZA" customClass="MyPropertyRebateRecordsTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -556,7 +514,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-0J-ndB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyPropertyInvestmentTableViewCell" rowHeight="64" id="ugR-0l-8SL" customClass="MyPropertyInvestmentTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
