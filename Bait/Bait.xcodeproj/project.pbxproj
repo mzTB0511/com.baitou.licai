@@ -928,9 +928,9 @@
 			children = (
 				E98A50641B45174A00193817 /* MyPropertyInvestmentHeaderView.h */,
 				E98A50651B45174A00193817 /* MyPropertyInvestmentHeaderView.m */,
+				E98A506A1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib */,
 				E98A50671B45175B00193817 /* MyPropertyInvestmentTableViewCell.h */,
 				E98A50681B45175B00193817 /* MyPropertyInvestmentTableViewCell.m */,
-				E98A506A1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib */,
 			);
 			path = MyPropertyInvestmentRecordCell;
 			sourceTree = "<group>";

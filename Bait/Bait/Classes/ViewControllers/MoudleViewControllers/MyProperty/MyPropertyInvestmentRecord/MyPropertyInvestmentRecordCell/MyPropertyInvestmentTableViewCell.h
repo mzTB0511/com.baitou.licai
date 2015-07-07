@@ -10,4 +10,18 @@
 
 @interface MyPropertyInvestmentTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lb_ProductName;
+
+@property (weak, nonatomic) IBOutlet UIImageView *img_VenderIco;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Limit;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Amount;
+
+
+@property(strong, nonatomic) NSDictionary *cellData;
+
+
 @end

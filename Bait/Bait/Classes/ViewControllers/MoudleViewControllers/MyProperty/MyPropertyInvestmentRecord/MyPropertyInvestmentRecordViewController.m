@@ -19,7 +19,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITableView *tbv_investmentList;
 
-@property (strong, nonatomic) NSArray *investmentList;
+@property (strong, nonatomic) NSMutableArray *investmentList;
 
 @end
 
@@ -28,14 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setViewTitle:@"投资记录"];
+    
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    _investmentList  = [NSMutableArray array];
+    
     [self setupRefresh];
-    
-    mRegisterHeaderFooterNib_TableView(_tbv_investmentList, NSStringFromClass([MyPropertyInvestmentHeaderView class]));
-    
-    mRegisterNib_TableView(_tbv_investmentList, NSStringFromClass([MyPropertyInvestmentTableViewCell class]));
-    
-    
-    
+
     
 }
 
@@ -50,10 +48,11 @@
     WEAKSELF
     // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
     [self.tbv_investmentList addHeaderWithCallback:^{
-         pageIndex = 1;
         
-        [weakSelf.tbv_investmentList reloadData];
+        //刷新代码
+        pageIndex = 1;
         
+        [weakSelf loadRebateDataWithPage:pageIndex];
         
     }];
     
@@ -61,14 +60,53 @@
     [self.tbv_investmentList addFooterWithCallback:^{
         
         //加载代码
+        //加载代码
         pageIndex ++;
-
-        [weakSelf.tbv_investmentList reloadData];
+        
+        [weakSelf loadRebateDataWithPage:pageIndex];
     }];
     
     //** 开始刷新
     [self.tbv_investmentList headerBeginRefreshing];
 }
+
+
+
+-(void)loadRebateDataWithPage:(NSInteger)page{
+    
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"page_no":[NSString stringWithFormat:@"%li",(long)page]}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"my/getIvstrecord")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSArray *data = [responseDictionary objectForKey:Return_data];
+                                                  
+                                                  if (data.count > 0) {
+                                                      
+                                                      if (page == 1) {
+                                                          [_investmentList removeAllObjects];
+                                                          
+                                                      }
+                                                      [_investmentList addObjectsFromArray:data];
+                                                      
+                                                  }
+                                                  
+                                                  [_tbv_investmentList reloadData];
+                                              }
+                                              
+                                              stopTableViewRefreshAnimation(_tbv_investmentList);
+                                          }
+                                          failure:^{
+                                              stopTableViewRefreshAnimation(_tbv_investmentList);
+                                          } networkFailure:^{
+                                              stopTableViewRefreshAnimation(_tbv_investmentList);
+                                          }
+                                      showLoading:YES
+     ];
+    
+}
+
 
 
 #pragma mark -- UITabelViewDelegate
@@ -86,6 +124,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MyPropertyInvestmentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyPropertyInvestmentTableViewCell" forIndexPath:indexPath];
+    
+     [cell setCellData:[_investmentList objectAtIndex:indexPath.row]];
     
     return cell;
 }
