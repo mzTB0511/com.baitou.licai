@@ -10,4 +10,7 @@
 
 @interface MoneyMarketProducDetailViewController : RootViewController
 
+
+@property(nonatomic,strong) NSString *productID;
+
 @end

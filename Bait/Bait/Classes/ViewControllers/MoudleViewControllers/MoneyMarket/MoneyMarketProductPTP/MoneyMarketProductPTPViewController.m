@@ -10,6 +10,7 @@
 #import "MJRefresh.h"
 #import "NetworkHandle.h"
 #import "MoneyMarketProductPTPTableViewCell.h"
+#import "MoneyMarketProducDetailViewController.h"
 
 @interface MoneyMarketProductPTPViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -138,6 +139,9 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    pushViewControllerWith(sbStoryBoard_Moudle_MoneyMarket, MoneyMarketProducDetailViewController, [_productPTPList objectAtIndex:indexPath.row])
     
 }
 
