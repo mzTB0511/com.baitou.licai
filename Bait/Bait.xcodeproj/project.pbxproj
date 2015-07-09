@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A806D0F96E6D6191F91DF80 /* libPods-Bait.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3BCBC420174E90B9586E1C /* libPods-Bait.a */; };
+		E908B6EC1B4E1AE4007AAB70 /* LXCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E908B6EB1B4E1AE4007AAB70 /* LXCycleScrollView.m */; };
 		E9156DAE1B42939300F24616 /* MoneyMarketContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DAD1B42939300F24616 /* MoneyMarketContainerViewController.m */; };
 		E9156DB11B42953000F24616 /* EmptySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DB01B42953000F24616 /* EmptySegue.m */; };
 		E9156DB41B42995100F24616 /* MoneyMarketNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9156DB31B42995100F24616 /* MoneyMarketNavigationViewController.m */; };
@@ -137,6 +138,11 @@
 		E98F9A7F1B3B194B00E3E365 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E98F9A7E1B3B194B00E3E365 /* libsqlite3.dylib */; };
 		E98F9A811B3B195400E3E365 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98F9A801B3B195400E3E365 /* CoreTelephony.framework */; };
 		E98F9A831B3B195E00E3E365 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E98F9A821B3B195E00E3E365 /* libstdc++.dylib */; };
+		E9AACE351B4EBB2800D244E4 /* TOWebViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9AACE241B4EBB2800D244E4 /* TOWebViewControllerLocalizable.strings */; };
+		E9AACE361B4EBB2800D244E4 /* TOActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AACE2C1B4EBB2800D244E4 /* TOActivityChrome.m */; };
+		E9AACE371B4EBB2800D244E4 /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AACE2E1B4EBB2800D244E4 /* TOActivitySafari.m */; };
+		E9AACE381B4EBB2800D244E4 /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AACE301B4EBB2800D244E4 /* TOWebViewController.m */; };
+		E9AACE391B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AACE321B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.m */; };
 		E9DA8A381B38719C00CB5AF6 /* UserRegisterSetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DA8A371B38719C00CB5AF6 /* UserRegisterSetPwdViewController.m */; };
 		E9DCA8B21B4193BE009EE6A3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DCA8B11B4193BE009EE6A3 /* LaunchScreen.xib */; };
 		E9DCA8B71B419FB7009EE6A3 /* IssueQuestionListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8B51B419FB7009EE6A3 /* IssueQuestionListCell.m */; };
@@ -162,6 +168,8 @@
 		4A6B832BE50BCC3F7655BCCA /* Pods-Bait.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bait.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bait/Pods-Bait.release.xcconfig"; sourceTree = "<group>"; };
 		4CCD0EFA62EA14E7DAE55737 /* Pods-Bait.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bait.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bait/Pods-Bait.debug.xcconfig"; sourceTree = "<group>"; };
 		CC3BCBC420174E90B9586E1C /* libPods-Bait.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bait.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E908B6EA1B4E1AE4007AAB70 /* LXCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCycleScrollView.h; sourceTree = "<group>"; };
+		E908B6EB1B4E1AE4007AAB70 /* LXCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCycleScrollView.m; sourceTree = "<group>"; };
 		E9156DAC1B42939300F24616 /* MoneyMarketContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketContainerViewController.h; sourceTree = "<group>"; };
 		E9156DAD1B42939300F24616 /* MoneyMarketContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketContainerViewController.m; sourceTree = "<group>"; };
 		E9156DAF1B42953000F24616 /* EmptySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptySegue.h; sourceTree = "<group>"; };
@@ -402,6 +410,22 @@
 		E98F9A7E1B3B194B00E3E365 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E98F9A801B3B195400E3E365 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E98F9A821B3B195E00E3E365 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		E9AACE251B4EBB2800D244E4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		E9AACE261B4EBB2800D244E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		E9AACE271B4EBB2800D244E4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		E9AACE281B4EBB2800D244E4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		E9AACE291B4EBB2800D244E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		E9AACE2A1B4EBB2800D244E4 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		E9AACE2B1B4EBB2800D244E4 /* TOActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivityChrome.h; sourceTree = "<group>"; };
+		E9AACE2C1B4EBB2800D244E4 /* TOActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivityChrome.m; sourceTree = "<group>"; };
+		E9AACE2D1B4EBB2800D244E4 /* TOActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivitySafari.h; sourceTree = "<group>"; };
+		E9AACE2E1B4EBB2800D244E4 /* TOActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivitySafari.m; sourceTree = "<group>"; };
+		E9AACE2F1B4EBB2800D244E4 /* TOWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOWebViewController.h; sourceTree = "<group>"; };
+		E9AACE301B4EBB2800D244E4 /* TOWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
+		E9AACE311B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TOWebViewControllerIcons.h"; sourceTree = "<group>"; };
+		E9AACE321B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TOWebViewControllerIcons.m"; sourceTree = "<group>"; };
+		E9AACE331B4EBB2800D244E4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOWebViewControllerLocalizable.strings"; sourceTree = "<group>"; };
+		E9AACE341B4EBB2800D244E4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/TOWebViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		E9DA8A361B38719C00CB5AF6 /* UserRegisterSetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegisterSetPwdViewController.h; sourceTree = "<group>"; };
 		E9DA8A371B38719C00CB5AF6 /* UserRegisterSetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegisterSetPwdViewController.m; sourceTree = "<group>"; };
 		E9DCA8B11B4193BE009EE6A3 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -476,6 +500,15 @@
 				CC3BCBC420174E90B9586E1C /* libPods-Bait.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E908B6E91B4E1AE4007AAB70 /* CycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E908B6EA1B4E1AE4007AAB70 /* LXCycleScrollView.h */,
+				E908B6EB1B4E1AE4007AAB70 /* LXCycleScrollView.m */,
+			);
+			path = CycleScrollView;
 			sourceTree = "<group>";
 		};
 		E920C0BF1B37F13000F19EC5 = {
@@ -559,6 +592,8 @@
 		E920C0FD1B37F6C000F19EC5 /* 3rdPaty */ = {
 			isa = PBXGroup;
 			children = (
+				E9AACE231B4EBB2800D244E4 /* TOWebViewController */,
+				E908B6E91B4E1AE4007AAB70 /* CycleScrollView */,
 				E97E746D1B49736400E2A1AD /* NSDateCategory */,
 				E97E74691B4963C200E2A1AD /* BabySanteDatePicker */,
 				E98A504A1B44504A00193817 /* UIViewController+ImagePicker */,
@@ -1256,6 +1291,22 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		E9AACE231B4EBB2800D244E4 /* TOWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9AACE241B4EBB2800D244E4 /* TOWebViewControllerLocalizable.strings */,
+				E9AACE2B1B4EBB2800D244E4 /* TOActivityChrome.h */,
+				E9AACE2C1B4EBB2800D244E4 /* TOActivityChrome.m */,
+				E9AACE2D1B4EBB2800D244E4 /* TOActivitySafari.h */,
+				E9AACE2E1B4EBB2800D244E4 /* TOActivitySafari.m */,
+				E9AACE2F1B4EBB2800D244E4 /* TOWebViewController.h */,
+				E9AACE301B4EBB2800D244E4 /* TOWebViewController.m */,
+				E9AACE311B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.h */,
+				E9AACE321B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.m */,
+			);
+			path = TOWebViewController;
+			sourceTree = "<group>";
+		};
 		E9DCA8B31B419FB7009EE6A3 /* MoreNormalIssueCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1341,6 +1392,12 @@
 				en,
 				Base,
 				"zh-Hans",
+				de,
+				es,
+				ja,
+				ko,
+				pl,
+				"zh-Hant",
 			);
 			mainGroup = E920C0BF1B37F13000F19EC5;
 			productRefGroup = E920C0C91B37F13000F19EC5 /* Products */;
@@ -1358,6 +1415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AACE351B4EBB2800D244E4 /* TOWebViewControllerLocalizable.strings in Resources */,
 				E9DCA8B81B419FB7009EE6A3 /* IssueQuestionListCell.xib in Resources */,
 				E920C2071B38538A00F19EC5 /* UserLoginRegister.storyboard in Resources */,
 				E98F9A5C1B3B18AD00E3E365 /* UMSCommentDetailController.xib in Resources */,
@@ -1487,12 +1545,14 @@
 				E97E74721B49736400E2A1AD /* NSDate+Category.m in Sources */,
 				E920C1CA1B37FCA800F19EC5 /* MLBlackTransition.m in Sources */,
 				E98F9A3E1B3B0A2200E3E365 /* MyPropertyCardManagerCardInfoViewController.m in Sources */,
+				E9AACE381B4EBB2800D244E4 /* TOWebViewController.m in Sources */,
 				E98F9A0F1B3AFFF500E3E365 /* MoneyMarketProducSectionDetailSection.m in Sources */,
 				E920C1ED1B3809C300F19EC5 /* MainViewController.m in Sources */,
 				E98F99EC1B3AF79000E3E365 /* MoneyMarketProductFundTableViewCell.m in Sources */,
 				E98F9A3B1B3B0A0100E3E365 /* MyPropertyCardManagerOwnInfoViewController.m in Sources */,
 				E9FD407A1B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m in Sources */,
 				E920C2051B38534E00F19EC5 /* UserRegisterViewController.m in Sources */,
+				E9AACE391B4EBB2800D244E4 /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				E920C1841B37F6F600F19EC5 /* SignTool.m in Sources */,
 				E920C1F51B380E8400F19EC5 /* OpenUDID.m in Sources */,
 				E98A50591B44604F00193817 /* UserCenterCardVerifierViewController.m in Sources */,
@@ -1507,9 +1567,11 @@
 				E98A50621B45071100193817 /* MyPropertyRebateRecordsTableViewCell.m in Sources */,
 				E98F9A061B3AFC2D00E3E365 /* MoneyMarketFavouriteTableViewCell.m in Sources */,
 				E98F99BE1B3AF42D00E3E365 /* MoreAboutUsViewController.m in Sources */,
+				E9AACE371B4EBB2800D244E4 /* TOActivitySafari.m in Sources */,
 				E98A50501B44524800193817 /* EditPhoneVeriferPwdViewController.m in Sources */,
 				E98F99F11B3AF7A300E3E365 /* MoneyMarketProductPTPTableViewCell.m in Sources */,
 				E920C18A1B37F6F600F19EC5 /* UIImage+Tint.m in Sources */,
+				E9AACE361B4EBB2800D244E4 /* TOActivityChrome.m in Sources */,
 				E9DCA8BF1B41A219009EE6A3 /* IssueModule.m in Sources */,
 				E920C1CE1B37FCA800F19EC5 /* UIAlertView+Blocks.m in Sources */,
 				E9156DB41B42995100F24616 /* MoneyMarketNavigationViewController.m in Sources */,
@@ -1518,6 +1580,7 @@
 				E920C1E91B3809C300F19EC5 /* BaseTableViewCell.m in Sources */,
 				E98F99C11B3AF42D00E3E365 /* MoreNormalIssueViewController.m in Sources */,
 				E920C1821B37F6F600F19EC5 /* UserInfo.m in Sources */,
+				E908B6EC1B4E1AE4007AAB70 /* LXCycleScrollView.m in Sources */,
 				E98A50421B44257D00193817 /* UserCenterUserInfoViewController.m in Sources */,
 				E920C1C41B37FCA800F19EC5 /* MJRefreshConst.m in Sources */,
 				E920C1EB1B3809C300F19EC5 /* RootViewController.m in Sources */,
@@ -1560,6 +1623,21 @@
 				E98F9A591B3B18AD00E3E365 /* zh-Hans */,
 			);
 			name = UMSocialLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		E9AACE241B4EBB2800D244E4 /* TOWebViewControllerLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9AACE251B4EBB2800D244E4 /* de */,
+				E9AACE261B4EBB2800D244E4 /* en */,
+				E9AACE271B4EBB2800D244E4 /* es */,
+				E9AACE281B4EBB2800D244E4 /* ja */,
+				E9AACE291B4EBB2800D244E4 /* ko */,
+				E9AACE2A1B4EBB2800D244E4 /* pl */,
+				E9AACE331B4EBB2800D244E4 /* zh-Hans */,
+				E9AACE341B4EBB2800D244E4 /* zh-Hant */,
+			);
+			name = TOWebViewControllerLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

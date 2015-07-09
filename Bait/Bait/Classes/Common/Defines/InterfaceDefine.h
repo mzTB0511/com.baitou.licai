@@ -10,7 +10,7 @@
  *定义接口
  */
 
-#define Interface_Server                    @"http://lx.thinkphp.com/"//@"http://app.babysante.net/"//
+#define Interface_Server                   @"http://101.231.74.38/baitou/"// @"http://lx.thinkphp.com/"//@"101.231.74.38/baitou/"
 
 #define ProjectForder                        @"app/"
 
