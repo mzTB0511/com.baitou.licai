@@ -9,7 +9,7 @@
 #import "MoneyMarketProducDetailViewController.h"
 #import "MoneyMarketProducDetailTopTableViewCell.h"
 #import "NetworkHandle.h"
-
+#import "MoneyMarketProducSectionDetailOneViewController.h"
 
 @interface MoneyMarketProducDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -264,7 +264,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    NSDictionary *sectionData = [[_productDetailList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
+    pushViewControllerWith(sbStoryBoard_Moudle_MoneyMarket, MoneyMarketProducSectionDetailOneViewController, sectionData);
     
 }
 

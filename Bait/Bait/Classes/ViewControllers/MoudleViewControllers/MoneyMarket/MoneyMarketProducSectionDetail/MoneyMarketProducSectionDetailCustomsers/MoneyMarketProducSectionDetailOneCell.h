@@ -10,6 +10,8 @@
 
 @interface MoneyMarketProducSectionDetailOneCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lb_PropertyTitle;
+
 @property (weak, nonatomic) IBOutlet UILabel *lb_PropertyValue;
 
 
