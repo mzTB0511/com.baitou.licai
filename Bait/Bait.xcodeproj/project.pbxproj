@@ -60,6 +60,7 @@
 		E920C20D1B3856A400F19EC5 /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C20C1B3856A400F19EC5 /* UserLoginViewController.m */; };
 		E920C20F1B385A6D00F19EC5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E920C20E1B385A6D00F19EC5 /* More.storyboard */; };
 		E920C2121B38692400F19EC5 /* MoudleOthersWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */; };
+		E94142141B501653007D5594 /* RecommendtionMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E94142131B501653007D5594 /* RecommendtionMessageTableViewCell.m */; };
 		E97E746C1B4963C200E2A1AD /* BabySanteDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E746B1B4963C200E2A1AD /* BabySanteDatePicker.m */; };
 		E97E74721B49736400E2A1AD /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E746F1B49736400E2A1AD /* NSDate+Category.m */; };
 		E97E74731B49736400E2A1AD /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E74711B49736400E2A1AD /* NSDateFormatter+Category.m */; };
@@ -273,6 +274,8 @@
 		E920C20E1B385A6D00F19EC5 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		E920C2101B38692400F19EC5 /* MoudleOthersWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoudleOthersWebViewController.h; sourceTree = "<group>"; };
 		E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoudleOthersWebViewController.m; sourceTree = "<group>"; };
+		E94142121B501653007D5594 /* RecommendtionMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendtionMessageTableViewCell.h; sourceTree = "<group>"; };
+		E94142131B501653007D5594 /* RecommendtionMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendtionMessageTableViewCell.m; sourceTree = "<group>"; };
 		E97E746A1B4963C200E2A1AD /* BabySanteDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabySanteDatePicker.h; sourceTree = "<group>"; };
 		E97E746B1B4963C200E2A1AD /* BabySanteDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySanteDatePicker.m; sourceTree = "<group>"; };
 		E97E746E1B49736400E2A1AD /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
@@ -1168,6 +1171,8 @@
 			children = (
 				E98F9A261B3B039500E3E365 /* RecommendationMessageViewController.h */,
 				E98F9A271B3B039500E3E365 /* RecommendationMessageViewController.m */,
+				E94142121B501653007D5594 /* RecommendtionMessageTableViewCell.h */,
+				E94142131B501653007D5594 /* RecommendtionMessageTableViewCell.m */,
 			);
 			path = RecommendationMessage;
 			sourceTree = "<group>";
@@ -1557,6 +1562,7 @@
 				E920C1F51B380E8400F19EC5 /* OpenUDID.m in Sources */,
 				E98A50591B44604F00193817 /* UserCenterCardVerifierViewController.m in Sources */,
 				E9156E001B42EFF000F24616 /* RecommendationServiceViewController.m in Sources */,
+				E94142141B501653007D5594 /* RecommendtionMessageTableViewCell.m in Sources */,
 				E920C2121B38692400F19EC5 /* MoudleOthersWebViewController.m in Sources */,
 				E98F9A221B3B035B00E3E365 /* RecommendationActivityViewController.m in Sources */,
 				E920C18B1B37F6F600F19EC5 /* UMTrack.m in Sources */,

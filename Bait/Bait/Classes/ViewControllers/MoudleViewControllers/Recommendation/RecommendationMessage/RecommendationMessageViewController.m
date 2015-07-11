@@ -7,14 +7,21 @@
 //
 
 #import "RecommendationMessageViewController.h"
+#import "RecommendtionMessageTableViewCell.h"
 #import "NetworkHandle.h"
 #import "MJRefresh.h"
 
-@interface RecommendationMessageViewController ()
+@interface RecommendationMessageViewController ()<UITableViewDataSource,UITableViewDelegate>
+{
+    NSInteger pageIndex;
+}
+
 
 @property (weak, nonatomic) IBOutlet UITableView *tbv_RecommendationMessage;
 
-@property(nonatomic,strong) NSArray *MessageList;
+@property(nonatomic,strong) NSMutableArray *MessageList;
+
+@property(nonatomic,strong) RecommendtionMessageTableViewCell *customerCell;
 
 @end
 
@@ -22,8 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _MessageList = [NSMutableArray array];
     // Do any additional setup after loading the view.
     
+    
+    _customerCell = [self.tbv_RecommendationMessage dequeueReusableCellWithIdentifier:@"RecommendtionMessageTableViewCell"];
     [self setupRefresh];
 }
 
@@ -38,9 +48,18 @@
     // 1.下拉刷新(进入刷新状态就会调用self的headerRereshing)
     [self.tbv_RecommendationMessage addHeaderWithCallback:^{
         
-        [weakSelf.tbv_RecommendationMessage reloadData];
+        pageIndex = 1;
         
+        [weakSelf loadMessageDataWithPage:pageIndex];
+    }];
+    
+    
+    [self.tbv_RecommendationMessage addFooterWithCallback:^{
         
+        //加载代码
+        pageIndex ++;
+        
+        [weakSelf loadMessageDataWithPage:pageIndex];
     }];
     
     //** 开始刷新
@@ -48,7 +67,56 @@
 }
 
 
+-(void)loadMessageDataWithPage:(NSInteger)page{
+    
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"page_no":[NSString stringWithFormat:@"%li",(long)page]}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"recomend/message")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSArray *data = [responseDictionary objectForKey:Return_data];
+                                                  
+                                                  if (data.count > 0) {
+                                                      
+                                                      if (page == 1) {
+                                                          [_MessageList removeAllObjects];
+                                                          
+                                                      }
+                                                      [_MessageList addObjectsFromArray:data];
+                                                      
+                                                  }
+                                                  
+                                                  [_tbv_RecommendationMessage reloadData];
+                                              }
+                                              
+                                              stopTableViewRefreshAnimation(_tbv_RecommendationMessage);
+                                          }
+                                          failure:^{
+                                              stopTableViewRefreshAnimation(_tbv_RecommendationMessage);
+                                          } networkFailure:^{
+                                              stopTableViewRefreshAnimation(_tbv_RecommendationMessage);
+                                          }
+                                      showLoading:YES
+     ];
+    
+}
+
+
+
 #pragma mark -- UITabelViewDelegate
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSDictionary *cellDict = [_MessageList objectAtIndex:indexPath.row];
+
+    [_customerCell.lb_time setText:[cellDict objectForKey:@"insert_time"]];
+    [_customerCell.lb_Message setText:[cellDict objectForKey:@"message_content"]];
+
+    CGSize size = [_customerCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height + 1;
+    
+}
+
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -62,8 +130,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendtionMessageTableViewCell" forIndexPath:indexPath];
+    RecommendtionMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendtionMessageTableViewCell" forIndexPath:indexPath];
     
+    NSDictionary *cellDict = [_MessageList objectAtIndex:indexPath.row];
+    
+    [cell.lb_time setText:[cellDict objectForKey:@"insert_time"]];
+    [cell.lb_Message setText:[cellDict objectForKey:@"message_content"]];
     return cell;
 }
 

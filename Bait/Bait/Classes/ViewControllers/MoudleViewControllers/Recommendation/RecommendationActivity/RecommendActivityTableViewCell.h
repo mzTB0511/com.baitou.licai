@@ -18,5 +18,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *img_Status;
 
+@property(strong, nonatomic) NSDictionary *cellData;
+
+@property (weak, nonatomic) IBOutlet UIView *view_BGView;
+
 
 @end
