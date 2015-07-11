@@ -9,7 +9,6 @@
 #import "MoneyMarketProducDetailViewController.h"
 #import "MoneyMarketProducDetailTopTableViewCell.h"
 #import "NetworkHandle.h"
-#import <NSDictionary+BlocksKit.h>
 
 
 @interface MoneyMarketProducDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
