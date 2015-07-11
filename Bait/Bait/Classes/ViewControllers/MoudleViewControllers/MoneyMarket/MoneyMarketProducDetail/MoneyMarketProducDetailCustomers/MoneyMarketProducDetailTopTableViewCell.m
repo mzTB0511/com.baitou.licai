@@ -8,7 +8,7 @@
 
 #import "MoneyMarketProducDetailTopTableViewCell.h"
 #import <UIImageView+WebCache.h>
-
+#import <UIControl+BlocksKit.h>
 
 @implementation MoneyMarketProducDetailTopTableViewCell
 
@@ -43,6 +43,23 @@
         
         [_lb_LimitCashTitle setText:[cellData objectForKey:@"limit_cash_title"]];
         [_lb_LimitCashValue setText:[cellData objectForKey:@"limit_cash"]];
+        
+        [_btn_RSS setTag:[[cellData objectForKey:@"id"] intValue]];
+        
+        
+        //** 订阅产品
+        NSInteger isRss = [[cellData objectForKey:@"is_rss"] intValue];
+        isRss == 1 ? [_btn_RSS setTitle:@"退订" forState:UIControlStateNormal] :
+        [_btn_RSS setTitle:@"订阅" forState:UIControlStateNormal];
+        
+        [_btn_RSS bk_addEventHandler:^(id sender) {
+            
+            if (_rssBlock) {
+                NSInteger rss;
+                rss = (isRss == 1) ? 0 : 1;
+                self.rssBlock([NSString stringWithFormat:@"%li",(long)((UIButton *)sender).tag],rss);
+            }
+        } forControlEvents:UIControlEventTouchUpInside];
        
     }
     

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ProductRSSBlock)(NSString *partnerID,NSInteger controlType);
+
 @interface MoneyMarketProducDetailTopTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *img_PartnerIco;
@@ -34,6 +36,7 @@
 
 @property(nonatomic, strong) NSDictionary *cellData;
 
+@property(nonatomic, strong) ProductRSSBlock rssBlock;
 
 
 @end

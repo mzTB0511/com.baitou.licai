@@ -56,7 +56,7 @@
         
         pageIndex = 1;
         
-        [weakSelf loadRebateDataWithPage:pageIndex];
+        [weakSelf loadFavouriteDataWithPage:pageIndex];
         
         
     }];
@@ -66,7 +66,7 @@
         //加载代码
         pageIndex ++;
         
-        [weakSelf loadRebateDataWithPage:pageIndex];
+        [weakSelf loadFavouriteDataWithPage:pageIndex];
     }];
     
     //** 开始刷新
@@ -75,7 +75,7 @@
 
 
 
--(void)loadRebateDataWithPage:(NSInteger)page{
+-(void)loadFavouriteDataWithPage:(NSInteger)page{
     
     [NetworkHandle loadDataFromServerWithParamDic:@{@"page_no":[NSString stringWithFormat:@"%li",(long)page],@"product_type_id":@"3"}
                                           signDic:nil

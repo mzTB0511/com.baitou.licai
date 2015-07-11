@@ -79,7 +79,10 @@
         NSDictionary *productDict = [[data objectForKey:@"product"] objectAtIndex:0];
         
         //** 产品基本信息
-        [_productDetailList addObject:[data objectForKey:@"product"]];
+        NSMutableDictionary *muProductInfo = [NSMutableDictionary dictionaryWithDictionary:[[data objectForKey:@"product"] objectAtIndex:0]];
+        
+        [_productDetailList addObject:@[muProductInfo]];
+        
         
         NSMutableArray *muProperty = [NSMutableArray array];
         for (int i= 1; i<=11 ;i++) {
@@ -119,8 +122,57 @@
 }
 
 
+/**
+ *  订阅 /退订 产品功能
+ *
+ *  @param   partner   产品提供伤
+ *  @param   type      操作类型 0:退订 ，1:订阅
+ */
+-(void)producdtRss:(NSString *)partner controlType:(NSInteger)type{
+     
+    [NetworkHandle loadDataFromServerWithParamDic:@{@"partner_id":partner,
+                                                    @"is_like":[NSString stringWithFormat:@"%li",(long)type]}
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"product/setProductRss")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              switch (type) {
+                                                  case 0:{ //退订
+                                                      [[[_productDetailList objectAtIndex:0] objectAtIndex:0] setObject:@"0" forKey:@"is_rss"];
+                                                      [_tbv_MoneyMarketPTPDetail reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+                                                  }
+                                                      
+                                                      break;
+                                                  case 1:{//订阅
+                                                      [[[_productDetailList objectAtIndex:0] objectAtIndex:0]setObject:@"1" forKey:@"is_rss"];
+                                                      [_tbv_MoneyMarketPTPDetail reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+                                                      
+                                                  }
+                                                      
+                                                      break;
+                                                      
+                                                 
+                                              }
+                                          }
+                                          failure:^{
+                                              
+                                          } networkFailure:^{
+                                              
+                                          }
+                                      showLoading:YES
+     ];
+
+}
+
+
 
 #pragma mark -- UITabelViewDelegate
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [UIView new];
+    [view setBackgroundColor:[UIColor clearColor]];
+    return view;
+}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 1;
@@ -169,6 +221,12 @@
             NSDictionary *dict = [[_productDetailList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
             
             [cell setCellData:dict];
+            WEAKSELF
+            cell.rssBlock = ^(NSString *partnerID,NSInteger controlType){
+              
+                [weakSelf producdtRss:partnerID controlType:controlType];
+            };
+            
             return cell;
         }
             break;
@@ -205,6 +263,8 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
     
 }
 

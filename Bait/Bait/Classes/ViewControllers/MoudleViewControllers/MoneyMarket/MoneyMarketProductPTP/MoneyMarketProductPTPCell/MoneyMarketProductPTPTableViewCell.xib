@@ -17,7 +17,6 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c4k-fo-jiy">
                         <rect key="frame" x="8" y="8" width="80" height="21"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="RIp-Gu-Pso"/>
                             <constraint firstAttribute="width" constant="80" id="hdp-JV-OGM"/>
@@ -69,14 +68,14 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-VW-5Nx">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="37Y-VW-5Nx">
                         <rect key="frame" x="262" y="8" width="23" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="5QD-Ax-voG"/>
                             <constraint firstAttribute="width" constant="23" id="Glb-uH-TA7"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlm-7Q-eF2">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlm-7Q-eF2">
                         <rect key="frame" x="235" y="8" width="23" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="23" id="Lop-vS-JlL"/>

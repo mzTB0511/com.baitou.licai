@@ -28,6 +28,13 @@
 
 @implementation MoneyMarketProductPTPViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if ([_tbv_MoneyMarketPTP indexPathForSelectedRow]) {
+        [_tbv_MoneyMarketPTP deselectRowAtIndexPath:[_tbv_MoneyMarketPTP indexPathForSelectedRow] animated:YES];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
      [self setAutomaticallyAdjustsScrollViewInsets:NO];
@@ -139,7 +146,6 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     
     pushViewControllerWith(sbStoryBoard_Moudle_MoneyMarket, MoneyMarketProducDetailViewController, [_productPTPList objectAtIndex:indexPath.row])
     
