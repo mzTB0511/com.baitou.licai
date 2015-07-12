@@ -13,6 +13,14 @@
 
 @implementation BaseNavigationViewController
 
+-(void)awakeFromNib{
+    
+    [super awakeFromNib];
+    
+    [self.navigationBar setBarTintColor:Color_System_Tint_Color];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

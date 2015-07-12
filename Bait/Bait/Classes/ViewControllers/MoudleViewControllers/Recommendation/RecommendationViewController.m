@@ -21,6 +21,25 @@
 @property (weak, nonatomic) IBOutlet UIView *scrollview_CycleScrollView;
 
 
+@property (weak, nonatomic) IBOutlet UILabel *lb_ProductName;
+
+@property (weak, nonatomic) IBOutlet UIImageView *img_BaoIco;
+
+@property (weak, nonatomic) IBOutlet UIImageView *img_DaiIco;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Limit_Cash_Title;
+@property (weak, nonatomic) IBOutlet UILabel *lb_Profit_Title;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Deadline_Title;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Limit_Cash;
+@property (weak, nonatomic) IBOutlet UILabel *lb_Profit;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_Deadline;
+
+
 @property(nonatomic,strong) NSArray *bannerList;
 
 @end
@@ -35,6 +54,7 @@
     
     [self loadBannerData];
     
+    [self loadRecomendDataFromServer];
 }
 
 
@@ -75,6 +95,65 @@
                                       showLoading:YES
      ];
     
+}
+
+
+/**
+ *  网络加载推荐产品信息
+ */
+-(void)loadRecomendDataFromServer{
+    
+    WEAKSELF
+    [NetworkHandle loadDataFromServerWithParamDic:nil
+                                          signDic:nil
+                                    interfaceName:InterfaceAddressName(@"recomend/hotproduct")
+                                          success:^(NSDictionary *responseDictionary, NSString *message) {
+                                              
+                                              if ([responseDictionary objectForKey:Return_data]) {
+                                                  NSDictionary *data = [responseDictionary objectForKey:Return_data];
+                                                  
+                                                  if (data.count > 0) {
+                                                      
+                                                      [weakSelf setRecomendProductDataWith:data];
+                                                      
+                                                  }
+                                                  
+                                              }
+                                              
+                                          }
+                                          failure:^{
+                                              
+                                          } networkFailure:^{
+                                              
+                                          }
+                                      showLoading:YES
+     ];
+}
+
+
+
+/**
+ *  设置推荐位产品信息
+ */
+-(void)setRecomendProductDataWith:(NSDictionary *)product{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+       
+        [_lb_ProductName setText:[product objectForKey:@"product_name"]];
+        [_lb_Limit_Cash_Title setText:[product objectForKey:@"limit_cash_title"]];
+        
+        [_lb_Profit_Title setText:[product objectForKey:@"profit_title"]];
+        
+        [_lb_Deadline_Title setText:[product objectForKey:@"deadline_title"]];
+        
+        [_lb_Limit_Cash setText:[product objectForKey:@"limit_cash"]];
+        [_lb_Profit setText:[product objectForKey:@"profit"]];
+        [_lb_Deadline setText:[product objectForKey:@"deadline"]];
+        
+        [_img_BaoIco sd_setImageWithURL:[NSURL URLWithString:[product objectForKey:@"bao_url"]] placeholderImage:nil];
+        [_img_DaiIco sd_setImageWithURL:[NSURL URLWithString:[product objectForKey:@"dai_url"]] placeholderImage:nil];
+
+    });
 }
 
 

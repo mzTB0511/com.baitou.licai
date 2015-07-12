@@ -55,9 +55,14 @@
      *  自定义返回按钮
      */
 
+    // 修改 返回键 颜色
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    // 重置返回键内容
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
+ 
 }
 
 

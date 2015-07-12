@@ -14,6 +14,14 @@
 
 @implementation MoneyMarketNavigationViewController
 
+-(void)awakeFromNib{
+    
+    [super awakeFromNib];
+    
+    [self.navigationBar setBarTintColor:Color_System_Tint_Color];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

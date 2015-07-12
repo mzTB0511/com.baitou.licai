@@ -47,7 +47,7 @@
 {
 
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIColor blackColor],
+                                [UIColor whiteColor],
                                 NSForegroundColorAttributeName,
                                 [UIFont boldSystemFontOfSize:19],
                                 NSFontAttributeName,
