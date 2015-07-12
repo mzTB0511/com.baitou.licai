@@ -42,7 +42,7 @@
                                 <segment title="活动"/>
                                 <segment title="消息"/>
                             </segments>
-                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="swapButtonPressed:" destination="fM7-NL-9O8" eventType="valueChanged" id="NXQ-rq-7dD"/>
                             </connections>

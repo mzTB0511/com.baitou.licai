@@ -12,7 +12,7 @@
  */
 
 //系统顶部颜色
-#define Color_System_Tint_Color                 mRGBColor(251, 113, 114)
+#define Color_System_Tint_Color                 mRGBColor(250, 81, 59)
 
 //view背景色
 #define Color_System_View_bgColor               mRGBColor(242, 242, 242)

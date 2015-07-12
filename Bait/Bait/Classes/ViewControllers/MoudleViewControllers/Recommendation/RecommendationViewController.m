@@ -50,7 +50,7 @@
     [super viewDidLoad];
     [self setViewTitle:@"热门推荐"];
     
-    [self customerRightNavigationBarItemWithTitle:@"活动" andImageRes:nil];
+    [self customerRightNavigationBarItemWithTitle:nil andImageRes:@"btn_recommend_msg"];
     
     [self loadBannerData];
     
