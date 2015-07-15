@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:getColorWithRGBA(239, 239, 244, 1)];
+    [self.view setBackgroundColor:getColorWithRGBA(237, 237, 237, 1)];
     
     
     

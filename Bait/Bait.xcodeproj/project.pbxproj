@@ -61,6 +61,9 @@
 		E920C20F1B385A6D00F19EC5 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E920C20E1B385A6D00F19EC5 /* More.storyboard */; };
 		E920C2121B38692400F19EC5 /* MoudleOthersWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */; };
 		E94142141B501653007D5594 /* RecommendtionMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E94142131B501653007D5594 /* RecommendtionMessageTableViewCell.m */; };
+		E97A48741B569F2F00CA2C93 /* MyProperty.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97A48731B569F2F00CA2C93 /* MyProperty.xcassets */; };
+		E97A48761B569F4400CA2C93 /* MoneyMarket.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97A48751B569F4400CA2C93 /* MoneyMarket.xcassets */; };
+		E97A48781B569F5200CA2C93 /* More.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97A48771B569F5200CA2C93 /* More.xcassets */; };
 		E97E746C1B4963C200E2A1AD /* BabySanteDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E746B1B4963C200E2A1AD /* BabySanteDatePicker.m */; };
 		E97E74721B49736400E2A1AD /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E746F1B49736400E2A1AD /* NSDate+Category.m */; };
 		E97E74731B49736400E2A1AD /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E74711B49736400E2A1AD /* NSDateFormatter+Category.m */; };
@@ -276,6 +279,9 @@
 		E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoudleOthersWebViewController.m; sourceTree = "<group>"; };
 		E94142121B501653007D5594 /* RecommendtionMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendtionMessageTableViewCell.h; sourceTree = "<group>"; };
 		E94142131B501653007D5594 /* RecommendtionMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendtionMessageTableViewCell.m; sourceTree = "<group>"; };
+		E97A48731B569F2F00CA2C93 /* MyProperty.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyProperty.xcassets; sourceTree = "<group>"; };
+		E97A48751B569F4400CA2C93 /* MoneyMarket.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoneyMarket.xcassets; sourceTree = "<group>"; };
+		E97A48771B569F5200CA2C93 /* More.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = More.xcassets; sourceTree = "<group>"; };
 		E97E746A1B4963C200E2A1AD /* BabySanteDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabySanteDatePicker.h; sourceTree = "<group>"; };
 		E97E746B1B4963C200E2A1AD /* BabySanteDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySanteDatePicker.m; sourceTree = "<group>"; };
 		E97E746E1B49736400E2A1AD /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
@@ -621,6 +627,9 @@
 			children = (
 				E920C0FF1B37F6C000F19EC5 /* Images.xcassets */,
 				E9FD407B1B494A7400B3E249 /* Recommend.xcassets */,
+				E97A48731B569F2F00CA2C93 /* MyProperty.xcassets */,
+				E97A48751B569F4400CA2C93 /* MoneyMarket.xcassets */,
+				E97A48771B569F5200CA2C93 /* More.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1432,6 +1441,7 @@
 				E98F9A731B3B18CB00E3E365 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				E98F9A5D1B3B18AD00E3E365 /* UMSCommentInputController.xib in Resources */,
 				E98F99F21B3AF7A300E3E365 /* MoneyMarketProductPTPTableViewCell.xib in Resources */,
+				E97A48741B569F2F00CA2C93 /* MyProperty.xcassets in Resources */,
 				E98A50461B44257D00193817 /* UserInfoHeaderFooterView.xib in Resources */,
 				E98A50441B44257D00193817 /* MoudleFourthUserInfoAvatarCell.xib in Resources */,
 				E98A506B1B45176C00193817 /* MyPropertyInvestmentHeaderView.xib in Resources */,
@@ -1445,10 +1455,12 @@
 				E920C1051B37F6C000F19EC5 /* Main.storyboard in Resources */,
 				E920C1C21B37FCA800F19EC5 /* MJRefresh.bundle in Resources */,
 				E920C1031B37F6C000F19EC5 /* Images.xcassets in Resources */,
+				E97A48781B569F5200CA2C93 /* More.xcassets in Resources */,
 				E9FD407C1B494A7400B3E249 /* Recommend.xcassets in Resources */,
 				E98F998A1B3AEFD200E3E365 /* MyProperty.storyboard in Resources */,
 				E98F99ED1B3AF79000E3E365 /* MoneyMarketProductFundTableViewCell.xib in Resources */,
 				E9DCA8B21B4193BE009EE6A3 /* LaunchScreen.xib in Resources */,
+				E97A48761B569F4400CA2C93 /* MoneyMarket.xcassets in Resources */,
 				E98F9A161B3B008700E3E365 /* MoneyMarketProducSectionDetailOneCell.xib in Resources */,
 				E98F9A5E1B3B18AD00E3E365 /* UMSCommentInputControlleriPad.xib in Resources */,
 				E98F9A601B3B18AD00E3E365 /* UMShareEditViewControlleriPad.xib in Resources */,

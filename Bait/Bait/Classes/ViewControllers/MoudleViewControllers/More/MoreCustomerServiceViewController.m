@@ -56,14 +56,18 @@
         
         if (indexPath.row == 0) {
             [cell.textLabel setText:@"微信公众号:baitou_23434"];
+            [cell.imageView setImage:getImageWithRes(@"img_More_Services_Wachat")];
         }else if (indexPath.row ==1){
             [cell.textLabel setText:@"官方客服:QQ2323434"];
+            [cell.imageView setImage:getImageWithRes(@"img_More_Services_QQ")];
         }else if (indexPath.row ==2){
             [cell.textLabel setText:@"新浪微博:baitou_xinlang1232"];
+            [cell.imageView setImage:getImageWithRes(@"img_More_Services_Weibo")];
         }
         
     }else{
         [cell.textLabel setText:@"客服热线: 4006-977-977"];
+        [cell.imageView setImage:getImageWithRes(@"img_More_Services_Tellphone")];
     }
     return cell;
 }
