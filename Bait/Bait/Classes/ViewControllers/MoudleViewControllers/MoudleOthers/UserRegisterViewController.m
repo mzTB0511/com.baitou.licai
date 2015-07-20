@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *tf_userPhone;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnRegister_Step1;
 
 @end
 
@@ -24,6 +25,8 @@
     
     [self setViewTitle:@"注册"];
     
+    
+
     
 }
 

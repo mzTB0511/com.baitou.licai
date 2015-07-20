@@ -154,6 +154,7 @@
 		E9DCA8BC1B41A20C009EE6A3 /* PlaceholdeTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8BB1B41A20C009EE6A3 /* PlaceholdeTextView.m */; };
 		E9DCA8BF1B41A219009EE6A3 /* IssueModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8BE1B41A219009EE6A3 /* IssueModule.m */; };
 		E9DCA8C21B41A243009EE6A3 /* IssueListSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DCA8C11B41A243009EE6A3 /* IssueListSearchViewController.m */; };
+		E9F667061B5D5462004E34DD /* LXCommonButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F667051B5D5462004E34DD /* LXCommonButton.m */; };
 		E9FD407A1B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FD40791B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m */; };
 		E9FD407C1B494A7400B3E249 /* Recommend.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FD407B1B494A7400B3E249 /* Recommend.xcassets */; };
 /* End PBXBuildFile section */
@@ -447,6 +448,8 @@
 		E9DCA8BE1B41A219009EE6A3 /* IssueModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueModule.m; sourceTree = "<group>"; };
 		E9DCA8C01B41A243009EE6A3 /* IssueListSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueListSearchViewController.h; sourceTree = "<group>"; };
 		E9DCA8C11B41A243009EE6A3 /* IssueListSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueListSearchViewController.m; sourceTree = "<group>"; };
+		E9F667041B5D5462004E34DD /* LXCommonButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCommonButton.h; sourceTree = "<group>"; };
+		E9F667051B5D5462004E34DD /* LXCommonButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCommonButton.m; sourceTree = "<group>"; };
 		E9FD40781B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyMarketProducDetailTopTableViewCell.h; sourceTree = "<group>"; };
 		E9FD40791B46C75800B3E249 /* MoneyMarketProducDetailTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyMarketProducDetailTopTableViewCell.m; sourceTree = "<group>"; };
 		E9FD407B1B494A7400B3E249 /* Recommend.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Recommend.xcassets; sourceTree = "<group>"; };
@@ -869,6 +872,7 @@
 		E920C1E51B3809C300F19EC5 /* MoudleOthers */ = {
 			isa = PBXGroup;
 			children = (
+				E9F667031B5D5433004E34DD /* ModuleButtonCustomers */,
 				E920C2031B38534E00F19EC5 /* UserRegisterViewController.h */,
 				E920C2041B38534E00F19EC5 /* UserRegisterViewController.m */,
 				E920C2081B38562400F19EC5 /* UserRegisterPwdViewController.h */,
@@ -1340,6 +1344,15 @@
 			path = PLaceholdeTextView;
 			sourceTree = "<group>";
 		};
+		E9F667031B5D5433004E34DD /* ModuleButtonCustomers */ = {
+			isa = PBXGroup;
+			children = (
+				E9F667041B5D5462004E34DD /* LXCommonButton.h */,
+				E9F667051B5D5462004E34DD /* LXCommonButton.m */,
+			);
+			path = ModuleButtonCustomers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1605,6 +1618,7 @@
 				E98F9A251B3B038600E3E365 /* RecommendationActivityDetailViewController.m in Sources */,
 				E9156DB11B42953000F24616 /* EmptySegue.m in Sources */,
 				E9DCA8BC1B41A20C009EE6A3 /* PlaceholdeTextView.m in Sources */,
+				E9F667061B5D5462004E34DD /* LXCommonButton.m in Sources */,
 				E920C1861B37F6F600F19EC5 /* CommonIO.m in Sources */,
 				E98F99DF1B3AF70D00E3E365 /* MoneyMarketFavouriteViewController.m in Sources */,
 				E920C1891B37F6F600F19EC5 /* FormatData.m in Sources */,
