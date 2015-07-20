@@ -278,53 +278,43 @@
                         <viewControllerLayoutGuide type="bottom" id="Rxp-OP-jNF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6lP-Hh-dWU">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-qa-hu8">
-                                <rect key="frame" x="0.0" y="51" width="320" height="453"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <connections>
                                     <segue destination="ZPI-l5-Bph" kind="embed" identifier="embedContainer" id="7ic-vf-TsM"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RO4-8H-EX0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OzL-6t-Lcn">
-                                        <rect key="frame" x="44" y="11" width="233" height="29"/>
-                                        <segments>
-                                            <segment title="P2P网贷"/>
-                                            <segment title="基金产品"/>
-                                            <segment title="我的订阅"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.98039215686274506" green="0.31764705882352939" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="swapButtonPressed:" destination="po2-PL-f73" eventType="valueChanged" id="ucx-Si-5ZW"/>
-                                        </connections>
-                                    </segmentedControl>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="top" secondItem="RO4-8H-EX0" secondAttribute="top" constant="11" id="G9I-8G-BZ2"/>
-                                    <constraint firstItem="OzL-6t-Lcn" firstAttribute="leading" secondItem="RO4-8H-EX0" secondAttribute="leading" constant="44" id="H32-3h-FPy"/>
-                                    <constraint firstAttribute="trailing" secondItem="OzL-6t-Lcn" secondAttribute="trailing" constant="43" id="RqX-j2-s9c"/>
-                                    <constraint firstAttribute="bottom" secondItem="OzL-6t-Lcn" secondAttribute="bottom" constant="11" id="ScK-y3-T68"/>
-                                    <constraint firstAttribute="height" constant="50" id="n7S-gY-GmG"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ILr-qa-hu8" secondAttribute="trailing" constant="-16" id="3ee-bJ-k1U"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RO4-8H-EX0" secondAttribute="trailing" constant="-16" id="9vG-fy-Tqk"/>
-                            <constraint firstItem="ILr-qa-hu8" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="RFh-c0-EdD"/>
-                            <constraint firstItem="Rxp-OP-jNF" firstAttribute="top" secondItem="ILr-qa-hu8" secondAttribute="bottom" id="Vnk-1d-wDm"/>
-                            <constraint firstItem="RO4-8H-EX0" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="XUb-ze-4a1"/>
-                            <constraint firstItem="RO4-8H-EX0" firstAttribute="top" secondItem="cmU-wF-ght" secondAttribute="bottom" id="i6Q-kC-T6P"/>
-                            <constraint firstItem="ILr-qa-hu8" firstAttribute="top" secondItem="RO4-8H-EX0" secondAttribute="bottom" constant="1" id="kvG-ec-DLn"/>
+                            <constraint firstItem="Rxp-OP-jNF" firstAttribute="top" secondItem="ILr-qa-hu8" secondAttribute="bottom" id="TLd-U6-Jhg"/>
+                            <constraint firstItem="ILr-qa-hu8" firstAttribute="leading" secondItem="6lP-Hh-dWU" secondAttribute="leadingMargin" constant="-16" id="asP-YB-bqo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ILr-qa-hu8" secondAttribute="trailing" constant="-16" id="o8Q-jz-2J4"/>
+                            <constraint firstItem="ILr-qa-hu8" firstAttribute="top" secondItem="cmU-wF-ght" secondAttribute="bottom" id="rd9-rD-1sr"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="oyt-mx-gxd">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="OzL-6t-Lcn">
+                            <rect key="frame" x="44" y="8" width="233" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="P2P网贷"/>
+                                <segment title="基金产品"/>
+                                <segment title="我的订阅"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="swapButtonPressed:" destination="po2-PL-f73" eventType="valueChanged" id="ucx-Si-5ZW"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzt-EK-gCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
