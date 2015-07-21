@@ -15,7 +15,7 @@
 #import "BaseNavigationViewController.h"
 #import <UIView+BlocksKit.h>
 #import "UserLoginViewController.h"
-
+#import <UIButton+WebCache.h>
 
 @interface MoreViewController ()
 
@@ -83,6 +83,9 @@
         }else{
             [self.btn_Login setHidden:NO];
             [self.v_UserIcoPhone setHidden:YES];
+            
+            [self.lb_UserPhone setText:[CommonUser userPhone]];
+            [self.btn_UseIco sd_setImageWithURL:getUrlWithStrValue([CommonUser userInfo].user_ico) forState:UIControlStateNormal placeholderImage:default_Image_UserIco];
         }
     
 }

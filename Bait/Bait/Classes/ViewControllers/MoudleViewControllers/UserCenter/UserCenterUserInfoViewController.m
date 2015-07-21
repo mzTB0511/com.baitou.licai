@@ -18,7 +18,7 @@
 
 #import "BaseNavigationViewController.h"
 #import "NetworkHandle.h"
-
+#import "UserLoginViewController.h"
 
 @interface UserCenterUserInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -180,12 +180,24 @@
                                       
                                           [CommonUser setUserInfo:nil];
                                           
-                                          //**跳转到登录页面
-                                          UIStoryboard *moreSB = mLoadStoryboard(sbStoryBoard_Moudle_LoginRegister);
-                                          UINavigationController *nav = mLoadViewController(moreSB, NSStringFromClass([BaseNavigationViewController class]));
+                                          UserLoginViewController *loginView = getViewControllFromStoryBoard(sbStoryBoard_Moudle_LoginRegister, UserLoginViewController);
                                           
-                                          [self presentViewController:nav animated:YES completion:nil];
-                                      
+                                          BaseNavigationViewController *nav_Base = [[BaseNavigationViewController alloc] initWithRootViewController:loginView];
+                                          [nav_Base awakeFromNib];
+                                          WEAKSELF
+                                          loginView.actionLoginBlock = ^(){
+                                              
+                                              [weakSelf dismissViewControllerAnimated:YES completion:^{
+                                                 
+                                              }];
+                                              
+                                          };
+                                          
+                                          
+                                          [self presentViewController:nav_Base animated:YES completion:nil];
+                                          
+                                          
+                                          
                                       } onCancel:nil];
             
 

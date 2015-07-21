@@ -40,7 +40,11 @@
                                               if ([responseDictionary objectForKey:Return_data]) {
                                                   NSDictionary *rebateDict = [[responseDictionary objectForKey:Return_data] objectAtIndex:0];
                                                   
-                                                  [weakSelf.lb_CashTotal setText:[rebateDict objectForKey:@"repay_now"]];
+                                                  [weakSelf.lb_CashTotal setText:getValueIfNilReturnDefaultStr([rebateDict objectForKey:@"repay_now"], @"0.00")];
+                                                  
+                                                  ([weakSelf.lb_CashTotal.text intValue] == 0) ?
+                                                  [_btn_CashApply setEnabled:NO] : [_btn_CashApply setEnabled:YES];
+                                                  
                                                   
                                               }
                                               

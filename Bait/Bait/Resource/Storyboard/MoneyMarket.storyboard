@@ -99,12 +99,13 @@
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-vR-8XI">
-                                                    <rect key="frame" x="243" y="6" width="69" height="28"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-vR-8XI" customClass="LXCommonButton">
+                                                    <rect key="frame" x="243" y="9" width="69" height="23"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="DV9-9M-22a"/>
                                                         <constraint firstAttribute="width" constant="69" id="o2r-6U-QdH"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <state key="normal" title="订阅">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -150,7 +151,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="XSt-mg-5Qm" secondAttribute="bottom" constant="18" id="Vqh-d1-cgS"/>
                                                 <constraint firstItem="dzU-Br-h5K" firstAttribute="leading" secondItem="zk9-m4-KLr" secondAttribute="leading" id="YCh-WL-lmW"/>
                                                 <constraint firstItem="nm1-mN-mfk" firstAttribute="top" secondItem="Tvh-cB-bRK" secondAttribute="bottom" constant="4" id="Z7I-4p-oxD"/>
-                                                <constraint firstItem="e4k-vR-8XI" firstAttribute="top" secondItem="YF9-bK-WnY" secondAttribute="topMargin" constant="-2" id="djP-Sd-XmX"/>
+                                                <constraint firstItem="e4k-vR-8XI" firstAttribute="top" secondItem="YF9-bK-WnY" secondAttribute="topMargin" constant="1" id="djP-Sd-XmX"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="zk9-m4-KLr" secondAttribute="trailing" constant="13" id="l0s-xB-P0v"/>
                                                 <constraint firstAttribute="centerX" secondItem="Tvh-cB-bRK" secondAttribute="centerX" constant="1" id="ldQ-6K-Dzl"/>
                                                 <constraint firstItem="XSt-mg-5Qm" firstAttribute="leading" secondItem="Ehg-rK-O5f" secondAttribute="leading" id="pOY-2e-xbw"/>
