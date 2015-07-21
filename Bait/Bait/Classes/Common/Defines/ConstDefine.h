@@ -61,8 +61,18 @@
 #define Com_Notifation_MoreViewController         @"com.notifation.more_view"
 
 
+// APP 字体文件定义
+#define FontViewTitle(fontSize) [UIFont fontWithName:@"FZLTCHJW--GB1-0" size:fontSize]
+#define FontOthers_CH(fontSize) [UIFont fontWithName:@"FZLTHJW--GB1-0" size:fontSize]
+#define FontOthers_Number(fontSize) [UIFont fontWithName:@"DINAlternate-Bold" size:fontSize]
 
 
+/**
+ *  MJRefresh Tableview停止刷新
+ */
+#define stopTableViewRefreshAnimation(tableview)\
+[tableview headerEndRefreshing];\
+[tableview footerEndRefreshing];
 
 
 

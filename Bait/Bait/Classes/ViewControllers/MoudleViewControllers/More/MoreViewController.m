@@ -14,6 +14,7 @@
 #import "UserCenterUserInfoViewController.h"
 #import "BaseNavigationViewController.h"
 #import <UIView+BlocksKit.h>
+#import "UserLoginViewController.h"
 
 
 @interface MoreViewController ()
@@ -61,8 +62,6 @@
     
      [self.btn_Login setHidden:NO];
     
-    [mNotificationCenter addObserver:self selector:@selector(action_RefrashView) name:Com_Notifation_MoreViewController object:nil];
-    
 }
 
 
@@ -100,12 +99,24 @@
 
 
 - (IBAction)action_Login:(id)sender {
-
     
-    UIStoryboard *moreSB = mLoadStoryboard(sbStoryBoard_Moudle_LoginRegister);
-    UINavigationController *nav = mLoadViewController(moreSB, NSStringFromClass([BaseNavigationViewController class]));
     
-    [self presentViewController:nav animated:YES completion:nil];
+    UserLoginViewController *loginView = getViewControllFromStoryBoard(sbStoryBoard_Moudle_LoginRegister, UserLoginViewController);
+    
+    BaseNavigationViewController *nav_Base = [[BaseNavigationViewController alloc] initWithRootViewController:loginView];
+    [nav_Base awakeFromNib];
+    WEAKSELF
+    loginView.actionLoginBlock = ^(){
+      
+        [weakSelf dismissViewControllerAnimated:YES completion:^{
+             [weakSelf action_RefrashView];
+        }];
+        
+    };
+    
+    
+    [self presentViewController:nav_Base animated:YES completion:nil];
+    
     
 }
 

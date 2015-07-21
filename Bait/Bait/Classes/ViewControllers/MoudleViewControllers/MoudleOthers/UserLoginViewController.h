@@ -10,5 +10,7 @@
 
 @interface UserLoginViewController : RootViewController
 
+@property (nonatomic,strong)CommonBlock actionLoginBlock;
+
 
 @end

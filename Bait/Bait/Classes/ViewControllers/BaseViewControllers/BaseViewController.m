@@ -75,11 +75,11 @@
         [imageView setFrame:CGRectMake(0, 0, 224, 102)];
     
         [imageView setTag:10000];
-        [imageView setCenter:CGPointMake(Screen_width/2, Screen_height
+        [imageView setCenter:CGPointMake(getScreenWidth/2, getScreenHeight
 /2 - 50)];//CGPointMake(self.view.center.x, self.view.center.y - 64)
         [self.view addSubview:imageView];
     }else{
-        [imgView setCenter:CGPointMake(Screen_width/2, Screen_height/2 - 50)];
+        [imgView setCenter:CGPointMake(getScreenWidth/2, getScreenHeight/2 - 50)];
         [imgView setImage:[UIImage imageNamed:res]];
         [self.view bringSubviewToFront:imgView];
     }

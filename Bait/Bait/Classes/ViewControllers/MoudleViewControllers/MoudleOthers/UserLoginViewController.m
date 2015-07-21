@@ -61,11 +61,11 @@
                                     interfaceName:InterfaceAddressName(@"user/login")
                                           success:^(NSDictionary *responseDictionary, NSString *message) {
                                               [CommonUser userLoginSuccess:responseDictionary block:^{
-                                                
-                                                  [weakSelf backToView];
-                                                  
-                                                  [mNotificationCenter postNotificationName:Com_Notifation_MoreViewController object:nil];
-                                                  
+                                                 
+                                                  //** 登录成功后执行 相应逻辑
+                                                  if (_actionLoginBlock) {
+                                                      weakSelf.actionLoginBlock();
+                                                  }
                                               }];
                                           }
                                           failure:nil

@@ -49,7 +49,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setViewTitle:@"热门推荐"];
-    
+
     [self customerRightNavigationBarItemWithTitle:nil andImageRes:@"btn_recommend_msg"];
     
     [self loadBannerData];

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Constant.h"
+
 #import "UIAlertView+Blocks.h"
 #import <AFNetworking.h>
 #import "CommonFunc.h"

@@ -112,48 +112,4 @@ typedef void(^CommonBlock)(void);
 
 
 
-/**
- *  presentModuleView NavigationController 弹出模态视图
- *
- *  @param storyboard     Storyboard
- *  @param viewController ViewController
- *  @param object         PassValue  (NSObject)
- *
- *  @return void
- */
-#define presentViewControllerWith(storyboard,viewController,object) \
-viewController *controller = [[UIStoryboard storyboardWithName:storyboard bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([viewController class])]; \
-if ([viewController instancesRespondToSelector:@selector(viewObject)])\
-[controller setValue:object forKey:@"viewObject"];\
-UINavigationController *nav_Remind = mLoadViewController(sbStoryBoard_MoudleUserStatus, @"BaseNavigationViewController");\
-nav_Remind.viewControllers = @[controller];\
-[self presentViewController:nav_Remind animated:YES completion:nil];
-
-
-
-/**
- *  Push NavigationController 视图压栈操作
- *
- *  @param storyboard     Storyboard
- *  @param viewController ViewController
- *  @param object         PassValue  (NSObject)
- *
- *  @return void
- */
-#define pushViewControllerWith(storyboard,viewController,object) \
-viewController *controller = [mLoadStoryboard(storyboard) instantiateViewControllerWithIdentifier:NSStringFromClass([viewController class])]; \
-if ([viewController instancesRespondToSelector:@selector(viewObject)])\
-[controller setValue:object forKey:@"viewObject"];\
-controller.hidesBottomBarWhenPushed = YES;\
-[self.navigationController pushViewController:controller animated:YES];
-
-
-/**
- *  MJRefresh Tableview停止刷新
- */
-#define stopTableViewRefreshAnimation(tableview)\
-[tableview headerEndRefreshing];\
-[tableview footerEndRefreshing];
-
-
 

@@ -305,8 +305,8 @@
                                     <action selector="actionLogin:" destination="HQl-a2-o4L" eventType="touchUpInside" id="1lS-CV-KQD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-0R-jvG">
-                                <rect key="frame" x="16" y="155" width="61" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-0R-jvG">
+                                <rect key="frame" x="16" y="169" width="61" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="2Sx-tW-fA9"/>
                                 </constraints>
@@ -318,7 +318,7 @@
                                     <segue destination="gJ9-QR-xWg" kind="push" id="xiv-Ay-zw3"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-Cn-T9M">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yd-Cn-T9M">
                                 <rect key="frame" x="230" y="155" width="76" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="aSN-IF-tPf"/>
@@ -336,10 +336,10 @@
                             <constraint firstItem="44P-3C-j3Z" firstAttribute="top" secondItem="j7f-rF-a2J" secondAttribute="bottom" constant="8" id="BGq-51-ebp"/>
                             <constraint firstItem="44P-3C-j3Z" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" constant="-16" id="EA4-38-TL3"/>
                             <constraint firstItem="YcW-bU-J5G" firstAttribute="top" secondItem="j7f-rF-a2J" secondAttribute="bottom" constant="60" id="EL7-lL-Ry6"/>
-                            <constraint firstItem="zBv-0R-jvG" firstAttribute="top" secondItem="pbd-Ya-duD" secondAttribute="bottom" constant="8" id="F4z-Uz-i1h"/>
+                            <constraint firstItem="zBv-0R-jvG" firstAttribute="top" secondItem="pbd-Ya-duD" secondAttribute="bottom" constant="12" id="F4z-Uz-i1h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pbd-Ya-duD" secondAttribute="trailing" constant="-2" id="JRh-ZU-sCn"/>
                             <constraint firstItem="YcW-bU-J5G" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" constant="-16" id="baG-Wt-OeJ"/>
-                            <constraint firstItem="3Yd-Cn-T9M" firstAttribute="top" secondItem="pbd-Ya-duD" secondAttribute="bottom" constant="8" id="kOF-e5-SSO"/>
+                            <constraint firstItem="3Yd-Cn-T9M" firstAttribute="top" secondItem="pbd-Ya-duD" secondAttribute="bottom" constant="-2" id="kOF-e5-SSO"/>
                             <constraint firstItem="zBv-0R-jvG" firstAttribute="leading" secondItem="Twm-ts-BmO" secondAttribute="leadingMargin" id="sJ8-9y-m52"/>
                             <constraint firstItem="pbd-Ya-duD" firstAttribute="top" secondItem="YcW-bU-J5G" secondAttribute="bottom" constant="13" id="uy7-Rt-cUp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YcW-bU-J5G" secondAttribute="trailing" constant="-16" id="wf3-yU-ItI"/>
@@ -365,9 +365,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="HQl-a2-o4L" kind="relationship" relationship="rootViewController" id="y1W-Hx-Wmk"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM0-Ej-ziJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

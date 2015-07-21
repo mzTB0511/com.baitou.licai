@@ -17,8 +17,7 @@
 #import "CommonHUD.h"
 #import "CommonUser.h"
 #import "InterfaceDefine.h"
-#import "Constant.h"
-
+#import "MacroDefine.h"
 
 // // Close all NSLog() //
 #ifdef __OPTIMIZE__

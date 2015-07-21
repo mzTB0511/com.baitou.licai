@@ -214,7 +214,6 @@
 		E920C1201B37F6F600F19EC5 /* CommonUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUser.m; sourceTree = "<group>"; };
 		E920C1221B37F6F600F19EC5 /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
 		E920C1231B37F6F600F19EC5 /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
-		E920C1241B37F6F600F19EC5 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		E920C1261B37F6F600F19EC5 /* FormatData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatData.h; sourceTree = "<group>"; };
 		E920C1271B37F6F600F19EC5 /* FormatData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatData.m; sourceTree = "<group>"; };
 		E920C1281B37F6F600F19EC5 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
@@ -280,6 +279,7 @@
 		E920C2111B38692400F19EC5 /* MoudleOthersWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoudleOthersWebViewController.m; sourceTree = "<group>"; };
 		E94142121B501653007D5594 /* RecommendtionMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendtionMessageTableViewCell.h; sourceTree = "<group>"; };
 		E94142131B501653007D5594 /* RecommendtionMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendtionMessageTableViewCell.m; sourceTree = "<group>"; };
+		E95B0D891B5E352600E788D1 /* MacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
 		E97A48731B569F2F00CA2C93 /* MyProperty.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyProperty.xcassets; sourceTree = "<group>"; };
 		E97A48751B569F4400CA2C93 /* MoneyMarket.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoneyMarket.xcassets; sourceTree = "<group>"; };
 		E97A48771B569F5200CA2C93 /* More.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = More.xcassets; sourceTree = "<group>"; };
@@ -679,6 +679,7 @@
 		E920C1111B37F6F600F19EC5 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
+				E95B0D891B5E352600E788D1 /* MacroDefine.h */,
 				E920C1121B37F6F600F19EC5 /* CommonDefine.h */,
 				E920C1131B37F6F600F19EC5 /* ConstDefine.h */,
 				E920C1141B37F6F600F19EC5 /* InterfaceDefine.h */,
@@ -718,7 +719,6 @@
 			children = (
 				E920C1221B37F6F600F19EC5 /* CommonFunc.h */,
 				E920C1231B37F6F600F19EC5 /* CommonFunc.m */,
-				E920C1241B37F6F600F19EC5 /* Constant.h */,
 				E920C1251B37F6F600F19EC5 /* Interface */,
 				E920C1281B37F6F600F19EC5 /* UIImage+Tint.h */,
 				E920C1291B37F6F600F19EC5 /* UIImage+Tint.m */,

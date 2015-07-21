@@ -22,6 +22,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *lb_RebateAll;
 
 
+@property (weak, nonatomic) IBOutlet UIView *v_RebateNowBgView;
+
+@property (weak, nonatomic) IBOutlet UILabel *lb_RebateNowNull;
+
+
+
+
+
 
 @end
 
@@ -40,8 +48,24 @@
                                               if ([responseDictionary objectForKey:Return_data]) {
                                                   NSDictionary *rebateDict = [[responseDictionary objectForKey:Return_data] objectAtIndex:0];
                                                   
-                                                  [weakSelf.lb_RebateNow setText:[rebateDict objectForKey:@"repay_now"]];
-                                                  [weakSelf.lb_RebateAll setText:[rebateDict objectForKey:@"repay_all"]];
+                                                  
+                                                  NSString *rebateNow = getValueIfNilReturnDefaultStr([rebateDict objectForKey:@"repay_now"],@"");
+                                                  
+                                                   NSString *rebateAll = getValueIfNilReturnDefaultStr([rebateDict objectForKey:@"repay_all"],@"0.00");
+                                               
+                                                  if (isEmpty(rebateNow)) {
+                                                      
+                                                      [_lb_RebateNowNull setHidden:NO];
+                                                      [_v_RebateNowBgView setHidden:YES];
+                                                      
+                                                  }else{
+                                                      [_lb_RebateNowNull setHidden:YES];
+                                                      [_v_RebateNowBgView setHidden:NO];
+                                                      [weakSelf.lb_RebateNow setText:rebateNow];
+                                                  }
+                                                  
+                                                  
+                                                  [weakSelf.lb_RebateAll setText:rebateAll];
                                               }
                                               
                                           }

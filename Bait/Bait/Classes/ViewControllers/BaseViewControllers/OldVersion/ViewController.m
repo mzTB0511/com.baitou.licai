@@ -109,11 +109,11 @@
     
     UILabel *label = (UILabel *)[self.view viewWithTag:10000];
     if(!label.superview){
-        UILabel *label_Hint = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, Screen_width, 30)];
+        UILabel *label_Hint = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, getScreenWidth, 30)];
         [label_Hint setBackgroundColor:[UIColor clearColor]];
         [label_Hint setText:msg];
         [label_Hint setFont:FontOthers_CH(20)];
-        [label_Hint setCenter:CGPointMake(Screen_width/2, Screen_height/2 - 50)];
+        [label_Hint setCenter:CGPointMake(getScreenWidth/2, getScreenHeight/2 - 50)];
         [label_Hint setTextColor:[UIColor colorWithRed:222.0/255 green:222.0/255 blue:222.0/255 alpha:1]];
         [label_Hint setTextAlignment:NSTextAlignmentCenter];
         [label_Hint setTag:10000];
