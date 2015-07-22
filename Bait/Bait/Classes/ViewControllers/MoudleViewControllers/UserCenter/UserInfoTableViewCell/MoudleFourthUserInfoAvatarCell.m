@@ -25,9 +25,9 @@
     
     _lbl_title.text = title;
     
-    if (imageUrl.length) {
-        [_imv_image sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:nil];
-    }
+   // if (imageUrl.length) {
+        [_imv_image sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:default_Image_UserIco];
+   // }
 }
 
 -(void)action_setImage:(UIImage *)image {

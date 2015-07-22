@@ -315,14 +315,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evx-0c-jKL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTx-DH-ffT">
+                                        <rect key="frame" x="24" y="45" width="64" height="36"/>
+                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可取现金额(元)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmK-7d-Vyf">
+                                        <rect key="frame" x="24" y="21" width="111" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqj-ko-jFq" customClass="LXCommonButton">
-                                        <rect key="frame" x="207" y="74" width="96" height="30"/>
+                                        <rect key="frame" x="208" y="32" width="96" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="2fJ-dn-npC"/>
-                                            <constraint firstAttribute="width" constant="96" id="UlA-Gx-UDt"/>
+                                            <constraint firstAttribute="width" constant="96" id="PAe-7M-PrC"/>
+                                            <constraint firstAttribute="height" constant="40" id="lEi-AI-MXG"/>
                                         </constraints>
                                         <state key="normal" title="申请取现">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -331,40 +341,16 @@
                                             <action selector="action_CashApply:" destination="lbH-QS-A7o" eventType="touchUpInside" id="mdS-cu-rLc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr7-Mx-Ody">
-                                        <rect key="frame" x="17" y="78" width="10" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="FhS-Ch-uVv"/>
-                                            <constraint firstAttribute="width" constant="10" id="WDl-sG-eQj"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTx-DH-ffT">
-                                        <rect key="frame" x="35" y="72" width="81" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可取现金额(元)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmK-7d-Vyf">
-                                        <rect key="frame" x="17" y="14" width="99" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="4NK-Od-yh6"/>
-                                    <constraint firstItem="eTx-DH-ffT" firstAttribute="leading" secondItem="tr7-Mx-Ody" secondAttribute="trailing" constant="8" id="9wR-co-yLo"/>
-                                    <constraint firstItem="tr7-Mx-Ody" firstAttribute="leading" secondItem="evx-0c-jKL" secondAttribute="leading" constant="17" id="Ei9-6J-3PK"/>
+                                    <constraint firstAttribute="height" constant="97" id="4NK-Od-yh6"/>
+                                    <constraint firstAttribute="bottom" secondItem="qqj-ko-jFq" secondAttribute="bottom" constant="25" id="8vc-Rb-ED5"/>
+                                    <constraint firstItem="eTx-DH-ffT" firstAttribute="leading" secondItem="evx-0c-jKL" secondAttribute="leading" constant="24" id="Gdg-o6-L9r"/>
                                     <constraint firstAttribute="bottom" secondItem="eTx-DH-ffT" secondAttribute="bottom" constant="16" id="VN1-vg-lpn"/>
-                                    <constraint firstAttribute="bottom" secondItem="tr7-Mx-Ody" secondAttribute="bottom" constant="22" id="lng-5b-Ufi"/>
-                                    <constraint firstItem="gmK-7d-Vyf" firstAttribute="top" secondItem="evx-0c-jKL" secondAttribute="top" constant="14" id="mIL-04-m1a"/>
-                                    <constraint firstAttribute="trailing" secondItem="qqj-ko-jFq" secondAttribute="trailing" constant="17" id="mS4-ci-Z87"/>
-                                    <constraint firstAttribute="bottom" secondItem="qqj-ko-jFq" secondAttribute="bottom" constant="17" id="mpj-Xx-NPb"/>
-                                    <constraint firstItem="gmK-7d-Vyf" firstAttribute="leading" secondItem="evx-0c-jKL" secondAttribute="leading" constant="17" id="pGY-9T-bE7"/>
+                                    <constraint firstAttribute="trailing" secondItem="qqj-ko-jFq" secondAttribute="trailing" constant="16" id="ZQQ-d1-lpo"/>
+                                    <constraint firstItem="gmK-7d-Vyf" firstAttribute="top" secondItem="evx-0c-jKL" secondAttribute="top" constant="21" id="mIL-04-m1a"/>
+                                    <constraint firstItem="gmK-7d-Vyf" firstAttribute="leading" secondItem="evx-0c-jKL" secondAttribute="leading" constant="24" id="pGY-9T-bE7"/>
                                 </constraints>
                             </view>
                         </subviews>

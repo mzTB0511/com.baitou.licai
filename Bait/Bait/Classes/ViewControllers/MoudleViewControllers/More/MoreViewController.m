@@ -60,7 +60,7 @@
     
     [self action_RefrashView];
     
-     [self.btn_Login setHidden:NO];
+  //   [self.btn_Login setHidden:NO];
     
 }
 
@@ -73,6 +73,12 @@
             [self.v_UserIcoPhone setHidden:NO];
             [self.btn_Login setHidden:YES];
     
+            NSRange range = NSMakeRange(4, 4);
+            
+            NSString *rangePhone = [[CommonUser userPhone] stringByReplacingCharactersInRange:range  withString:@"****"];
+            
+            [self.lb_UserPhone setText:rangePhone];
+            
             WEAKSELF
             [_v_UserIcoPhone bk_whenTapped:^{
                
