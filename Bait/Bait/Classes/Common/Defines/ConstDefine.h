@@ -26,6 +26,16 @@
 #define WX_App_ID                               @"wxa6428af98aa625a3"
 #define WX_App_Secret                           @"cfb98f4d9ed78d863557cde7b77ee6bc"
 
+//QQ开放平台ID/Secret
+#define QQ_App_ID                               @"wxa6428af98aa625a3"
+#define QQ_App_Secret                           @"cfb98f4d9ed78d863557cde7b77ee6bc"
+
+//新浪微博开放平台ID/Secret
+#define SINO_App_ID                               @"wxa6428af98aa625a3"
+#define SINO_App_Secret                           @"cfb98f4d9ed78d863557cde7b77ee6bc"
+
+
+
 //友盟统计App Key
 #define UMeng_App_Key                           @"5440f28cfd98c51e6b002346"
 //分发渠道

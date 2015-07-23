@@ -78,6 +78,7 @@
 		E960BE421B5FE62A001FA114 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E960BE2C1B5FE62A001FA114 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		E960BE431B5FE62A001FA114 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E960BE2F1B5FE62A001FA114 /* libSocialWechat.a */; };
 		E960BE441B5FE62A001FA114 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E960BE301B5FE62A001FA114 /* libWeChatSDK.a */; };
+		E960BE481B60CC92001FA114 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E960BE461B60CC92001FA114 /* libSocialSina.a */; };
 		E97A48741B569F2F00CA2C93 /* MyProperty.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97A48731B569F2F00CA2C93 /* MyProperty.xcassets */; };
 		E97A48761B569F4400CA2C93 /* MoneyMarket.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97A48751B569F4400CA2C93 /* MoneyMarket.xcassets */; };
 		E97A48781B569F5200CA2C93 /* More.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97A48771B569F5200CA2C93 /* More.xcassets */; };
@@ -316,6 +317,8 @@
 		E960BE311B5FE62A001FA114 /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		E960BE321B5FE62A001FA114 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		E960BE331B5FE62A001FA114 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		E960BE461B60CC92001FA114 /* libSocialSina.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialSina.a; sourceTree = "<group>"; };
+		E960BE471B60CC92001FA114 /* UMSocialSinaHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSinaHandler.h; sourceTree = "<group>"; };
 		E97A48731B569F2F00CA2C93 /* MyProperty.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyProperty.xcassets; sourceTree = "<group>"; };
 		E97A48751B569F4400CA2C93 /* MoneyMarket.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MoneyMarket.xcassets; sourceTree = "<group>"; };
 		E97A48771B569F5200CA2C93 /* More.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = More.xcassets; sourceTree = "<group>"; };
@@ -471,6 +474,7 @@
 				E98F9A811B3B195400E3E365 /* CoreTelephony.framework in Frameworks */,
 				E960BE361B5FE62A001FA114 /* libUMSocial_Sdk_4.2.3.a in Frameworks */,
 				E98F9A7F1B3B194B00E3E365 /* libsqlite3.dylib in Frameworks */,
+				E960BE481B60CC92001FA114 /* libSocialSina.a in Frameworks */,
 				E960BE411B5FE62A001FA114 /* TencentOpenAPI.framework in Frameworks */,
 				E98F9A7D1B3B193C00E3E365 /* CoreGraphics.framework in Frameworks */,
 				E98F9A7B1B3B193200E3E365 /* SystemConfiguration.framework in Frameworks */,
@@ -977,6 +981,7 @@
 		E960BE281B5FE62A001FA114 /* UMSocial_Sdk_Extra_Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E960BE451B60CC92001FA114 /* Sina */,
 				E960BE291B5FE62A001FA114 /* TencentOpenAPI */,
 				E960BE2E1B5FE62A001FA114 /* Wechat */,
 			);
@@ -1004,6 +1009,15 @@
 				E960BE331B5FE62A001FA114 /* WXApiObject.h */,
 			);
 			path = Wechat;
+			sourceTree = "<group>";
+		};
+		E960BE451B60CC92001FA114 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				E960BE461B60CC92001FA114 /* libSocialSina.a */,
+				E960BE471B60CC92001FA114 /* UMSocialSinaHandler.h */,
+			);
+			path = Sina;
 			sourceTree = "<group>";
 		};
 		E97E74691B4963C200E2A1AD /* BabySanteDatePicker */ = {
@@ -1807,6 +1821,7 @@
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_4.2.3",
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/Wechat",
+					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1839,6 +1854,7 @@
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_4.2.3",
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/Wechat",
+					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

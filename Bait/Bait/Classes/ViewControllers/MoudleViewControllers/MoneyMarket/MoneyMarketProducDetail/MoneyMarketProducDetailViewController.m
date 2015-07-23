@@ -18,7 +18,7 @@
 #import "UMSocialSnsService.h"
 
 
-@interface MoneyMarketProducDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface MoneyMarketProducDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tbv_MoneyMarketPTPDetail;
@@ -58,24 +58,24 @@
     WEAKSELF
     NSArray *arr_SnsList = @[UMShareToSina,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQQ];
     
-    [UMSocialSnsService presentSnsIconSheetView:weakSelf appKey:UMeng_App_Key shareText:@"hellow" shareImage:default_Image_UserIco shareToSnsNames:arr_SnsList delegate:
-     nil];
-    
-
-//    [UIActionSheet presentOnView:self.view withTitle:@"分享" cancelButton:@"取消" destructiveButton:nil otherButtons:muArr_SnsList onCancel:^(UIActionSheet * a ) {
-//        
-//    } onDestructive:^(UIActionSheet * a ) {
-//        
-//    } onClickedButton:^(UIActionSheet * a , NSUInteger index) {
-//        
-//        
-//        
-//    }];
+    [UMSocialSnsService presentSnsIconSheetView:weakSelf appKey:UMeng_App_Key shareText:@"我们大家都在用百投,小伙伴快来加入吧!" shareImage:default_Image_UserIco shareToSnsNames:arr_SnsList delegate:self];
     
     
 
     
 }
+
+#pragma mark --UMSociaDelegate
+-(void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response
+{
+    //根据`responseCode`得到发送结果,如果分享成功
+    if(response.responseCode == UMSResponseCodeSuccess)
+    {
+        //得到分享到的微博平台名
+        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+    }
+}
+
 
 
 

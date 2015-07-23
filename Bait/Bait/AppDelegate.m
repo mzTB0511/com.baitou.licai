@@ -11,7 +11,8 @@
 #import "UMSocialWechatHandler.h"
 #import "WXApi.h"
 #import "UMSocial.h"
-
+#import "UMSocialQQHandler.h"
+#import "UMSocialSinaHandler.h"
 
 @interface AppDelegate ()
 
@@ -71,12 +72,26 @@
 }
 
 /**
- *  配置友盟微信分享
+ *  配置友盟微信，微博，qq 分享
  */
 - (void) action_setupWeixin {
     [UMSocialData setAppKey:WX_App_ID];
     [UMSocialWechatHandler setWXAppId:WX_App_ID appSecret:WX_App_Secret url:nil];
+    [UMSocialData defaultData].extConfig.wechatTimelineData.title = @"百投App";
+    [UMSocialData defaultData].extConfig.wechatSessionData.title = @"百投App";
+    [UMSocialData defaultData].extConfig.tencentData.title = @"百投App";
+
+    
+    //设置手机QQ 的AppId，Appkey，和分享URL，需要#import "UMSocialQQHandler.h"
+    [UMSocialQQHandler setQQWithAppId:QQ_App_ID appKey:QQ_App_Secret url:@"http://www.umeng.com/social"];
+    
+    [UMSocialSinaHandler openSSOWithRedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    
     [WXApi registerApp:WX_App_ID];
+    
+    
+    [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeApp;
+    
 }
 
 
