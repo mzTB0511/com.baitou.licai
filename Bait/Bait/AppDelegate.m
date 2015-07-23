@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "MobClick.h"
+#import "UMSocialWechatHandler.h"
+#import "WXApi.h"
+#import "UMSocial.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +22,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    //配置友盟统计
+    [self action_setupUmeng];
+    
+    //配置友盟渠道推广
+    // [UMTrack registerUserIDFAWithUMTrck];
+    
+    //配置微信分享
+    [self action_setupWeixin];
+    
     return YES;
 }
 
@@ -41,5 +57,42 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
+#pragma mark - 其他方法
+
+/**
+ *  配置友盟统计
+ */
+- (void) action_setupUmeng {
+    [MobClick startWithAppkey:UMeng_App_Key reportPolicy:REALTIME channelId:UMeng_Channel];
+}
+
+/**
+ *  配置友盟微信分享
+ */
+- (void) action_setupWeixin {
+    [UMSocialData setAppKey:WX_App_ID];
+    [UMSocialWechatHandler setWXAppId:WX_App_ID appSecret:WX_App_Secret url:nil];
+    [WXApi registerApp:WX_App_ID];
+}
+
+
+#pragma mark - 回调
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
+
 
 @end

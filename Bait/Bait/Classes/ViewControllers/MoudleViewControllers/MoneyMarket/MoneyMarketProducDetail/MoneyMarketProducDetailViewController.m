@@ -11,6 +11,13 @@
 #import "NetworkHandle.h"
 #import "MoneyMarketProducSectionDetailOneViewController.h"
 
+
+#import "UMSocial.h"
+#import "UMSocialSnsPlatformManager.h"
+#import "UIActionSheet+Blocks.h"
+#import "UMSocialSnsService.h"
+
+
 @interface MoneyMarketProducDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 
@@ -29,6 +36,8 @@
     
     [self setViewTitle:@"产品详细"];
     
+    [self customerRightNavigationBarItemWithTitle:@"分享" andImageRes:nil];
+    
     _productDetailList = [NSMutableArray array];
     
     if (self.viewObject) {
@@ -41,6 +50,32 @@
     
 }
 
+/**
+ *  重载NavigationBar右键点击事件
+ */
+-(void)navigationRightItemEvent{
+
+    WEAKSELF
+    NSArray *arr_SnsList = @[UMShareToSina,UMShareToWechatSession,UMShareToWechatTimeline,UMShareToQQ];
+    
+    [UMSocialSnsService presentSnsIconSheetView:weakSelf appKey:UMeng_App_Key shareText:@"hellow" shareImage:default_Image_UserIco shareToSnsNames:arr_SnsList delegate:
+     nil];
+    
+
+//    [UIActionSheet presentOnView:self.view withTitle:@"分享" cancelButton:@"取消" destructiveButton:nil otherButtons:muArr_SnsList onCancel:^(UIActionSheet * a ) {
+//        
+//    } onDestructive:^(UIActionSheet * a ) {
+//        
+//    } onClickedButton:^(UIActionSheet * a , NSUInteger index) {
+//        
+//        
+//        
+//    }];
+    
+    
+
+    
+}
 
 
 
@@ -180,7 +215,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 100;
+        return 160;
     }else if (indexPath.section ==1){
         return 30;
     }else{
@@ -264,10 +299,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.section != 2) return;
+    
     NSDictionary *sectionData = [[_productDetailList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
     pushViewControllerWith(sbStoryBoard_Moudle_MoneyMarket, MoneyMarketProducSectionDetailOneViewController, sectionData);
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
