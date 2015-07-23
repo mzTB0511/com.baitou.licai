@@ -262,7 +262,8 @@
  *  用户是否登录了
  */
 + (BOOL) ifUserHasLogin {
-    return ![[CommonUser userInfo] isEqual:[NSNull null]];
+    return [CommonUser userInfo];
+    
 }
 
 /**
