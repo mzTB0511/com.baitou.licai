@@ -119,7 +119,7 @@
 #pragma mark -- UITabelViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 89;
+    return 110;
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
