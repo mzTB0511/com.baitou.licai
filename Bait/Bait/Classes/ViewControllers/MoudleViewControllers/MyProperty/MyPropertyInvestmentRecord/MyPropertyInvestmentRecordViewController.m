@@ -12,8 +12,10 @@
 
 #import "NetworkHandle.h"
 #import "MJRefresh.h"
+#import "MoneyMarketProducDetailViewController.h"
 
-@interface MyPropertyInvestmentRecordViewController ()
+
+@interface MyPropertyInvestmentRecordViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSInteger pageIndex;
 }
@@ -131,6 +133,15 @@
 }
 
 
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    pushViewControllerWith(sbStoryBoard_Moudle_MoneyMarket, MoneyMarketProducDetailViewController, [_investmentList objectAtIndex:indexPath.row]);
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 
 
 
