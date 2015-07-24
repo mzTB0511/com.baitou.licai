@@ -18,4 +18,15 @@
 }
 */
 
+
+-(void)setCellData:(NSDictionary *)cellData{
+    if (_cellData != cellData) {
+        
+        [_lb_SectionTitle setText:[cellData objectForKey:@""]];
+        
+    }
+}
+
+
+
 @end

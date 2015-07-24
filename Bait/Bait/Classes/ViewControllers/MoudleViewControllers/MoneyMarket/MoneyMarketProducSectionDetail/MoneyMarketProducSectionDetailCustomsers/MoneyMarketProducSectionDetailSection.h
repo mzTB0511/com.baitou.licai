@@ -14,6 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btn_SecitonReightItem;
 
+@property(strong, nonatomic) NSDictionary *cellData;
+
+
 
 
 @end
