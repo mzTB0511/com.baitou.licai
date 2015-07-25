@@ -30,7 +30,7 @@
     NSString *platformID = @"1";
     NSString *version = [CommonIO appVersion];
     
-    NSString *urlStr = [NSString stringWithFormat:@"http://lx.thinkphp.com/app/tools/aboutus?member_id=%@&ud_id=%@&version=%@&platform_id=%@",memberID,udid,version,platformID];
+    NSString *urlStr = [NSString stringWithFormat:@"http://101.231.74.38/baitou/app/tools/aboutus?member_id=%@&ud_id=%@&version=%@&platform_id=%@",memberID,udid,version,platformID];
     
     [_web_WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
     
