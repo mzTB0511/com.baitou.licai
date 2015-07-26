@@ -173,7 +173,8 @@
 - (UIView *)pageAtIndex:(NSInteger)index{
 
     NSDictionary *dict = [_bannerList objectAtIndex:index];
-    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, mScreenWidth, 150)];
+    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, mScreenWidth, 130)];
+    image.contentMode  = UIViewContentModeScaleAspectFit;
     [image sd_setImageWithURL:[NSURL URLWithString:[dict objectForKey:@"img_url"]] placeholderImage:nil];
    
     return  image;

@@ -28,6 +28,7 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.contentOffset = CGPointMake(self.bounds.size.width, 0);
         _scrollView.pagingEnabled = YES;
+        _scrollView.bounces = NO;
         [self addSubview:_scrollView];
         
         CGRect rect = self.bounds;
@@ -80,7 +81,7 @@
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                     action:@selector(handleTap:)];
         [v addGestureRecognizer:singleTap];
-     
+        v.contentMode = UIViewContentModeScaleAspectFit;
         v.frame = CGRectOffset(v.frame, v.frame.size.width * i, 0);
         [_scrollView addSubview:v];
     }
