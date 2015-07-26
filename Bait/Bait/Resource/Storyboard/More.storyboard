@@ -234,7 +234,7 @@
                                             <segue destination="dzl-Ja-3GA" kind="push" id="Ura-Lp-Vs4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUC-b6-g2S">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUC-b6-g2S">
                                         <rect key="frame" x="8" y="43" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Gmd-90-Q5n"/>
@@ -251,7 +251,7 @@
                                             <action selector="action_GetDataByIssueType:" destination="BQr-YS-1F2" eventType="touchUpInside" id="Yau-TH-tKf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-Hb-08v">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="EW5-Hb-08v">
                                         <rect key="frame" x="174" y="43" width="60" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -265,7 +265,7 @@
                                             <action selector="action_GetDataByIssueType:" destination="BQr-YS-1F2" eventType="touchUpInside" id="Xsm-Km-9vt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDf-JY-fKx">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDf-JY-fKx">
                                         <rect key="frame" x="253" y="43" width="60" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="titleEdgeInsets" minX="-35" minY="0.0" maxX="0.0" maxY="-41"/>
@@ -278,7 +278,7 @@
                                             <action selector="action_GetDataByIssueType:" destination="BQr-YS-1F2" eventType="touchUpInside" id="bcV-Vr-GKo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFz-U5-kPr">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFz-U5-kPr">
                                         <rect key="frame" x="92" y="43" width="60" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="titleEdgeInsets" minX="-39" minY="0.0" maxX="0.0" maxY="-41"/>
