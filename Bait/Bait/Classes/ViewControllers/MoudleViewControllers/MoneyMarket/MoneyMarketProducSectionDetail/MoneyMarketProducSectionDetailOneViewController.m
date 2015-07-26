@@ -41,6 +41,7 @@
     
     if (self.viewObject) {
         _passedProduct = (NSDictionary *)self.viewObject;
+        [self setViewTitle:getValueIfNilReturnStr([_passedProduct objectForKey:@"section_name"])];
     }
     
     

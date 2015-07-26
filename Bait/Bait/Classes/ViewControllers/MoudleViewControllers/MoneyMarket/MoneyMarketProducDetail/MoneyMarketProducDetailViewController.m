@@ -15,8 +15,9 @@
 #import "UMSocial.h"
 #import "UMSocialSnsPlatformManager.h"
 #import "UIActionSheet+Blocks.h"
+#import <BlocksKit/UIView+BlocksKit.h>
 #import "UMSocialSnsService.h"
-
+#import "MoneyMarkeyProductDetailBuyView.h"
 
 @interface MoneyMarketProducDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UMSocialUIDelegate>
 
@@ -46,6 +47,18 @@
         [self loadProductDetailWithID:[productItem objectForKey:@"id"]];
     }
     
+    //** 加载底部购买按钮
+    MoneyMarkeyProductDetailBuyView *buyView  = getViewByNib(MoneyMarkeyProductDetailBuyView, self);
+
+    [buyView setFrame:CGRectMake(0, getScreenHeight - 44, getScreenWidth, getScreenHeight)];
+    [self.view addSubview:buyView];
+    
+    [buyView bk_whenTapped:^{
+       
+       [CommonHUD showHudWithMessage:@"码农正在拼命赶进度..." delay:1.5f completion:^{
+           
+       }];
+    }];
     
     
 }
@@ -90,6 +103,8 @@
                                               
                                               if ([responseDictionary objectForKey:Return_data]) {
                                                   NSDictionary *data = [responseDictionary objectForKey:Return_data];
+                                                  
+                                                  [weakSelf setViewTitle:getValueIfNilReturnStr([[[data objectForKey:@"product"] objectAtIndex:0] objectForKey:@"product_name"])];
                                                   
                                                   [weakSelf makeTableViewDataSourceWithData:data];
                                               }
@@ -210,6 +225,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+
     return 1;
 }
 
@@ -228,9 +244,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if (section == 0) {
         return 30;
-    }else{
-        return 10;
+    }else if (section == 2){
+        return 45;
     }
+    
     return 10;
 }
 

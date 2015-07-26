@@ -11,6 +11,8 @@
 #import "MJRefresh.h"
 #import "MyPropertyCardManagerOwnInfoViewController.h"
 
+#import <UIImageView+WebCache.h>
+
 @interface MyPropertyCardManagerListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tbv_CardManageList;
@@ -111,6 +113,17 @@
     cardNo = [NSString stringWithFormat:@"末四位数 %@", subStr];
     
     [cell.detailTextLabel setText:cardNo];
+    
+    [cell.imageView sd_setImageWithURL:getUrlWithStrValue([cellData objectForKey:@"bank_ico"]) placeholderImage:nil];
+    
+    CGSize itemSize = CGSizeMake(35, 35);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO,0.0);
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    [cell.imageView.image drawInRect:imageRect];
+    
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
     return cell;
 }
 
