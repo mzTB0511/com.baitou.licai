@@ -291,6 +291,11 @@
                                             <action selector="action_GetDataByIssueType:" destination="BQr-YS-1F2" eventType="touchUpInside" id="6bW-xw-E7P"/>
                                         </connections>
                                     </button>
+                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-Mw-EaA">
+                                        <rect key="frame" x="0.0" y="-1" width="320" height="44"/>
+                                        <color key="barTintColor" red="0.82745098039999998" green="0.83137254900000002" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
