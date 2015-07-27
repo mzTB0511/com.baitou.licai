@@ -50,6 +50,8 @@
     [super viewDidLoad];
     [self setViewTitle:@"热门推荐"];
 
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
     [self customerRightNavigationBarItemWithTitle:nil andImageRes:@"btn_recommend_msg"];
     
     [self loadBannerData];
@@ -72,7 +74,7 @@
                                                       
                                                       _bannerList = data;
                                                       
-                                                      LXCycleScrollView *view = [[LXCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, mScreenWidth, 150)];
+                                                      LXCycleScrollView *view = [[LXCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, mScreenWidth, 130)];
                                                       
                                                       //** 初始化ScrollVeiw
                                                       view.delegate = self ;
@@ -174,7 +176,7 @@
 
     NSDictionary *dict = [_bannerList objectAtIndex:index];
     UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, mScreenWidth, 130)];
-    image.contentMode  = UIViewContentModeScaleAspectFit;
+    image.contentMode  = UIViewContentModeScaleAspectFill;
     [image sd_setImageWithURL:[NSURL URLWithString:[dict objectForKey:@"img_url"]] placeholderImage:nil];
    
     return  image;

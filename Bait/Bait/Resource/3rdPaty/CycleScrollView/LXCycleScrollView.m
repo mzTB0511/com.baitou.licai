@@ -32,7 +32,7 @@
         [self addSubview:_scrollView];
         
         CGRect rect = self.bounds;
-        rect.origin.y = rect.size.height - 50;
+        rect.origin.y = rect.size.height - 30;
         rect.size.height = 30;
         _pageControl = [[UIPageControl alloc] initWithFrame:rect];
         _pageControl.userInteractionEnabled = NO;
@@ -81,7 +81,7 @@
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                     action:@selector(handleTap:)];
         [v addGestureRecognizer:singleTap];
-        v.contentMode = UIViewContentModeScaleAspectFit;
+        v.contentMode = UIViewContentModeScaleAspectFill;
         v.frame = CGRectOffset(v.frame, v.frame.size.width * i, 0);
         [_scrollView addSubview:v];
     }
@@ -133,7 +133,8 @@
             UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                         action:@selector(handleTap:)];
             [v addGestureRecognizer:singleTap];
-           
+             v.contentMode = UIViewContentModeScaleAspectFill;
+            
             v.frame = CGRectOffset(v.frame, v.frame.size.width * i, 0);
             [_scrollView addSubview:v];
         }
