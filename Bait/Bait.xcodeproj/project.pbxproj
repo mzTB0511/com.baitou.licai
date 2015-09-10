@@ -1834,6 +1834,7 @@
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1867,6 +1868,7 @@
 					"$(PROJECT_DIR)/Bait/Resource/3rdPaty/UMSDK/UMSocial_Sdk_Extra_Frameworks/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
